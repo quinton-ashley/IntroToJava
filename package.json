@@ -1,0 +1,23 @@
+{
+	"author": "quinton-ashley",
+	"bugs": {
+		"url": "https://github.com/quinton-ashley/IntroToJava/issues"
+	},
+	"description": "Learn to code by making games in Java using QuintOS!",
+	"homepage": "https://github.com/quinton-ashley/IntroToJava#readme",
+	"license": "GPL-3.0-only",
+	"main": "",
+	"name": "introtojava",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/quinton-ashley/IntroToJava.git"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"v": "npm version patch --force",
+		"V": "npm version minor --force",
+		"version": "git add -A",
+		"postversion": "git push"
+	},
+	"version": "2.0.0"
+}

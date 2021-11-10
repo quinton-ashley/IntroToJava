@@ -1,0 +1,68 @@
+# IntroToJava
+
+Learn to code by making games in Java using [QuintOS](https://github.com/quinton-ashley/quintos)!
+
+## Summary
+
+In this course, students level up their coding skills by making games using Java! No prior coding experience is required. This course was primarily designed for students ages 13-16 but anyone ages 12+ can join.
+
+Students develop these games using QuintOS, a graphics system I created to make learning to program easier and more fun. The games run on vintage virtual computers displayed in their web browser. As students level up their coding skills, their virtual computer will get upgraded. The virtual computers are modeled after the CASIO FX-702P, Commodore PET, ZX Spectrum, Apple II, GRiD Compass, Commodore 64, Speak and Spell, classic arcade cabinets, and the Nintendo GameBoy.
+
+Students will also learn how to share their games online using GitHub and CodePen.
+
+![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/QuintOS_promo.jpg)
+
+| <img width="160px" src="https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/profile-sm.jpg"> | Hi I'm Quinton Ashley, the creator of this course. I graduated from NYU in 2018. I've been a CS tutor for 3 years and coding for 10 years, since I was 14! I also created [Nostlan](https://github.com/quinton-ashley/nostlan), a game launcher for emulators. |
+| --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+## Student Reviews
+
+| "Quinton is super smart and helped me learn this better than my professor did. Super nice guy. Well done." | "This man is a legend." |
+| ---------------------------------------------------------------------------------------------------------- | ----------------------- |
+
+| "Great tutor! very helpful. will work with you until you really understand the material." | "Quinton's communications were clear and concise and he is very detail oriented." |
+| ----------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+
+| "Quinton helped me on an assignment I was stuck on for almost a week that involved the implementation of airplane runways. Such a good teacher and explained certain imperfections and improvements to my code! I've never had any tutor help me so much while being an encouraging and uplifting teacher!" | [Read more reviews](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/Quinton_Ashley_Student_Reviews.pdf) |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+
+If you'd like to sign up for private lessons contact me: qashto@gmail.com
+
+Join the [QuintOS Discord server](https://discord.gg/5pcyKWRwSB) to chat with other students taking this course!
+
+## Games List
+
+GuessTheNumber : a random number is generated, player tries to guess it  
+PickAPath : a "Choose Your Own Adventure" type game  
+Pong : the classic tennis arcade game  
+Hangman : a random word from a word list is picked, player tries to guess it  
+QuickClicks : tests player's mouse movement speed with a mouse  
+ClickAPath : illustrated "remaster" of PickAPath  
+TicTacToe : play Tic Tac Toe against a friend or an AI  
+WorldWideWeb : create a web page using HTML and CSS  
+WheelOfFortune : a mini-game from the "Wheel of Fortune" TV show  
+SpeakAndSpell : the classic 80s educational talking toy  
+Contain : 4 paddle variant of Pong for 1-4 players  
+SketchBook : a drawing program for creating pixel art images  
+Snake : move fast to collect food pellets but don't hit your tail!  
+SuperJump : an endless vertical platform jumping game  
+Sokoban : a Japanese puzzle game, move boxes into the correct positions  
+CosmicDebris : navigate two spaceships through dangerous cosmic debris fields
+
+## Credits
+
+### Fonts
+
+Apple2 https://www.kreativekorp.com/software/fonts/apple2.shtml  
+C64 Pro Mono https://style64.org/petscii/  
+casio_fx_9860gii https://www.dafont.com/casio-fx-9860gii.font  
+Digital7 https://www.dafont.com/digital-7.font?text=digital7
+
+### Codepens
+
+Calculator https://codepen.io/wiljav/pen/zYrBYKb  
+Terminal https://codepen.io/rocknrollinc/pen/MwLMZG  
+CSS Old Computer https://codepen.io/rocknrollinc/pen/MwLMZG  
+MS-DOS Defrag https://codepen.io/manz/pen/MdErww  
+MS-DOS Scandisk https://codepen.io/manz/pen/KLPEby  
+90s Web https://codepen.io/bgbraithwaite/pen/vzPrRY

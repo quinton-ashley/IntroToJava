@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class GuessTheNumber {
 	public static void main(String[] args) {
-		// creat the user input scanner object
+		// create the user input scanner object
 		Scanner sc = new Scanner(System.in);
 
 		// your code goes here!

@@ -8,7 +8,7 @@ Just to get you started coding as quick as possible, use the online editor CodeP
 
 Create an account on Github. Then create an account on CodePen, link it to your GitHub. Open this pen:
 
-https://codepen.io/qashto/pen/porNBjX?editors=0010
+https://codepen.io/qashto/pen/bGrKjGd?editors=0010
 
 ## Instructions for PART A
 

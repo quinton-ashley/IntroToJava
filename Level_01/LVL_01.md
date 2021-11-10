@@ -2,15 +2,15 @@
 
 Congratulations, you completed level 0! 🥳
 
-Before you can work on the next game, let's get you setup so you can write JavaScript on your own computer without having to only use CodePen, which an online code editor.
+Before you can work on the next game, let's get you setup so you can write Java on your own computer without having to only use CodePen, which an online code editor.
 
 ## Requirements for Offline Development
 
 - install Google Chrome (Firefox, Edge, and Opera are good too, just don't use Safari)
-- only Windows users need to install [Git](https://gitforwindows.org/) (macOS and most Linux distros come with git pre-installed)
-- install the [Visual Studio Code editor](https://code.visualstudio.com/)
 - install [node.js](https://nodejs.org/en/) (includes [npm](https://www.npmjs.com/))
-- create an account on [github.com](https://github.com/)
+- Windows users need to install [Git](https://gitforwindows.org/)
+- macOS users need to use the command `xcode-select --install` in Terminal
+- install the [Visual Studio Code editor](https://code.visualstudio.com/)
 
 ## Setup
 
@@ -20,29 +20,25 @@ Now open Git Bash on Windows or Terminal on macOS and copy/paste these commands.
 
 ```sh
 cd ~/Documents
-git clone https://github.com/quinton-ashley/IntroToJS.git
+git clone https://github.com/quinton-ashley/IntroToJava.git
 git clone https://github.com/!!!your username!!!/quintos-games.git
 cd quintos-games
 npm i
 ```
 
-Open Visual Studio Code (aka VSCode) and add your `quintos-games` folder to the workspace.
+Open Visual Studio Code (aka VSCode) and add `IntroToJava` and your `quintos-games` folder to the workspace.
 
-## Loading QuintOS
+## Install Extensions for VSCode
 
-Edit the `load.js` in the `quintos-games` project folder and set your level to 0.
+In the Activity Bar on the left side of VSCode click the extension icon which looks like one box being separated from three other boxes. In the Extension sidebar, search for and install Prettier and Live Server.
 
-```js
-QuintOS.level = 0;
-```
+Prettier is an extension that will automatically format your code for you when you save it so you won't have to worry about doing proper indentation and formatting yourself!
 
-Open the `QuintOS.html` file with Chrome. You should see the calculator. 😄
+Live Server auto-refreshes the browser when you make changes to your code.
 
-## Install Prettier for VSCode
+## VSCode Settings
 
-Prettier is an extension that will automatically format your code for you when you save it so you won't have to worry about doing proper indentation and formatting yourself! Install it in VSCode from the Extension section.
-
-Use these settings in VSCode's `settings.json` file. Press F1 on your keyboard (Fn+F1 on macOS).
+Press F1 on your keyboard (hold Fn then press F1 on macOS). Search the menu for "Preferences: Open Settings (JSON)". Use these settings in VSCode's `settings.json` file:
 
 ```json
 "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -65,15 +61,66 @@ Use these settings in VSCode's `settings.json` file. Press F1 on your keyboard (
 "prettier.printWidth": 120
 ```
 
-## Loading Games
+## Loading QuintOS Games
 
-Upgrade your PC by editing your `load.js` file in your `quintos-games` project. 🥳
+Make a new folder in `quintos-games` called `games_java`. Copy the `GuessTheNumber` folder from Level_00 in IntroToJava and paste it in `games_java`.
+
+Copy your GuessTheNumber code from CodePen and put it in `GuessTheNumber.java`
+
+Edit the `load.js` in your `quintos-games` project folder.
 
 ```js
-QuintOS.game = 'PickAPath';
+QuintOS.username = 'your username';
+QuintOS.dir = 'games_java';
+QuintOS.gameTitle = 'GuessTheNumber';
 ```
 
+Right click on `QuintOS_live.html` file and select `Open with Live Server`. You should see the calculator show up in your browser. 😄
+
 ![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen1.jpg)
+
+You've finished the install process! Read the next lesson section before starting PickAPath.
+
+## Special characters
+
+When you make strings using quotes they can't be on multiple lines of your JavaScript file.
+
+```java
+String example = "I want to put something on a new line:
+something"; // ERROR!
+```
+
+To put part of a string on a newline use `\n` the newline character.
+
+```java
+String example = 'I want to put something on a new line:\nsomething';
+```
+
+```txt
+I want to put something on a new line:
+something
+```
+
+The tab character `\t`, note that the `+` operator is used to add another string to the list on a new line in the JavaScript code.
+
+```java
+String list = 'Grocery list:\n\n\t'
+	+ "Apples\n\tOranges\n\tBananas';
+```
+
+```txt
+Grocery list:
+
+	Apples
+	Oranges
+	Bananas
+```
+
+## End of Level 01 A
+
+Start your PickAPath game! Follow the instructions in project file `PickAPath.md` located in the same folder as this lesson file.
+
+# Level 01 B
 
 ## Boolean Operators
 
@@ -159,85 +206,41 @@ x y z
 1 1 1 =
 ```
 
-## Special characters
+## End of Level 01 B
 
-When you make strings using quotes they can't be on multiple lines of your JavaScript file.
+You learned about boolean operators:
 
-```js
-let example = "I want to put something on a new line:
-something"; // ERROR!
-```
+- NOT `!`
+- AND `&&`
+- OR `||`
 
-To put part of a string on a newline use `\n` the newline character.
-
-```js
-let example = 'I want to put something on a new line:\nsomething';
-```
-
-```txt
-I want to put something on a new line:
-something
-```
-
-The tab character `\t`, note that the `+` operator is used to add another string to the list on a new line in the JavaScript code.
-
-```js
-let list = 'Grocery list:\n\n\t'
-	+ "Apples\n\tOranges\n\tBananas';
-```
-
-```txt
-Grocery list:
-
-	Apples
-	Oranges
-	Bananas
-```
-
-## End of Level 01 A
-
-What did we learn?
-
-- boolean operators: NOT `!` AND `&&` OR `||`
-- two special characters `\n` and `\t` to format Strings with
-
-# Level 01 B
+## Level 01 C
 
 ## Arrays
 
 [Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are lists of variables with numbered indexes.
 
-```js
-let names = ['Amy', 'Ellie', 'Max'];
-let nums = [50, 21, 46, 83];
-```
-
-## array.includes(item)
-
-Another useful Array function is `includes`, it checks if the input "Ellie" is included in the array.
-
-```js
-names.includes('Ellie'); // returns true
-names.includes('James'); // returns false
+```java
+String[] names = new String[]{"Amy", "Ellie", "Max"};
+int[] nums = new int[]{50, 21, 46, 83};
 ```
 
 ## Array length
 
 length is a property of Array accessed using a period `.`
 
-```js
-console.log('The names array has ' + names.length + ' names');
+```java
+System.out.println("The names array has " + names.length + " names");
 ```
 
 This example code would print "The names array has 3 names" to the console.
 
-## End of Level 01 B
+## End of Level 01 C
 
 You learned how to:
 
 - create Arrays
 - get the amount of items in an array using `.length`
-- how to check if something is included in an array
 
 ## Computer History: Commodore PET
 
@@ -248,9 +251,12 @@ PETSCII character set: <https://style64.org/petscii/>
 - [Level 01 A](#level-01-a)
   - [Requirements for Offline Development](#requirements-for-offline-development)
   - [Setup](#setup)
-  - [Loading QuintOS](#loading-quintos)
-  - [Install Prettier for VSCode](#install-prettier-for-vscode)
-  - [Loading Games](#loading-games)
+  - [Install Extensions for VSCode](#install-extensions-for-vscode)
+  - [VSCode Settings](#vscode-settings)
+  - [Loading QuintOS Games](#loading-quintos-games)
+  - [Special characters](#special-characters)
+  - [End of Level 01 A](#end-of-level-01-a)
+- [Level 01 B](#level-01-b)
   - [Boolean Operators](#boolean-operators)
     - [NOT (aka negation)](#not-aka-negation)
     - [OR](#or)
@@ -258,11 +264,9 @@ PETSCII character set: <https://style64.org/petscii/>
     - [AND](#and)
     - [NAND](#nand)
   - [Compound Operations](#compound-operations)
-  - [Special characters](#special-characters)
-  - [End of Level 01 A](#end-of-level-01-a)
-- [Level 01 B](#level-01-b)
-  - [Arrays](#arrays)
-  - [array.includes(item)](#arrayincludesitem)
-  - [Array length](#array-length)
   - [End of Level 01 B](#end-of-level-01-b)
+  - [Level 01 C](#level-01-c)
+  - [Arrays](#arrays)
+  - [Array length](#array-length)
+  - [End of Level 01 C](#end-of-level-01-c)
   - [Computer History: Commodore PET](#computer-history-commodore-pet)

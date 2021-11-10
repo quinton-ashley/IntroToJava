@@ -212,11 +212,11 @@ That was a LOT of information! Here's a summary of everything we learned about:
 - `if`, `else if`, and `else` statements
 - globals like `System`
 
-Now you're ready to start making your first game! 🥳 [Click here for the GuessTheNumber instructions.](https://github.com/quinton-ashley/IntroToJS/blob/main/Level_00/GuessTheNumber.md)
+Now you're ready to start making your first game! 🥳 [Click here for the GuessTheNumber instructions.](https://github.com/quinton-ashley/IntroToJava/blob/main/Level_00/GuessTheNumber.md)
 
 # Level 00 B
 
-Did you complete part A and are ready to learn more? Before we can finish `GuessTheNumber` game we have to learn a bit more stuff.
+Did you complete `GuessTheNumber` part A and are ready to learn more? To complete the game you'll need to learn how to make a loop.
 
 ## while loops
 
@@ -253,40 +253,13 @@ if (value != 0) {
 }
 ```
 
-## String equals
-
-Unfortunately in Java, Strings can't be checked if one is equal to another using double equals `==`.
-
-Take a look at the example below which assigns a color to the variable `fruitColor` based on the name of the `fruit`.
-
-```java
-String fruitColor;
-
-// if the fruit is a banana
-if (fruit.equals("banana")) {
-	// set the fruitColor to yellow
-	fruitColor = "yellow";
-} else if (fruit.equals("pear")) {
-	// else if the fruit is a pear, set the fruitColor to green
-	fruitColor = "green";
-} else if (fruit.equals("orange")) {
-	fruitColor = "orange";
-} else if (fruit.equals("grape")) {
-	fruitColor = "purple";
-} else {
-	// else the fruit was not a banana, pear, orange, or grape
-	// the fruitColor is unknown
-	fruitColor = "unknown";
-}
-```
-
 ## Scopes
 
 Note that if you declare a variable in a code block it will only be available from the beginning to the end of the block. This is the scope of a variable.
 
 ```java
-if (name.equals("Bob")) {
-	String message = "Hi Bob!";
+if (orderNumber == 163) {
+	String message = orderNumber + " your order is ready!";
 }
 
 System.out.println(message); // ERROR: message is not defined
@@ -296,8 +269,8 @@ Fix this by initializing `message` outside of the if statement.
 
 ```java
 String message;
-if (name.equals("Bob")) {
-	message = "Hi Bob!";
+if (orderNumber == 163) {
+	message = orderNumber + " your order is ready!";
 }
 
 System.out.println(message); // good!
@@ -338,7 +311,6 @@ This level's computer was inspired by the Casio FX-720P, which could run program
 - [Level 00 B](#level-00-b)
   - [while loops](#while-loops)
   - [Checking for Inequivalence](#checking-for-inequivalence)
-  - [String equals](#string-equals)
   - [Scopes](#scopes)
   - [End of Level 00 B](#end-of-level-00-b)
   - [Computer History: Casio FX-720P](#computer-history-casio-fx-720p)

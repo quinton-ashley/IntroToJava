@@ -4,9 +4,17 @@ A simple guess the number game! The computer chooses a random number between 1 a
 
 ## Setup
 
-Just to get you started coding as quick as possible, use the online editor CodePen for your first game! For the next game you'll learn how to setup your own computer for development.
+On Level 01 you'll learn how to setup your own computer for development but just to get you started as quick as possible, use the online editor CodePen for your first game!
 
-Create an account on Github. Then create an account on CodePen, link it to your GitHub. Open this pen:
+Create an account on Github:
+
+https://github.com/
+
+Then create an account on CodePen, sign up with GitHub:
+
+https://codepen.io
+
+Open this pen and press "Fork" in the bottom left menu bar:
 
 https://codepen.io/qashto/pen/bGrKjGd?editors=0010
 
@@ -14,9 +22,9 @@ https://codepen.io/qashto/pen/bGrKjGd?editors=0010
 
 Since you're just starting to write this program, don't make the number random yet so you can test it out more easily. Create a varible called `num` using `int` and choose the number yourself.
 
-Tell the player to guess a number using `await prompt()` put your message (string) inside the parenthesis of the `prompt` function. Create the variable `guess` using `int`, assign it to the user's response to the `prompt`.
+Tell the player to guess a number using `System.out.println` put your message (string) inside the parenthesis of the `println` function. Create the variable `guess` using `int`, assign it to the user's response to `sc.nextInt()`.
 
-After each guess, the player should be told if their guess was right or wrong. If they were wrong, the player should be told whether their guess was too high or too low. They should also be told when they guess the number correctly. Use the `alert` function inside the code blocks `{}` of `if` and `else if` statements!
+After each guess, the player should be told if their guess was right or wrong. If they were wrong, the player should be told whether their guess was too high or too low. They should also be told when they guess the number correctly. Use the `System.out.println` function inside the code blocks `{}` of `if` and `else if` statements!
 
 At this point you should also know about the global object [Math](https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html), which has many useful functions. You will use `.random()` and `.ceil()` to make this game.
 
@@ -82,5 +90,3 @@ Use a `for` loop to count the turns but keep the same condition: `guess != num`.
 If the user enters a number outside the range of 1 to 100, tell them "Invalid guess" but don't count it against them. They should still have the same amount of valid guess attempts no matter how many invalid guess attempts they make.
 
 When you're done move on to Level 03!
-
-## Hints for PART C

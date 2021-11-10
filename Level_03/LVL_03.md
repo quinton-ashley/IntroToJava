@@ -2,8 +2,6 @@
 
 ![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen2.jpg)
 
-Don't read all the sections in the Level 2 A lesson at once. Read a section, then work on Hangman, then read another section, work on Hangman. The information in each section is sequenced to correspond directly to what you need to learn to complete each step in making the Hangman game.
-
 ## string.split(seperator)
 
 Strings have a lot of useful functions we can use. MDN, the Mozilla Developer Network, is a really great resource for learning JS. Documentation for the String class can be found here:
@@ -104,6 +102,35 @@ break;
 
 ## End of Level 03 B
 
+## Level 03 C
+
+## String equals
+
+Unfortunately in Java, Strings can't be checked if one is equal to another using double equals `==`. Only primitive types like `int` can be compared directly with the `==`. In Java, Objects like Strings must be compared using the Object's `.equals()` method.
+
+Take a look at the example below which assigns a color to the variable `fruitColor` based on the name of the `fruit`.
+
+```java
+String fruitColor;
+
+// if the fruit is a banana
+if (fruit.equals("banana")) {
+	// set the fruitColor to yellow
+	fruitColor = "yellow";
+} else if (fruit.equals("pear")) {
+	// else if the fruit is a pear, set the fruitColor to green
+	fruitColor = "green";
+} else if (fruit.equals("orange")) {
+	fruitColor = "orange";
+} else if (fruit.equals("grape")) {
+	fruitColor = "purple";
+} else {
+	// else the fruit was not a banana, pear, orange, or grape
+	// the fruitColor is unknown
+	fruitColor = "unknown";
+}
+```
+
 ## Computer History: Apple II
 
 This level's computer was inspired by the [Apple II](https://www.youtube.com/watch?v=CxJwy8NsXFs)
@@ -118,4 +145,6 @@ This level's computer was inspired by the [Apple II](https://www.youtube.com/wat
   - [Counting with while loops](#counting-with-while-loops)
   - [Breaking out of a loop early](#breaking-out-of-a-loop-early)
   - [End of Level 03 B](#end-of-level-03-b)
+  - [Level 03 C](#level-03-c)
+  - [String equals](#string-equals)
   - [Computer History: Apple II](#computer-history-apple-ii)

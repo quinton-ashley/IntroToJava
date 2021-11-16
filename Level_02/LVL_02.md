@@ -2,26 +2,41 @@
 
 ![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen5.jpg)
 
-## What is p5.js?
+## What is Processing?
 
-To make Pong we're going to use 2D graphics instead of text based graphics. p5.js is a JavaScript graphics library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else!
+To make Pong we're going to use 2D graphics instead of text based graphics. Processing is a Java graphics library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else!
 
-## p5.js Basics
+## Creating functions 👷
 
-https://p5js.org/get-started/
+How do we create our own functions? Use the `void` keyword to create a function that returns nothing. After `void` put the name of the function followed by the parenthesis. The function's code goes in the code block.
 
-p5.js uses a `setup` function for setting up your programs. I've already done the setup function for you though. So in your `pong.js` file you will just be working on the draw function.
+```java
+// create the function
+void sayHello() {
+	System.out.println('hello!');
+}
 
-The p5.js `draw` function should contain code for drawing an image (frame). It will be looped 60 times per second, this is called the frame rate. To animate objects on screen simply change their position everytime the draw function is run.
+sayHello(); // run the function
+```
+
+The code inside a function is not run until the function is called/invoked by using it's name and the parenthesis.
+
+## Processing Basics
+
+You need to make two functions, `setup` and `draw`, in your Processing programs.
+
+The Processing `setup` function is run once at the start of the game and should contain code for setting up the game, such as setting the inital positions of everything in the game.
+
+The Processing `draw` function should contain code for drawing an image (frame). It will be run 60 times per second, this is called the frame rate. To animate objects on screen simply change their position everytime the draw function is run.
 
 ## spriteArt
 
-p5.js has it's own `createImage` function, but it's a bit complicated. I created a simple `spriteArt` function for QuintOS that we can use to make sprites for our games very easily!
+Processing has it's own `createImage` function, but it's a bit complicated. I created a simple `spriteArt` function for QuintOS that we can use to make sprites for our games very easily!
 
 The first parameter to `spriteArt` is a string representing the color values of pixels.
 
-```js
-let img = spriteArt('w.w');
+```java
+PImage img = spriteArt('w.w');
 ```
 
 This example code would create an image with one white pixel, followed by a transparent pixel, and then another white pixel. You can also use spaces to indicate transparent pixels.
@@ -46,8 +61,8 @@ Backticks can also be used to create strings. Backticks look like a backwards ap
 
 When backticks are used to create strings, the text inside the backticks can go on multiple lines of code and retain these newlines without the use of the newline `\n` character.
 
-```js
-let str = `
+```java
+String str = `
 ...yyyy
 .yybyybyy
 yyyyyyyyyy
@@ -55,7 +70,7 @@ yybyyyybyy
 .yybbbbyy
 ...yyyy`;
 
-let bigImg = spriteArt(str);
+PImage bigImg = spriteArt(str);
 ```
 
 Can you tell what the image is?
@@ -64,12 +79,12 @@ It's a simple yellow and black smiley face image. 😃
 
 Note that you don't have to complete the width of each line with transparent pixels, you can just leave it blank.
 
-## string.repeat(amount)
+## Repeat
 
-To more easily create large strings you can use a String function called [repeat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat)
+To more easily create large strings you can use a String function called repeat.
 
-```js
-let pattern = '><'.repeat(4);
+```java
+String pattern = '><'.repeat(4);
 // pattern -> '><><><><';
 ```
 
@@ -79,8 +94,8 @@ To make Pong you'll need to have the ball move and bounce off the paddles. To ac
 
 Sprite objects have attributes such as their x and y position.
 
-```js
-let ball = createSprite(imgBall);
+```java
+Sprite ball = createSprite(imgBall);
 ball.x = width / 2;
 ball.y = height / 2;
 ```
@@ -93,7 +108,7 @@ When you create a sprite using an image the width and height of the sprite is au
 
 Here's what you learned about in Level 2:
 
-- p5.js basics
+- Processing basics
 - the `spriteArt` function
 - the `repeat` string function
 - how to create sprites and position them
@@ -108,7 +123,7 @@ In Physics a vector is a direction in which something is moving and the magnitud
 
 In 2D (two dimensional) games, a sprite's vector can be stored as the velocity at which a sprite is moving along the x-axis and the velocity it's moving along the y-axis per frame. The ball's speed is the combination of these velocities.
 
-```js
+```java
 ball.velocity.x = 1;
 ball.velocity.y = 1;
 ```
@@ -117,7 +132,7 @@ ball.velocity.y = 1;
 
 You can check for bounces using the sprite bounce function.
 
-```js
+```java
 ball.bounce(paddle);
 ```
 
@@ -131,11 +146,12 @@ ball.bounce(paddle);
 This level's computer is based on the Commodore 64
 
 - [Level 02 A](#level-02-a)
-	- [What is p5.js?](#what-is-p5js)
-	- [p5.js Basics](#p5js-basics)
+	- [What is Processing?](#what-is-processing)
+	- [Creating functions 👷](#creating-functions-)
+	- [Processing Basics](#processing-basics)
 	- [spriteArt](#spriteart)
 	- [Making Strings with Backticks](#making-strings-with-backticks)
-	- [string.repeat(amount)](#stringrepeatamount)
+	- [Repeat](#repeat)
 	- [p5.play Sprites](#p5play-sprites)
 	- [End of Level 02 A](#end-of-level-02-a)
 - [Level 02 B](#level-02-b)

@@ -8,7 +8,7 @@ Strings have a lot of useful functions we can use. MDN, the Mozilla Developer Ne
 
 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String>
 
-`.split(char)` splits a string by a pattern creating an array of strings
+`.split(String regex)` splits a string by a pattern creating an array of strings
 
 ```js
 // split by ' ' to get an array of words
@@ -136,15 +136,15 @@ if (fruit.equals("banana")) {
 This level's computer was inspired by the [Apple II](https://www.youtube.com/watch?v=CxJwy8NsXFs)
 
 - [Level 03 A](#level-03-a)
-  - [string.split(seperator)](#stringsplitseperator)
-  - [array.join(separator)](#arrayjoinseparator)
-  - [End of Level 03 A](#end-of-level-03-a)
+	- [string.split(seperator)](#stringsplitseperator)
+	- [array.join(separator)](#arrayjoinseparator)
+	- [End of Level 03 A](#end-of-level-03-a)
 - [Level 02 B](#level-02-b)
-  - [Accessing items in an Array](#accessing-items-in-an-array)
-  - [Accessing characters in a String](#accessing-characters-in-a-string)
-  - [Counting with while loops](#counting-with-while-loops)
-  - [Breaking out of a loop early](#breaking-out-of-a-loop-early)
-  - [End of Level 03 B](#end-of-level-03-b)
-  - [Level 03 C](#level-03-c)
-  - [String equals](#string-equals)
-  - [Computer History: Apple II](#computer-history-apple-ii)
+	- [Accessing items in an Array](#accessing-items-in-an-array)
+	- [Accessing characters in a String](#accessing-characters-in-a-string)
+	- [Counting with while loops](#counting-with-while-loops)
+	- [Breaking out of a loop early](#breaking-out-of-a-loop-early)
+	- [End of Level 03 B](#end-of-level-03-b)
+	- [Level 03 C](#level-03-c)
+	- [String equals](#string-equals)
+	- [Computer History: Apple II](#computer-history-apple-ii)

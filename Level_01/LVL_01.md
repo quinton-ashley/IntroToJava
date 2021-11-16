@@ -222,7 +222,7 @@ You learned about boolean operators:
 
 ```java
 String[] names = new String[]{"Amy", "Ellie", "Max"};
-int[] nums = new int[]{50, 21, 46, 83};
+Integer[] nums = new Integer[]{50, 21, 46, 83};
 ```
 
 ## Array length
@@ -234,6 +234,15 @@ System.out.println("The names array has " + names.length + " names");
 ```
 
 This example code would print "The names array has 3 names" to the console.
+
+## Array contains
+
+Check if an array contains a number by converting it to an ArrayList using `Arrays.asList` and then using the `contains` method. You'll learn what an ArrayList is in a future lessson.
+
+```js
+Intger num = 21;
+Arrays.asList(nums).contains(num);
+```
 
 ## End of Level 01 C
 
@@ -268,5 +277,6 @@ PETSCII character set: <https://style64.org/petscii/>
   - [Level 01 C](#level-01-c)
   - [Arrays](#arrays)
   - [Array length](#array-length)
+  - [Array contains](#array-contains)
   - [End of Level 01 C](#end-of-level-01-c)
   - [Computer History: Commodore PET](#computer-history-commodore-pet)

@@ -1,5 +1,6 @@
 package games_java.PickAPath;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class PickAPath {

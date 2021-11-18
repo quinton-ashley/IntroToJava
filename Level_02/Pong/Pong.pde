@@ -1,14 +1,14 @@
 // screen resolution is 256x192
 
-PImage imgBall = spriteArt(
-"..wwww..\n" +
-".ww..ww.\n" +
-"ww....ww\n" +
-"w......w\n" +
-"w......w\n" +
-"ww....ww\n" +
-".ww..ww.\n" +
-"..wwww..");
+PImage imgBall = spriteArt("""
+..wwww
+.ww..ww
+ww....ww
+w......w
+w......w
+ww....ww
+.ww..ww
+..wwww""");
 
 PImage imgPaddle = spriteArt(".wwwwww.\nwwwwwwww\n" + "www..www\nww.ww.ww\n".repeat(21) + "wwwwwwww\n.wwwwww.");
 

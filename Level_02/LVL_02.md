@@ -55,20 +55,18 @@ Here's the full color palette you can use for this game. They are the same color
 |   y    |   Yellow 🟨    |
 |   w    |    White ⬜    |
 
-## Making Strings with Backticks
+## Making Strings with Triple Quotes
 
-Backticks can also be used to create strings. Backticks look like a backwards apostrophe. They can be found on your keyboard on a special key next to the number 1. The backtick key also has a squiggly line called a tilda on it.
-
-When backticks are used to create strings, the text inside the backticks can go on multiple lines of code and retain these newlines without the use of the newline `\n` character.
+When triple quotes are used to create strings, the text inside them can go on multiple lines of code and retain these newlines without the use of the newline `\n` character.
 
 ```java
-String str = `
+String str = """
 ...yyyy
 .yybyybyy
 yyyyyyyyyy
 yybyyyybyy
 .yybbbbyy
-...yyyy`;
+...yyyy""";
 
 PImage bigImg = spriteArt(str);
 ```
@@ -136,26 +134,45 @@ You can check for bounces using the sprite bounce function.
 ball.bounce(paddle);
 ```
 
+## Immovable objects
+
+By default when sprites bounce of each other both objects will move. To prevent this set the paddle and walls to be immovable.
+
+```java
+sprite.immovable = true;
+```
+
+## colorPal
+
+`colorPal` retreives the color associated with the given letter from the retro computer's color palette. Here's some example code for making a red background:
+
+```js
+background(colorPal('r'));
+```
+
 ## End of Level 02 B
 
 - vectors (x and y velocities)
-- bounces
+- check for bounces
+- colorPal
 
-## Computer History: Commodore 64
+## Computer History: ZX Spectrum
 
-This level's computer is based on the Commodore 64
+This level's computer is based on the ZX Spectrum, an 8-bit personal home computer developed by Sinclair Research. It was first released in the United Kingdom on 23 April 1982 and went on to become Britain's best-selling microcomputer.
 
 - [Level 02 A](#level-02-a)
 	- [What is Processing?](#what-is-processing)
 	- [Creating functions 👷](#creating-functions-)
 	- [Processing Basics](#processing-basics)
 	- [spriteArt](#spriteart)
-	- [Making Strings with Backticks](#making-strings-with-backticks)
+	- [Making Strings with Triple Quotes](#making-strings-with-triple-quotes)
 	- [Repeat](#repeat)
 	- [p5.play Sprites](#p5play-sprites)
 	- [End of Level 02 A](#end-of-level-02-a)
 - [Level 02 B](#level-02-b)
 	- [Vectors](#vectors)
 	- [Bounces](#bounces)
+	- [Immovable objects](#immovable-objects)
+	- [colorPal](#colorpal)
 	- [End of Level 02 B](#end-of-level-02-b)
-	- [Computer History: Commodore 64](#computer-history-commodore-64)
+	- [Computer History: ZX Spectrum](#computer-history-zx-spectrum)

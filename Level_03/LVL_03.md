@@ -10,19 +10,28 @@ Strings have a lot of useful functions we can use. MDN, the Mozilla Developer Ne
 
 `.split(String regex)` splits a string by a pattern creating an array of strings
 
-```js
-// split by ' ' to get an array of words
-'the red fox'.split(' ');
-// -> ['the', 'red', 'fox']
+```java
+// split by " " to get an array of words
+"the red fox".split(" ");
+// -> ["the", "red", "fox"]
 ```
 
 ## array.join(separator)
 
 The Array `join` function creates a string by joining each element in the array together, inserting an optional seperator string between each item.
 
-```js
-names.join(' ~ ');
-// -> 'Amy ~ Ellie ~ Max'
+```java
+String[] names = new String[]{"Amy", "Ellie", "Max"};
+names.join(" ~ ");
+// -> "Amy ~ Ellie ~ Max"
+```
+
+## Create an array of characters from a String
+
+This example creates an array of characters from a String that contains the english alphabet.
+
+```java
+char[] letters = "abcdefghijklmnopqrstuvwxyz".toCharArray();
 ```
 
 ## End of Level 03 A
@@ -39,28 +48,31 @@ We learned how to:
 
 The `[]` square brackets are used to create arrays and are also used to access items in an array.
 
-```js
-names[0]; // is 'Amy'
-nums[1]; // is 21
+```java
+String[] names = new String[]{"Amy", "Ellie", "Max"};
+Integer[] nums = new Integer[]{50, 21, 46, 83};
+
+System.out.println(names[0]); // prints 'Amy'
+System.out.println(nums[1]); // prints 21
 ```
 
-Items in an array can also be edited using `[]` (aka sub).
+Items in an array can also be edited using `[]` (aka sub or at).
 
-```js
+```java
 names[2] = 'Ben';
-// edits the list: ['Amy', 'Ellie', 'Ben'];
+// edits the list: 'Amy', 'Ellie', 'Ben'
 nums[1] = 36;
-// edits the list: [50, 36, 42, 83]
+// edits the list: 50, 36, 42, 83
 ```
 
 ## Accessing characters in a String
 
 To access characters in a string you can use `[]` but note that you can't edit them like you can with arrays.
 
-```js
-let fox = 'the red fox';
-fox[4]; // is 'r'
-fox[8] = 'b'; // error
+```java
+String animal = "the red fox";
+System.out.println(animal[4]); // prints 'r'
+animal[8] = 'b'; // error
 // will not change fox string to 'the red box'
 ```
 
@@ -70,18 +82,18 @@ Strings are immutable, meaning individual characters in the string can not be ch
 
 The number of loops a while loop does can be counted with a variable.
 
-```js
-let names = ['Jake', 'Ali', 'Ben'];
+```java
+String[] names = new String[]{"Jake", "Ali", "Ben", "Cam"};
 
 let i = 0; // initialize i to 0
 
-// loop while i is less than names.length which is 3
+// loop while i is less than names.length which is 4
 while (i < names.length) {
 	// print the next name in the list
-	console.log(i + '. ' + names[i]);
+	System.out.println(i + '. ' + names[i]);
 
 	i = i + 1;
-} // in this loop i goes up from 0 to 1 to 2
+} // in this loop i goes up from 0 to 1 to 3
 ```
 
 The code above prints out a numbered list of names in the JS console.
@@ -90,19 +102,12 @@ The code above prints out a numbered list of names in the JS console.
 0. Jake
 1. Ali
 2. Ben
-```
-
-## Breaking out of a loop early
-
-If you need to exit a while loop early, use the `break` keyword.
-
-```js
-break;
+3. Cam
 ```
 
 ## End of Level 03 B
 
-## Level 03 C
+# Level 03 C
 
 ## String equals
 
@@ -131,6 +136,14 @@ if (fruit.equals("banana")) {
 }
 ```
 
+## Breaking out of a loop early
+
+If you need to exit a while loop early, use the `break` keyword.
+
+```java
+break;
+```
+
 ## Computer History: Apple II
 
 This level's computer was inspired by the [Apple II](https://www.youtube.com/watch?v=CxJwy8NsXFs)
@@ -138,13 +151,14 @@ This level's computer was inspired by the [Apple II](https://www.youtube.com/wat
 - [Level 03 A](#level-03-a)
 	- [string.split(seperator)](#stringsplitseperator)
 	- [array.join(separator)](#arrayjoinseparator)
+	- [Create an array of characters from a String](#create-an-array-of-characters-from-a-string)
 	- [End of Level 03 A](#end-of-level-03-a)
 - [Level 02 B](#level-02-b)
 	- [Accessing items in an Array](#accessing-items-in-an-array)
 	- [Accessing characters in a String](#accessing-characters-in-a-string)
 	- [Counting with while loops](#counting-with-while-loops)
-	- [Breaking out of a loop early](#breaking-out-of-a-loop-early)
 	- [End of Level 03 B](#end-of-level-03-b)
-	- [Level 03 C](#level-03-c)
+- [Level 03 C](#level-03-c)
 	- [String equals](#string-equals)
+	- [Breaking out of a loop early](#breaking-out-of-a-loop-early)
 	- [Computer History: Apple II](#computer-history-apple-ii)

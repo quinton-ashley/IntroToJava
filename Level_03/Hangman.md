@@ -14,7 +14,7 @@ Display the `lines` array like this `_ _ _ _` in the prompt on a new line below 
 
 ## Instructions for PART B
 
-Tell the player whether their guess was correct or incorrect. If they guessed a letter which occurs in the word, edit the `lines` array so it will be displayed in all its correct positions. For example if the word is "avenue" and the player has guessed "e", "x", "b", "r", "v" your prompt should display: `_ v e _ _ e`
+Show the player if their guess was correct or incorrect. If they guessed a letter which occurs in the word, edit the `lines` array so the letter will be displayed in all its correct positions. For example if the word is "avenue" and the player has guessed "e", "x", "b", "r", "v" your prompt should display: `_ v e _ _ e`
 
 If the suggested letter does not occur in the word, the other player draws one part of a hanged man stick figure. If the other player makes enough incorrect guesses to allow his opponent to complete the hangman drawing, the game is over and the guesser loses. Tell the player they lost and what the word was.
 

@@ -113,9 +113,13 @@ Here's what you learned about in Level 2:
 
 # Level 02 B
 
+# Level 02 B
+
+Checking for intersections between the ball and paddle is harder because they are both moving objects.
+
 ## Vectors
 
-To make Pong, we'll have to use Math "in real life"! How exciting! 😄
+To finish Pong, we'll have to use Math "in real life"! How exciting! 😄
 
 In Physics a vector is a direction in which something is moving and the magnitude of how fast it's moving there at a given interval of time.
 
@@ -128,7 +132,7 @@ ball.velocity.y = 1;
 
 ## Bounces
 
-You can check for bounces using the sprite bounce function.
+You can easily check for bounces between sprites using the p5.play sprite bounce function.
 
 ```java
 ball.bounce(paddle);
@@ -136,7 +140,7 @@ ball.bounce(paddle);
 
 ## Immovable objects
 
-By default when sprites bounce of each other both objects will move. To prevent this set the paddle and walls to be immovable.
+By default when sprites bounce of each other both objects will move. To prevent this, set the sprite to be immovable when another sprite bounces on it.
 
 ```java
 sprite.immovable = true;
@@ -146,8 +150,8 @@ sprite.immovable = true;
 
 `colorPal` retreives the color associated with the given letter from the retro computer's color palette. Here's some example code for making a red background:
 
-```js
-background(colorPal('r'));
+```java
+background(colorPal("r"));
 ```
 
 ## End of Level 02 B
@@ -170,6 +174,7 @@ This level's computer is based on the ZX Spectrum, an 8-bit personal home comput
 	- [p5.play Sprites](#p5play-sprites)
 	- [End of Level 02 A](#end-of-level-02-a)
 - [Level 02 B](#level-02-b)
+- [Level 02 B](#level-02-b-1)
 	- [Vectors](#vectors)
 	- [Bounces](#bounces)
 	- [Immovable objects](#immovable-objects)

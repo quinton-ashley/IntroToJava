@@ -100,7 +100,11 @@ ball.y = height / 2;
 
 Note that `width` and `height` refer to the size of the screen in pixels.
 
-When you create a sprite using an image the width and height of the sprite is automatically assigned to the sprite based on the size of the image.
+When you create a sprite using an image the width and height of the sprite is automatically assigned to the sprite based on the size of the image. They can be accessed using `.w` and `.h`
+
+```java
+System.out.println("size of the ball: " + ball.w + "x" + ball.h);
+```
 
 ## End of Level 02 A
 

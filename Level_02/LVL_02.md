@@ -25,9 +25,9 @@ The code inside a function is not run until the function is called/invoked by us
 
 You need to make two functions, `setup` and `draw`, in your Processing programs.
 
-The Processing `setup` function is run once at the start of the game and should contain code for setting up the game, such as setting the inital positions of everything in the game.
+The Processing `setup` function is run by Processing once at the start of the game and should contain code for setting up the game, such as setting the inital positions of everything in the game.
 
-The Processing `draw` function should contain code for drawing an image (frame). It will be run 60 times per second, this is called the frame rate. To animate objects on screen simply change their position everytime the draw function is run.
+The Processing `draw` function should contain code for drawing an image (frame). Processing will run it 60 times per second, this is called the frame rate. To animate objects on screen simply change their position everytime the draw function is run.
 
 ## spriteArt
 

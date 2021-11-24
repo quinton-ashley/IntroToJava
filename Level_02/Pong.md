@@ -12,7 +12,7 @@ You will notice that when the ball moves it leaves a trail of ball images behind
 
 Now try moving it to the left. Then try moving the ball in a diagonal. Get a sense of how changing the ball's x and y values will affect its trajectory.
 
-To easily test the game you can change the position of both paddles using your mouse. `mouseX` and `mouseY` store the position of the mouse at all times. Use `mouseY` to change the positions of the paddles.
+Usually Pong is a two player game but to easily test the game you can change the position of both paddles using your mouse. `mouseX` and `mouseY` store the position of the mouse at all times. Use `mouseY` to change the positions of the paddles.
 
 Personalize your game of Pong by choosing a sport to theme it on. Give the ball a design but be careful not to change its 8x8 size. The ball is pretty small so keep it simple.
 

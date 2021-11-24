@@ -6,25 +6,12 @@
 
 In the past you've been using `prompt()` which creates a rectangle, text, an input, and two buttons. In this level you'll learn how to draw text and buttons to the screen on their own!
 
-```js
+```java
 //  (text         , row, col)
-text('Hello World!', 10, 12);
+text("Hello World!", 10, 12);
 ```
 
 `text` expects at least three input arguments/parameters seperated by commas. The first input parameter is the string to display and the second and third inputs parameters are the row and column to display it on.
-
-## Creating functions 👷
-
-How do we create our own functions? Using the `function` keyword!
-
-```js
-function sayHello() {
-	// creates the function
-	console.log('hello!');
-}
-
-sayHello(); // runs the function
-```
 
 ## Creating a Button
 
@@ -32,18 +19,17 @@ Let's learn how to add a button. The `button` function is just like `text` but i
 
 A callback function is a function passed as an input argument to a function that will run the callback function. They used to be used for nearly everything asynchronous in JavaScript. These days callbacks are mainly just used for events, like button clicks.
 
-```js
-function btnClick() {
-	console.log('You clicked the button!');
+```java
+void btnClick() {
+	System.out.println("You clicked the button!");
 }
 //    (text,     row, col, function)
-button('Click me!', 5, 5, btnClick);
+button("Click me!", 5, 5, btnClick);
 ```
 
 ## End of Level 04 A
 
 - drawing text to the screen
-- how to create functions
 - creating buttons
 
 # Level 04 B
@@ -52,18 +38,18 @@ button('Click me!', 5, 5, btnClick);
 
 Recursion is when a function calls itself. It's another way to loop code in addition to for loops and while loops.
 
-```js
-function doRecursion() {
+```java
+void doRecursion() {
 	doRecursion(); // infinite loop! OH NO!
 }
 ```
 
 Example of a recursion loop that ends when the player's score reaches 20.
 
-```js
-let score = 0;
+```java
+int score = 0;
 
-function doRecursion() {
+void doRecursion() {
 	//
 	// ... game code here ...
 	score++;
@@ -78,8 +64,8 @@ function doRecursion() {
 
 Remove buttons from the screen by using the erase function on them. You must store the button returned by `button` to use the `erase` function on it.
 
-```js
-let btn = button('Click this!', 10, 10, clickResponse);
+```java
+Button btn = button("Click this!", 10, 10, clickResponse);
 btn.erase();
 ```
 
@@ -87,23 +73,23 @@ btn.erase();
 
 In this example, `playerIsDead` is a boolean varible.
 
-```js
-let playerIsDead = false;
+```java
+boolean playerIsDead = false;
 ```
 
 If `playerIsDead` gets set to `true` while the user is playing a game, then tell the user "Game Over!".
 
-```js
+```java
 if (playerIsDead == true) {
-	await alert('Game Over!');
+	System.out.println("Game Over!");
 }
 ```
 
 In Javascript you don't have to use `== true` in boolean conditions because checking for equivalence to `true` is implied. You can just put the variable in a boolean condition on it's own.
 
-```js
+```java
 if (playerIsDead) {
-	await alert('Game Over!');
+	System.out.println("Game Over!");
 }
 ```
 
@@ -111,8 +97,8 @@ if (playerIsDead) {
 
 Sometimes you'll need to check if a variable is defined before you do something with it. If you put a variable that doesn't have a boolean value in a boolean condition by itself, Javascript will evaluate its "truthiness".
 
-```js
-let robot; // robot created but not defined
+```java
+Robot robot; // robot created but not defined
 
 // only have the robot shoot lasers if it is defined!
 if (robot) {
@@ -124,18 +110,19 @@ You can check if a variable exists by putting it on it's own in a boolean condit
 
 Remember that the prompt function will return a string with the text the user entered or `null` if the user cancelled out of the prompt. In this example, if `name` is set to any string of text it will be considered truthy. If `name` is `null` or an empty string it will be considered falsy and the user will be asked for their name again.
 
-```js
-let name;
+```java
+String name;
 
 while (!name) {
-	name = await prompt("What's your name?");
+	System.out.println("What's your name?");
+	name = sc.nextLine();
 
 	if (!name) {
-		await alert('ERROR: You did not type anything!');
+		System.out.println("ERROR: You did not type anything!");
 	}
 }
 
-await alert('Hello ' + name + '!');
+System.out.println("Hello " + name + "!");
 ```
 
 The while loop will repeat until `name` is defined by the user. Neat!
@@ -203,7 +190,6 @@ Originally developed for business executives, GRiDs were also used by the U.S. m
 
 - [Level 04 A](#level-04-a)
 	- [Drawing text to the screen](#drawing-text-to-the-screen)
-	- [Creating functions 👷](#creating-functions-)
 	- [Creating a Button](#creating-a-button)
 	- [End of Level 04 A](#end-of-level-04-a)
 - [Level 04 B](#level-04-b)

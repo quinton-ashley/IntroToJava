@@ -44,34 +44,49 @@ We learned how to:
 
 # Level 02 B
 
+## Getting String input from the user
+
+You can get a String from the user via the standard input, `System.in`, by the `nextLine` method of the Scanner class.
+
+```java
+Scanner sc = new Scanner(System.in);
+
+System.out.println("What's your name?");
+String name = sc.nextLine();
+```
+
 ## Accessing items in an Array
 
 The `[]` square brackets are used to create arrays and are also used to access items in an array.
 
 ```java
 String[] names = new String[]{"Amy", "Ellie", "Max"};
-Integer[] nums = new Integer[]{50, 21, 46, 83};
+int[] nums = new int[]{50, 21, 46, 83};
 
-System.out.println(names[0]); // prints 'Amy'
+System.out.println(names[0]); // prints "Amy"
 System.out.println(nums[1]); // prints 21
 ```
 
 Items in an array can also be edited using `[]` (aka sub or at).
 
 ```java
-names[2] = 'Ben';
-// edits the list: 'Amy', 'Ellie', 'Ben'
+names[2] = "Ben";
+// edits the list: "Amy", "Ellie", "Ben"
 nums[1] = 36;
 // edits the list: 50, 36, 42, 83
 ```
 
 ## Accessing characters in a String
 
-To access characters in a string you can use `[]` but note that you can't edit them like you can with arrays.
+Remember that the data type `char` stores a single character but a String can store many characters.
+
+To access characters in a string you should use the `charAt` method. Note that you can't edit them like you can with arrays.
 
 ```java
 String animal = "the red fox";
-System.out.println(animal[4]); // prints 'r'
+char c = animal.charAt(4);
+System.out.println(c); // prints 'r'
+
 animal[8] = 'b'; // error
 // will not change fox string to 'the red box'
 ```
@@ -85,7 +100,7 @@ The number of loops a while loop does can be counted with a variable.
 ```java
 String[] names = new String[]{"Jake", "Ali", "Ben", "Cam"};
 
-let i = 0; // initialize i to 0
+int i = 0; // initialize i to 0
 
 // loop while i is less than names.length which is 4
 while (i < names.length) {
@@ -154,6 +169,7 @@ This level's computer was inspired by the [Apple II](https://www.youtube.com/wat
 	- [Create an array of characters from a String](#create-an-array-of-characters-from-a-string)
 	- [End of Level 03 A](#end-of-level-03-a)
 - [Level 02 B](#level-02-b)
+	- [Getting String input from the user](#getting-string-input-from-the-user)
 	- [Accessing items in an Array](#accessing-items-in-an-array)
 	- [Accessing characters in a String](#accessing-characters-in-a-string)
 	- [Counting with while loops](#counting-with-while-loops)

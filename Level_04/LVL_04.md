@@ -17,14 +17,17 @@ text("Hello World!", 10, 12);
 
 Let's learn how to add a button. The `button` function is just like `text` but it also expects a fourth input parameter, a callback function that gets run when the button is clicked.
 
-A callback function is a function passed as an input argument to a function that will run the callback function. They used to be used for nearly everything asynchronous in JavaScript. These days callbacks are mainly just used for events, like button clicks.
+A callback function is a function passed as an input argument to a function that will run the callback function. This callback uses a lambda arrow function `() -> {}` to call `btnClick`. This is the more modern version of a Java Runnable.
 
 ```java
 void btnClick() {
 	System.out.println("You clicked the button!");
 }
+
 //    (text,     row, col, function)
-button("Click me!", 5, 5, btnClick);
+button("Click me!", 5, 5, () -> {
+	this.btnClick();
+});
 ```
 
 ## End of Level 04 A

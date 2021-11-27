@@ -22,6 +22,6 @@ If the player guesses a letter which does not occur in the word, the computer sh
 
 If the player makes too many wrong guesses and the hangman drawing is completed, the game should end. Tell the player they lost and what the word was. Make the game a bit easier by adding more drawings to the hangman array of the
 
-The player guessing the word may, at any time, attempt to guess the whole word. If the word is correct, the game is over and the guesser wins. The guesser should also still be able to win by guessing all the letters that appear in the word. When the player wins, tell them they won and what the word was.
+The player guessing the word may, at any time, attempt to guess the whole word. If the word is correct, the game is over and the guesser wins. The guesser should also still be able to win by guessing all the letters that appear in the word.
 
 At the end of the game tell the player if they won or lost and show them what the word was.

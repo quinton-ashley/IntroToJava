@@ -2,6 +2,12 @@
 
 ![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen2.jpg)
 
+## Coding Philosophy: Naming variables
+
+Good code should be easy for other programmers (humans) to read and efficient for your computer to run. Here are some guidelines for how to write good code!
+
+Above all, it's important to put effort into thinking of GOOD names for your variables. Good variable names in Javascript are short and concise descriptors. Write sufficiently detailed comments in your code too.
+
 ## String.split(seperator)
 
 Strings have a lot of useful functions we can use. MDN, the Mozilla Developer Network, is a really great resource for learning JS. Documentation for the String class can be found here:
@@ -189,18 +195,19 @@ break;
 This level's computer was inspired by the [Apple II](https://www.youtube.com/watch?v=CxJwy8NsXFs)
 
 - [Level 03 A](#level-03-a)
-  - [String.split(seperator)](#Stringsplitseperator)
-  - [Create an array of characters from a String](#create-an-array-of-characters-from-a-String)
-  - [array.join(separator)](#arrayjoinseparator)
-  - [End of Level 03 A](#end-of-level-03-a)
+	- [Coding Philosophy: Naming variables](#coding-philosophy-naming-variables)
+	- [String.split(seperator)](#stringsplitseperator)
+	- [Create an array of characters from a String](#create-an-array-of-characters-from-a-string)
+	- [array.join(separator)](#arrayjoinseparator)
+	- [End of Level 03 A](#end-of-level-03-a)
 - [Level 02 B](#level-02-b)
-  - [Getting String input from the user](#getting-String-input-from-the-user)
-  - [Accessing items in an Array](#accessing-items-in-an-array)
-  - [Accessing characters in a String](#accessing-characters-in-a-String)
-  - [Counting with while loops](#counting-with-while-loops)
-  - [End of Level 03 B](#end-of-level-03-b)
+	- [Getting String input from the user](#getting-string-input-from-the-user)
+	- [Accessing items in an Array](#accessing-items-in-an-array)
+	- [Accessing characters in a String](#accessing-characters-in-a-string)
+	- [Counting with while loops](#counting-with-while-loops)
+	- [End of Level 03 B](#end-of-level-03-b)
 - [Level 03 C](#level-03-c)
-  - [for loops](#for-loops)
-  - [String equals](#String-equals)
-  - [Breaking out of a loop early](#breaking-out-of-a-loop-early)
-  - [Computer History: Apple II](#computer-history-apple-ii)
+	- [for loops](#for-loops)
+	- [String equals](#string-equals)
+	- [Breaking out of a loop early](#breaking-out-of-a-loop-early)
+	- [Computer History: Apple II](#computer-history-apple-ii)

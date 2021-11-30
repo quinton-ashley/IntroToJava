@@ -2,28 +2,18 @@
 
 ![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen2.jpg)
 
-## string.split(seperator)
+## String.split(seperator)
 
 Strings have a lot of useful functions we can use. MDN, the Mozilla Developer Network, is a really great resource for learning JS. Documentation for the String class can be found here:
 
 <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String>
 
-`.split(String regex)` splits a string by a pattern creating an array of strings
+`.split(String regex)` splits a String by a pattern creating an array of Strings
 
 ```java
 // split by " " to get an array of words
 "the red fox".split(" ");
 // -> ["the", "red", "fox"]
-```
-
-## array.join(separator)
-
-The Array `join` function creates a string by joining each element in the array together, inserting an optional seperator string between each item.
-
-```java
-String[] names = new String[]{"Amy", "Ellie", "Max"};
-names.join(" ~ ");
-// -> "Amy ~ Ellie ~ Max"
 ```
 
 ## Create an array of characters from a String
@@ -34,13 +24,23 @@ This example creates an array of characters from a String that contains the engl
 char[] letters = "abcdefghijklmnopqrstuvwxyz".toCharArray();
 ```
 
+## array.join(separator)
+
+The Array `join` function creates a String by joining each element in the array together, inserting an optional seperator String between each item.
+
+```java
+String[] names = new String[]{"Amy", "Ellie", "Max"};
+names.join(" ~ ");
+// -> "Amy ~ Ellie ~ Max"
+```
+
 ## End of Level 03 A
 
 We learned how to:
 
 - make while loops with a counter variable
-- split strings
-- get a character at a specific index in a string
+- split Strings
+- get a character at a specific index in a String
 
 # Level 02 B
 
@@ -80,7 +80,7 @@ nums[1] = 36;
 
 Remember that the data type `char` stores a single character but a String can store many characters.
 
-To access characters in a string you should use the `charAt` method. Note that you can't edit them like you can with arrays.
+To access characters in a String you should use the `charAt` method. Note that you can't edit them like you can with arrays.
 
 ```java
 String animal = "the red fox";
@@ -88,10 +88,10 @@ char c = animal.charAt(4);
 System.out.println(c); // prints 'r'
 
 animal[8] = 'b'; // error
-// will not change fox string to 'the red box'
+// will not change fox String to 'the red box'
 ```
 
-Strings are immutable, meaning individual characters in the string can not be changed.
+Strings are immutable, meaning individual characters in the String can not be changed.
 
 ## Counting with while loops
 
@@ -123,6 +123,31 @@ The code above prints out a numbered list of names in the JS console.
 ## End of Level 03 B
 
 # Level 03 C
+
+## for loops
+
+Scroll up and take another look at the example of the while loop with a counter variable, then check out this for loop! It does the same thing but all the steps related to the index variable are written as one line. The order of their operation is still the same.
+
+```java
+String[] names = new String[]{"Jake", "Ali", "Ben", "Cam"};
+
+// (INITIALIZER; CONDITION; INCREMENATION)
+for (int i = 0; i < names.length; i++) {
+	// print the next name in the list
+	System.out.println(i + '. ' + names[i]);
+}
+```
+
+When the for loop starts `i` is set to 0, then is check the condtion. If the condition is true the for loop runs for the first time, this is called an iteration. When the for loop ends, the incrementor section of the for loop is run, in this case `i++` which increases the value of `i` by 1. The condition is checked again, if true the for loop will repeat again, doing another iteration. Until the condition is false the for loop will continue to repeat.
+
+The code above prints out a numbered list of names in the JS console.
+
+```txt
+1. Jake
+2. Ali
+3. Ben
+4. Cam
+```
 
 ## String equals
 
@@ -164,17 +189,18 @@ break;
 This level's computer was inspired by the [Apple II](https://www.youtube.com/watch?v=CxJwy8NsXFs)
 
 - [Level 03 A](#level-03-a)
-	- [string.split(seperator)](#stringsplitseperator)
-	- [array.join(separator)](#arrayjoinseparator)
-	- [Create an array of characters from a String](#create-an-array-of-characters-from-a-string)
-	- [End of Level 03 A](#end-of-level-03-a)
+  - [String.split(seperator)](#Stringsplitseperator)
+  - [Create an array of characters from a String](#create-an-array-of-characters-from-a-String)
+  - [array.join(separator)](#arrayjoinseparator)
+  - [End of Level 03 A](#end-of-level-03-a)
 - [Level 02 B](#level-02-b)
-	- [Getting String input from the user](#getting-string-input-from-the-user)
-	- [Accessing items in an Array](#accessing-items-in-an-array)
-	- [Accessing characters in a String](#accessing-characters-in-a-string)
-	- [Counting with while loops](#counting-with-while-loops)
-	- [End of Level 03 B](#end-of-level-03-b)
+  - [Getting String input from the user](#getting-String-input-from-the-user)
+  - [Accessing items in an Array](#accessing-items-in-an-array)
+  - [Accessing characters in a String](#accessing-characters-in-a-String)
+  - [Counting with while loops](#counting-with-while-loops)
+  - [End of Level 03 B](#end-of-level-03-b)
 - [Level 03 C](#level-03-c)
-	- [String equals](#string-equals)
-	- [Breaking out of a loop early](#breaking-out-of-a-loop-early)
-	- [Computer History: Apple II](#computer-history-apple-ii)
+  - [for loops](#for-loops)
+  - [String equals](#String-equals)
+  - [Breaking out of a loop early](#breaking-out-of-a-loop-early)
+  - [Computer History: Apple II](#computer-history-apple-ii)

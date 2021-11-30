@@ -33,7 +33,7 @@ The Processing `draw` function should contain code for drawing an image (frame).
 
 Processing has it's own `createImage` function, but it's a bit complicated. I created a simple `spriteArt` function for QuintOS that we can use to make sprites for our games very easily!
 
-The first parameter to `spriteArt` is a string representing the color values of pixels.
+The first parameter to `spriteArt` is a String representing the color values of pixels.
 
 ```java
 PImage img = spriteArt('w.w');
@@ -57,7 +57,7 @@ Here's the full color palette you can use for this game. They are the same color
 
 ## Making Strings with Triple Quotes
 
-When triple quotes are used to create strings, the text inside them can go on multiple lines of code and retain these newlines without the use of the newline `\n` character.
+When triple quotes are used to create Strings, the text inside them can go on multiple lines of code and retain these newlines without the use of the newline `\n` character.
 
 ```java
 String str = """
@@ -79,7 +79,7 @@ Note that you don't have to complete the width of each line with transparent pix
 
 ## Repeat
 
-To more easily create large strings you can use a String function called repeat.
+To more easily create large Strings you can use a String function called repeat.
 
 ```java
 String pattern = '><'.repeat(4);
@@ -112,7 +112,7 @@ Here's what you learned about in Level 2:
 
 - Processing basics
 - the `spriteArt` function
-- the `repeat` string function
+- the `repeat` String function
 - how to create sprites and position them
 
 # Level 02 B
@@ -169,19 +169,19 @@ background(colorPal("r"));
 This level's computer is based on the ZX Spectrum, an 8-bit personal home computer developed by Sinclair Research. It was first released in the United Kingdom on 23 April 1982 and went on to become Britain's best-selling microcomputer.
 
 - [Level 02 A](#level-02-a)
-	- [What is Processing?](#what-is-processing)
-	- [Creating functions 👷](#creating-functions-)
-	- [Processing Basics](#processing-basics)
-	- [spriteArt](#spriteart)
-	- [Making Strings with Triple Quotes](#making-strings-with-triple-quotes)
-	- [Repeat](#repeat)
-	- [p5.play Sprites](#p5play-sprites)
-	- [End of Level 02 A](#end-of-level-02-a)
+  - [What is Processing?](#what-is-processing)
+  - [Creating functions 👷](#creating-functions-)
+  - [Processing Basics](#processing-basics)
+  - [spriteArt](#spriteart)
+  - [Making Strings with Triple Quotes](#making-Strings-with-triple-quotes)
+  - [Repeat](#repeat)
+  - [p5.play Sprites](#p5play-sprites)
+  - [End of Level 02 A](#end-of-level-02-a)
 - [Level 02 B](#level-02-b)
 - [Level 02 B](#level-02-b-1)
-	- [Vectors](#vectors)
-	- [Bounces](#bounces)
-	- [Immovable objects](#immovable-objects)
-	- [colorPal](#colorpal)
-	- [End of Level 02 B](#end-of-level-02-b)
-	- [Computer History: ZX Spectrum](#computer-history-zx-spectrum)
+  - [Vectors](#vectors)
+  - [Bounces](#bounces)
+  - [Immovable objects](#immovable-objects)
+  - [colorPal](#colorpal)
+  - [End of Level 02 B](#end-of-level-02-b)
+  - [Computer History: ZX Spectrum](#computer-history-zx-spectrum)

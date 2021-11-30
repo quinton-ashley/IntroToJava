@@ -4,7 +4,7 @@
 
 ## Instructions for PART A
 
-Split the `words` string into an array of words, assign the array to the `words` variables. HINT: use the `split` String function.
+Split the `words` String into an array of words, assign the array to the `words` variables. HINT: use the `split` String function.
 
 Pick a random word from the array of words. HINT: reference your use of `Math.random()` in the GuessTheNumber game.
 
@@ -17,6 +17,8 @@ Display the `lines` array like this `_ _ _ _` in the prompt on a new line below 
 If the player guesses a letter which occurs in the word, edit the `lines` array so the letter will be displayed in all its correct positions. For example if the word is "avenue" and the player has guessed "e", "x", "b", "r", "v" your prompt should display: `_ v e _ _ e`
 
 ## Instructions for PART C
+
+Replace the while loops you used for counting, use for loops instead!
 
 If the player guesses a letter which does not occur in the word, the computer should add a body part to the hangman stick figure. HINT: Don't check if they got a letter wrong, just ensure their guess matched none of the letters in the word.
 

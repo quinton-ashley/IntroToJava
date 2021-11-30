@@ -206,7 +206,7 @@ With QuintOS, printing to the console using `System.out` and then using a Scanne
 
 That was a LOT of information! Here's a summary of everything we learned about:
 
-- types of variables: numbers, booleans, characters, strings and functions
+- types of variables: numbers, booleans, characters, Strings and functions
 - making boolean conditions to test if something is `true` or `false`
 - using double equals to `==` check for equivalence
 - `if`, `else if`, and `else` statements

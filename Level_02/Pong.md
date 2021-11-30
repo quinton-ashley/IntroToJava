@@ -16,7 +16,7 @@ Usually Pong is a two player game but to easily test the game you can change the
 
 Personalize your game of Pong by choosing a sport to theme it on. Give the ball a design but be careful not to change its 8x8 size. The ball is pretty small so keep it simple.
 
-Make a wall using the `rect(x, y, w, h)` p5.js function or using an image (or two) with the `spriteArt` function. Place two walls at the top and bottom of the screen. You can make the walls one color or patterned or anything if you'd like, besides transparent lol. The second input parameter to the `spriteArt` function is a number value for scale, you can use it to make the wall big without having to type such a long string.
+Make a wall using the `rect(x, y, w, h)` p5.js function or using an image (or two) with the `spriteArt` function. Place two walls at the top and bottom of the screen. You can make the walls one color or patterned or anything if you'd like, besides transparent lol. The second input parameter to the `spriteArt` function is a number value for scale, you can use it to make the wall big without having to type such a long String.
 
 Make the ball bounce off the walls. To easily test your code for this, make the ball move straight down and then when it bounces have it go straight up. HINT: store the y velocity of the ball (the direction it is moving vertically) in a seperate variable.
 

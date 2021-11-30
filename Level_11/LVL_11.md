@@ -8,7 +8,7 @@ https://p5js.org/examples/sound-load-and-play-sound.html
 
 ## Creating Objects
 
-Objects have properties, aka key/value pairs. Everything in Javascript (Number, String, Array, etc.) is actually an Object too! You've already used some properties that these objects have such as `.length` for strings.
+Objects have properties, aka key/value pairs. Everything in Javascript (Number, String, Array, etc.) is actually an Object too! You've already used some properties that these objects have such as `.length` for Strings.
 
 Let's take a look at how we could use an object to store attributes about Gumball, a character from the Cartoon Network show The Amazing World of Gumball.
 
@@ -105,7 +105,7 @@ let inp = input(value, x, y, onSubmit, onChange);
 
 `inp` is the the `Input` object created, cursor blinking on the screen at position (x, y).
 
-`value` is the initial text in the input, set to an empty string by default.
+`value` is the initial text in the input, set to an empty String by default.
 
 `onSubmit` called when the user presses the enter key.
 
@@ -120,7 +120,7 @@ let inp;
 
 // value is the text the user entered in the input
 function calculate(value) {
-	// eval() is a global function that evaluates the string input value as
+	// eval() is a global function that evaluates the String input value as
 	// JavaScript code, for example if value is "5+3", result will be the number 8
 	let result = eval(value); // evaluate what the user entered
 
@@ -259,16 +259,16 @@ async function playAllLetters() {
 This level's computer is based on the classic children's toy from the 1980s, the electronic [Speak and Spell](<https://en.wikipedia.org/wiki/Speak_%26_Spell_(toy)>) made by Texas Instruments.
 
 - [Level 11 A](#level-11-a)
-	- [Loading Sounds](#loading-sounds)
-	- [Creating Objects](#creating-objects)
-	- [for in loops](#for-in-loops)
-	- [for of loops](#for-of-loops)
+  - [Loading Sounds](#loading-sounds)
+  - [Creating Objects](#creating-objects)
+  - [for in loops](#for-in-loops)
+  - [for of loops](#for-of-loops)
 - [Level 11 B](#level-11-b)
-	- [Working with Inputs directly](#working-with-inputs-directly)
-	- [Example use of Inputs](#example-use-of-inputs)
+  - [Working with Inputs directly](#working-with-inputs-directly)
+  - [Example use of Inputs](#example-use-of-inputs)
 - [Level 11 C](#level-11-c)
-	- [Callback Chaining](#callback-chaining)
+  - [Callback Chaining](#callback-chaining)
 - [Level 11 D](#level-11-d)
-	- [Promises](#promises)
-	- [Promisfied p5.js Sound](#promisfied-p5js-sound)
-	- [Computer History: Speak and Spell](#computer-history-speak-and-spell)
+  - [Promises](#promises)
+  - [Promisfied p5.js Sound](#promisfied-p5js-sound)
+  - [Computer History: Speak and Spell](#computer-history-speak-and-spell)

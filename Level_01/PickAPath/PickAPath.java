@@ -12,7 +12,7 @@ public class PickAPath {
 		int choice = -1; // initialize choice to -1, user has not made any choice yet
 
 		while (choice != 0) {
-			String msg = ""; // initialize message to empty string
+			String msg = ""; // initialize message to empty String
 
 			if (choice == -1) {
 				/* PART A0: Start your story! */

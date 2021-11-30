@@ -11,7 +11,7 @@ In the past you've been using `prompt()` which creates a rectangle, text, an inp
 text("Hello World!", 10, 12);
 ```
 
-`text` expects at least three input arguments/parameters seperated by commas. The first input parameter is the string to display and the second and third inputs parameters are the row and column to display it on.
+`text` expects at least three input arguments/parameters seperated by commas. The first input parameter is the String to display and the second and third inputs parameters are the row and column to display it on.
 
 ## Creating a Button
 
@@ -68,7 +68,7 @@ void doRecursion() {
 Remove buttons from the screen by using the erase function on them. You must store the button returned by `button` to use the `erase` function on it.
 
 ```java
-Button btn = button("Click this!", 10, 10, clickResponse);
+Button btn = button("Click this!", 10, 10);
 btn.erase();
 ```
 
@@ -84,98 +84,93 @@ If `playerIsDead` gets set to `true` while the user is playing a game, then tell
 
 ```java
 if (playerIsDead == true) {
-	System.out.println("Game Over!");
+	System.out.println('Game Over!');
 }
 ```
 
 In Javascript you don't have to use `== true` in boolean conditions because checking for equivalence to `true` is implied. You can just put the variable in a boolean condition on it's own.
 
-```java
-if (playerIsDead) {
-	System.out.println("Game Over!");
-}
-```
-
-## How to check if a variable is defined
-
-Sometimes you'll need to check if a variable is defined before you do something with it. If you put a variable that doesn't have a boolean value in a boolean condition by itself, Javascript will evaluate its "truthiness".
-
-```java
-Robot robot; // robot created but not defined
-
-// only have the robot shoot lasers if it is defined!
-if (robot) {
-	robot.shootLasers();
-}
-```
-
-You can check if a variable exists by putting it on it's own in a boolean condition. To check if it's undefined (falsy), put a negation operator `!` in front of the variable name in the boolean condition. Variables are considered undefined if they were not assigned a value.
-
-Remember that the prompt function will return a string with the text the user entered or `null` if the user cancelled out of the prompt. In this example, if `name` is set to any string of text it will be considered truthy. If `name` is `null` or an empty string it will be considered falsy and the user will be asked for their name again.
-
-```java
-String name;
-
-while (!name) {
-	System.out.println("What's your name?");
-	name = sc.nextLine();
-
-	if (!name) {
-		System.out.println("ERROR: You did not type anything!");
-	}
-}
-
-System.out.println("Hello " + name + "!");
-```
-
-The while loop will repeat until `name` is defined by the user. Neat!
-
-## truthy or falsy?
-
-Any value that is not falsy is truthy. Variables are falsy if they are:
-
 ```js
-undefined;
-null;
-0; // the number 0
-(''); // an empty string
+if (playerIsDead) {
+	System.out.println('Game Over!');
+}
 ```
 
 # Level 04 C
 
-## Date
+## Instant
 
-Take a look at the MDN documentation for [Date.now()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) and run the JavaScript demo.
+Take a look at the Java documentation for the [Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) class.
 
-`Date.now()` returns the current date in milliseconds.
-
-## Adding to Arrays
-
-So how do we add to arrays? By using the `.push()` function.
-
-```js
-let names = ['Amy', 'Ellie', 'Max'];
-let nums = [50, 21, 46, 83];
-
-names.push('Jake'); // adds "Jake" to names array
-// names -> ['Amy', 'Ellie', 'Max', 'Jake']
-
-nums.push(97); // adds 97 to the nums array
-// nums -> [50, 21, 46, 83, 97]
+```java
+long time = Instant.now().toEpochMilli();
 ```
 
-## asynchronous functions
+`time` is set to the current time in milliseconds since the epoch of January 1, 1970 at midnight.
 
-To use `await` inside a function you must make it an `async` function. Remember that `await` is used to wait for user interaction.
+## Creating Arrays of defined length
 
-```js
-async function sayHello() {
-	let name = await prompt("What's your name?");
-	await alert('Hello ' + name + '!');
+The following example asks the user security questions and records their answers. Since we already know there are three questions there will be three answers, but we don't know what the answers will be so they can't be defined when we create the array.
+
+```java
+String[] questions = new String[]{
+	"What was your first pet's name?",
+	"What's your mother's maiden name?",
+	"In what city or town did your parents meet?"
+};
+String[] answers = new String[3];
+
+for (int i = 0; i < 3; i++) {
+	System.out.println(questions[i]);
+	answers[i] = sc.nextLine();
 }
 ```
 
-Async functions and callbacks are the two main forms of asynchronous programming in JavaScript. Async functions were created so that asynchronous code could be written linearly like synchronous code, one line after the other.
+You can put the length of the array in the brackets when creating it inside of defining its values. Then you can add the values by assigning them to positions in the array.
+
+## prompts and alerts
+
+In previous lessons you've used `System.out.println` to create alert windows and a scanner `sc.next` to create prompt windows. You can also use the QuintOS functions `prompt` and `alert` to create them directly.
+
+```java
+// waits for the user to type something and press enter
+String favColor = prompt("What is your favorite color?");
+// the user's response to the prompt is assigned to favColor
+
+// waits for user to read the message in the alert and press enter
+alert(favColor + " is my favorite color too!"); // show message to user
+```
+
+## Changing the positions of prompts and alerts
+
+The position of prompt and alert windows can be changed by defining their row and column values just like with the `text` function.
+
+```java
+//   (text           , row, col, w)
+alert("I can move too!", 5, 20, 16);
+```
+
+A fourth input paramter can be used to restrict the width of the window. This also works with the `text` and `prompt` functions but not the `button` function. Text that is longer than the specified width will be put on new lines.
+
+If row, column, and width are not defined, default position values are used, which are different for each of the QuintOS virtual computers.
+
+# Level 04 D
+
+## modulo operator
+
+The modulo operator `%` gets the gets the remainder of a division.
+
+```java
+// true if x is even (divisible by 2)
+if (x % 2 == 0) {
+	System.out.println('x is even!');
+}
+
+// true if y is divisible by 5
+if (y % 5 == 0) {
+	System.out.println(y + ' is a multiple of 5');
+}
+```
 
 ## Computer History: GRiD Compass
 
@@ -199,10 +194,11 @@ Originally developed for business executives, GRiDs were also used by the U.S. m
 	- [Recursion](#recursion)
 	- [Erasing a button](#erasing-a-button)
 	- [Implied boolean conditions](#implied-boolean-conditions)
-	- [How to check if a variable is defined](#how-to-check-if-a-variable-is-defined)
-	- [truthy or falsy?](#truthy-or-falsy)
 - [Level 04 C](#level-04-c)
-	- [Date](#date)
-	- [Adding to Arrays](#adding-to-arrays)
-	- [asynchronous functions](#asynchronous-functions)
+	- [Instant](#instant)
+	- [Creating Arrays of defined length](#creating-arrays-of-defined-length)
+	- [prompts and alerts](#prompts-and-alerts)
+	- [Changing the positions of prompts and alerts](#changing-the-positions-of-prompts-and-alerts)
+- [Level 04 D](#level-04-d)
+	- [modulo operator](#modulo-operator)
 	- [Computer History: GRiD Compass](#computer-history-grid-compass)

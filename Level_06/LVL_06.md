@@ -1,8 +1,8 @@
 # Level 06 A
 
-Before you can start working on the `TicTacToe` game, you'll have to prove your skills in Javascript. You should be able to complete the first few test sections quite quickly. Stop when you complete the challenge titled "Golf Code".
+Before you can start working on the `TicTacToe` game, you'll have to prove your skills in Java.
 
-<https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/#basic-javascript>
+// TODO
 
 After you complete those challenges you can upgrade to level 6! 🥳
 
@@ -20,20 +20,20 @@ Try not to rewrite the same exact lines of code in different places, put that co
 
 functions can return a variable (only one). What will the value of `upHigh` be?
 
-```js
-function gimmeFive() {
+```java
+int gimmeFive() {
 	return 5;
 }
 
-let upHigh = gimmeFive() + gimmeFive();
+int upHigh = gimmeFive() + gimmeFive();
 ```
 
 ## Creating functions with input parameters
 
 function with input parameters x and y, returns the value of x^2 \* y^2
 
-```js
-function doMyMathHomework(x, y) {
+```java
+int doMyMathHomework(x, y) {
 	return x * x * y * y;
 }
 
@@ -41,40 +41,29 @@ doMyMathHomework(1, 3); // returns 9
 doMyMathHomework(2, 5); // what does this return?
 ```
 
-## Arrow function syntax
-
-You can also create function using the arrow syntax.
-
-```js
-//       (   text    , x, y, action)
-button('click me!', 0, 0, () => {
-	console.log('button clicked!');
-});
-```
-
 ## Two Dimensional Arrays
 
 A two dimensional array (aka 2D array) is an array of arrays.
 
-```js
+```java
 // red and black checkers on a checkerboard
-let board = [
-	[' ', ' ', ' ', 'r', ' ', 'B', ' ', ' '],
-	[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
-	[' ', ' ', ' ', ' ', ' ', ' ', ' ', 'r'],
-	[' ', ' ', ' ', ' ', 'r', ' ', ' ', ' '],
-	[' ', 'B', ' ', ' ', ' ', ' ', ' ', 'b'],
-	[' ', ' ', 'b', ' ', ' ', ' ', 'b', ' '],
-	[' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
-	[' ', ' ', ' ', ' ', 'b', ' ', 'b', ' ']
-];
+char[][] board = new char[]{
+	new char[]{' ', ' ', ' ', 'r', ' ', 'B', ' ', ' '},
+	new char[]{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+	new char[]{' ', ' ', ' ', ' ', ' ', ' ', ' ', 'r'},
+	new char[]{' ', ' ', ' ', ' ', 'r', ' ', ' ', ' '},
+	new char[]{' ', 'B', ' ', ' ', ' ', ' ', ' ', 'b'},
+	new char[]{' ', ' ', 'b', ' ', ' ', ' ', 'b', ' '},
+	new char[]{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+	new char[]{' ', ' ', ' ', ' ', 'b', ' ', 'b', ' '}
+};
 ```
 
 Two dimensional data, such as checker board piece positions, can be stored in two dimensional arrays. In the example `"r"` represents a single red piece, uppercase `"R"` represents a king (two stacked red pieces).
 
 How could we access the red piece on the top row?
 
-```js
+```java
 board[0][3]; // row is 0, column is 3
 ```
 
@@ -84,15 +73,15 @@ board[0][3]; // row is 0, column is 3
 
 A for loop inside a for loop? FORLOOPCEPTION! 😮
 
-```js
-for (let i = 0; i < rows; i++) {
-	for (let j = 0; j < columns; j++) {
+```java
+for (int i = 0; i < rows; i++) {
+	for (int j = 0; j < columns; j++) {
 		// nested for loop
 	}
 }
 ```
 
-How could we use a nested for loop to clear the board of all the pieces by assigning a blank space " " to every element in the `board` array?
+How could we use a nested for loop to clear the board of all the pieces by assigning a blank space ' ' to every element in the `board` array?
 
 ## End of Level 06 A
 
@@ -103,7 +92,6 @@ How could we use a nested for loop to clear the board of all the pieces by assig
 	- [Coding Philosophy: Part 1](#coding-philosophy-part-1)
 	- [Return variables from a function](#return-variables-from-a-function)
 	- [Creating functions with input parameters](#creating-functions-with-input-parameters)
-	- [Arrow function syntax](#arrow-function-syntax)
 	- [Two Dimensional Arrays](#two-dimensional-arrays)
 	- [Nested for loops](#nested-for-loops)
 	- [End of Level 06 A](#end-of-level-06-a)

@@ -22,7 +22,7 @@ https://codepen.io/qashto/pen/bGrKjGd?editors=0010
 
 Since you're just starting to write this program, don't make the number random yet so you can test it out more easily. Create a varible called `num` using `int` and choose the number yourself.
 
-Tell the player to guess a number using `System.out.println` put your message (string) inside the parenthesis of the `println` function. Create the variable `guess` using `int`, assign it to the user's response to `sc.nextInt()`.
+Tell the player to guess a number using `System.out.println` put your message (String) inside the parenthesis of the `println` function. Create the variable `guess` using `int`, assign it to the user's response to `sc.nextInt()`.
 
 After each guess, the player should be told if their guess was right or wrong. If they were wrong, the player should be told whether their guess was too high or too low. They should also be told when they guess the number correctly. Use the `System.out.println` function inside the code blocks `{}` of `if` and `else if` statements!
 

@@ -216,42 +216,32 @@ Now you're ready to start making your first game! 🥳 [Click here for the Guess
 
 # Level 00 B
 
-Did you complete `GuessTheNumber` part A and are ready to learn more? To complete the game you'll need to learn how to make a loop.
+Did you complete `GuessTheNumber` part A and are ready to learn more? Before we can finish the game we have to learn a bit more stuff!
 
-## while loops
+## Math functions
 
-Need to loop some code? Use a while loop! The code in the code block `{}` will be looped as long as the while loop condition remains true.
-
-While a toaster is ON the heating elements change in temperature and get hotter. Pretend `getTemperature()` is a function that gets the temperature from the toaster's temperature sensor.
+At this point you should also know about the global object [Math](https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html), which has many useful functions. You will use `.random()` and `.ceil()` to make this game.
 
 ```java
-int toastLevel = 70; // default amount before toasting
+// Math.random() returns a random decimal number between 0 and 1 (not including 1)
+double x = Math.random(); // x could be .2364 or .928279 or 0.45398, it's random!
 
-// more heat is required to toast frozen bread
-if (defrost == true) {
-	toastLevel = 0;
-}
+Math.round(30.1); // -> 30
+Math.round(30.7); // -> 31
+// Math.round() rounds the number to the nearest integer
 
-turnToasterOn();
-// loops while toastLevel is below 1000
-while (toastLevel < 1000) {
-	int heat = getTemperature();
-	toastLevel = toastLevel + heat; // add additional heat to toastLevel
-}
+double y = Math.floor(22.9); // y -> 22 (y gets assigned the value 22)
+// Math.floor() always rounds down
 
-System.out.println("Toast is ready!");
-turnToasterOff();
+double z = Math.ceil(15.3); // z -> 16
+// Math.ceil() always rounds up (ceil for ceiling)
+
+// casting to int forces a decimal number to become an int
+// drops the decimal (effectively rounding down)
+int casted = (int) (39.8); // casted -> 39
 ```
 
-## Checking for Inequivalence
-
-Not equals `!=` checks if something is not equal to something else.
-
-```java
-if (value != 0) {
-	// check to see if value is not 0
-}
-```
+# Level 00 C
 
 ## Scopes
 
@@ -276,12 +266,54 @@ if (orderNumber == 163) {
 System.out.println(message); // good!
 ```
 
+## while loops
+
+Need to loop some code? Use a while loop! `if` statements run the code in their code block once if their boolean condition is true. `while` loops repeat the code in their code block as long as their boolean condition remains true.
+
+Take a look at the following example. Imagine that the `pickACard` function returns a String with the name of the card taken from the top of the deck, such as "Two of Hearts" or "Nine of Clubs".
+
+```js
+let card; // no card picked yet
+
+while (card != 'Ace of Spades') {
+	card = pickACard();
+}
+
+await alert('Found the Ace of Spades!');
+```
+
+The while loop will loop until `card` is the Ace of Spades. What if the Ace of Spades wasn't in the deck though? Then every card in the deck will be picked until there are none left and then the program will keep trying to pick a card! This would result in an infinite loop, not good...
+
+## Breaking out of a loop early
+
+If there are no cards left in the deck let's imagine the `pickACard` function would return `null`, a special value that means none. If there are no cards left in the deck, the Ace of Spades can not be found. The while loop condition would remain true forever, so the loop must be exited early by using the `break` keyword.
+
+```js
+let card;
+
+while (card != 'Ace of Spades') {
+	card = pickACard();
+
+	if (card == null) {
+		break; // exit the while loop
+	}
+}
+
+if (card == 'Ace of Spades') {
+	await alert('Found the Ace of Spades!');
+} else {
+	await alert('The Ace of Spades was not in the deck!');
+}
+```
+
 ## End of Level 00 B
 
 Here's a summary of everything we learned about:
 
-- while loops
 - more about code blocks/scopes `{}`
+- `while` loops, used to repeat a code block
+- `null`, a special value that means none or nothing
+- `break`, a keyword used to exit a loop early
 
 ## Computer History: Casio FX-720P
 
@@ -309,8 +341,10 @@ This level's computer was inspired by the Casio FX-720P, which could run program
   - [Scanner](#scanner)
   - [End of Level 00 A](#end-of-level-00-a)
 - [Level 00 B](#level-00-b)
-  - [while loops](#while-loops)
-  - [Checking for Inequivalence](#checking-for-inequivalence)
+  - [Math functions](#math-functions)
+- [Level 00 C](#level-00-c)
   - [Scopes](#scopes)
+  - [while loops](#while-loops)
+  - [Breaking out of a loop early](#breaking-out-of-a-loop-early)
   - [End of Level 00 B](#end-of-level-00-b)
   - [Computer History: Casio FX-720P](#computer-history-casio-fx-720p)

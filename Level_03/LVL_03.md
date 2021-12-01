@@ -182,14 +182,6 @@ if (fruit.equals("banana")) {
 }
 ```
 
-## Breaking out of a loop early
-
-If you need to exit a while loop early, use the `break` keyword.
-
-```java
-break;
-```
-
 ## Computer History: Apple II
 
 This level's computer was inspired by the [Apple II](https://www.youtube.com/watch?v=CxJwy8NsXFs)
@@ -209,5 +201,4 @@ This level's computer was inspired by the [Apple II](https://www.youtube.com/wat
 - [Level 03 C](#level-03-c)
 	- [for loops](#for-loops)
 	- [String equals](#string-equals)
-	- [Breaking out of a loop early](#breaking-out-of-a-loop-early)
 	- [Computer History: Apple II](#computer-history-apple-ii)

@@ -4,6 +4,8 @@ A simple guess the number game! The computer chooses a random number between 1 a
 
 ## Setup
 
+_Read Level 00 A in the `LVL_00.md` file first!_
+
 On Level 01 you'll learn how to setup your own computer for development but just to get you started as quick as possible, use the online editor CodePen for your first game!
 
 Create an account on Github:
@@ -26,40 +28,23 @@ Tell the player to guess a number using `System.out.println` put your message (S
 
 After each guess, the player should be told if their guess was right or wrong. If they were wrong, the player should be told whether their guess was too high or too low. They should also be told when they guess the number correctly. Use the `System.out.println` function inside the code blocks `{}` of `if` and `else if` statements!
 
-At this point you should also know about the global object [Math](https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html), which has many useful functions. You will use `.random()` and `.ceil()` to make this game.
-
-```java
-// Math.random() returns a random decimal number between 0 and 1 (not including 1)
-double x = Math.random(); // x could be .2364 or .928279 or 0.45398, it's random!
-
-Math.round(30.1); // -> 30
-Math.round(30.7); // -> 31
-// Math.round() rounds the number to the nearest integer
-
-double y = Math.floor(22.9); // y -> 22 (y gets assigned the value 22)
-// Math.floor() always rounds down
-
-double z = Math.ceil(15.3); // z -> 16
-// Math.ceil() always rounds up (ceil for ceiling)
-
-// casting to int forces a decimal number to become an int
-// drops the decimal (effectively rounding down)
-int casted = (int) (39.8); // casted -> 39
-```
-
-Use these `Math` functions to have the computer pick a random whole number between 1 and 100.
-
 [Now you can click here to move onto Level 00 B](https://github.com/quinton-ashley/IntroToJava#level-00-b).
 
 ## Instructions for PART B
 
-_Make sure you read all of `LVL_00.md` before doing PART B_
+_Read Level 00 B in the `LVL_00.md` file before doing this section_
 
-Make the game loop by using a while loop. Think about what condition must remain true for the player to keep playing the game.
+Use `Math` functions to have the computer pick a random whole number between 1 and 100.
 
 ## Instructions for PART C
 
-_Complete Hangman (A and B) first!_
+_Read Level 00 C in the `LVL_00.md` file before doing this section_
+
+Make the game loop by using a while loop. Think about what condition must remain true for the player to keep playing the game.
+
+## CHALLENGE SECTION
+
+_Complete the Level 03 game, Hangman, first!_
 
 If you haven't already, figure out the best strategy to use when playing this game.
 

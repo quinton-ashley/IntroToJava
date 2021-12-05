@@ -158,22 +158,20 @@ sprite.immovable = true;
 background(colorPal("r"));
 ```
 
-## End of Level 02 B
-
-- vectors (x and y velocities)
-- check for bounces
-- colorPal
-
 ## Computer History: ZX Spectrum
 
-This level's computer is based on the ZX Spectrum, an 8-bit personal home computer developed by Sinclair Research. It was first released in the United Kingdom on 23 April 1982 and went on to become Britain's best-selling microcomputer.
+Excerpt from the last paragraph of Chapter 1 of "ZX81 BASIC PROGRAMMING" by Stephen Vickers:
+
+"Whatever else you do, keep using the computer. If you have a question 'What does it do if I tell it such & such?' then the answer is easy:type it in & see. Whenever the manual tells you to type something in, always ask yourself, 'What could I type instead?' & try out your replies. The more of your own stuff you write, the better you will understand the ZX81. (This is called unprogrammed learning.) Regardless of what you type in, you cannot damage the computer."
+
+This level's computer is based on the ZX Spectrum, an 8-bit personal home computer developed by Sinclair Research. It was first released in the United Kingdom on the 23rd of April 1982 and went on to become Britain's best-selling microcomputer. Watch some of this video to hear what it was like for people to use the ZX Spectrum back then!
 
 - [Level 02 A](#level-02-a)
   - [What is Processing?](#what-is-processing)
   - [Creating functions 👷](#creating-functions-)
   - [Processing Basics](#processing-basics)
   - [spriteArt](#spriteart)
-  - [Making Strings with Triple Quotes](#making-Strings-with-triple-quotes)
+  - [Making Strings with Triple Quotes](#making-strings-with-triple-quotes)
   - [Repeat](#repeat)
   - [p5.play Sprites](#p5play-sprites)
   - [End of Level 02 A](#end-of-level-02-a)
@@ -183,5 +181,4 @@ This level's computer is based on the ZX Spectrum, an 8-bit personal home comput
   - [Bounces](#bounces)
   - [Immovable objects](#immovable-objects)
   - [colorPal](#colorpal)
-  - [End of Level 02 B](#end-of-level-02-b)
   - [Computer History: ZX Spectrum](#computer-history-zx-spectrum)

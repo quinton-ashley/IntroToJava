@@ -222,3 +222,11 @@ _____/\     _   /       | otter
 ------------------------------------------------
 https://asciiart.website/index.php?art=books/harry%20potter
 ```
+
+## Erase
+
+Erase everything on the screen using the `erase` function.
+
+```js
+erase();
+```

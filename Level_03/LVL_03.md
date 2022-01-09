@@ -10,9 +10,9 @@ Above all, it's important to put effort into thinking of GOOD names for your var
 
 ## String.split(seperator)
 
-Strings have a lot of useful functions we can use. MDN, the Mozilla Developer Network, is a really great resource for learning JS. Documentation for the String class can be found here:
+Strings have a lot of useful functions we can use. Oracle is a really great resource for learning Java. Documentation for the String class can be found here:
 
-<https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String>
+<https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html>
 
 `.split(String regex)` splits a String by a pattern creating an array of Strings
 
@@ -30,29 +30,17 @@ This example creates an array of characters from a String that contains the engl
 char[] letters = "abcdefghijklmnopqrstuvwxyz".toCharArray();
 ```
 
-## array.join(separator)
-
-The Array `join` function creates a String by joining each element in the array together, inserting an optional seperator String between each item.
-
-```java
-String[] names = new String[]{"Amy", "Ellie", "Max"};
-names.join(" ~ ");
-// -> "Amy ~ Ellie ~ Max"
-```
-
 ## End of Level 03 A
 
 We learned how to:
 
-- make while loops with a counter variable
 - split Strings
-- get a character at a specific index in a String
 
 # Level 02 B
 
 ## Getting String input from the user
 
-You can get a String from the user via the standard input, `System.in`, by the `nextLine` method of the Scanner class.
+You can get a String from the user via the standard input, `System.in`, by using the `nextLine` method of the Scanner class.
 
 ```java
 Scanner sc = new Scanner(System.in);
@@ -192,7 +180,6 @@ https://www.youtube.com/watch?v=CxJwy8NsXFs
 	- [Coding Philosophy: Naming variables](#coding-philosophy-naming-variables)
 	- [String.split(seperator)](#stringsplitseperator)
 	- [Create an array of characters from a String](#create-an-array-of-characters-from-a-string)
-	- [array.join(separator)](#arrayjoinseparator)
 	- [End of Level 03 A](#end-of-level-03-a)
 - [Level 02 B](#level-02-b)
 	- [Getting String input from the user](#getting-string-input-from-the-user)

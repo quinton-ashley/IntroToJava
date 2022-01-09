@@ -227,6 +227,6 @@ https://asciiart.website/index.php?art=books/harry%20potter
 
 Erase everything on the screen using the `erase` function.
 
-```js
+```java
 erase();
 ```

@@ -69,10 +69,10 @@ Copy your GuessTheNumber code from CodePen and put it in `GuessTheNumber.java`
 
 Edit the `load.js` in your `quintos-games` project folder.
 
-```js
-QuintOS.username = 'your username';
-QuintOS.dir = 'games_java';
-QuintOS.gameTitle = 'GuessTheNumber';
+```
+QuintOS.username = "your username";
+QuintOS.dir = "games_java";
+QuintOS.gameTitle = "GuessTheNumber";
 ```
 
 Right click on `QuintOS_live.html` file and select `Open with Live Server`. You should see the calculator show up in your browser. 😄
@@ -239,7 +239,7 @@ This example code would print "The names array has 3 names" to the console.
 
 Check if an array contains a number by converting it to an ArrayList using `Arrays.asList` and then using the `contains` method. You'll learn what an ArrayList is in a future lessson.
 
-```js
+```java
 Intger num = 21;
 Arrays.asList(nums).contains(num);
 ```

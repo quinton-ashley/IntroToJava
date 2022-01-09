@@ -1,10 +1,6 @@
 # Level 06 A
 
-Before you can start working on the `TicTacToe` game, you'll have to prove your skills in Java.
-
-// TODO
-
-After you complete those challenges you can upgrade to level 6! 🥳
+Upgrade to level 6! 🥳
 
 ![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen4.jpg)
 
@@ -33,8 +29,8 @@ int doMyMathHomework(x, y) {
 	return x * x * y * y;
 }
 
-doMyMathHomework(1, 3); // returns 9
-doMyMathHomework(2, 5); // what does this return?
+int result0 = doMyMathHomework(1, 3); // returns 9
+int result1 = doMyMathHomework(2, 5); // what does this return?
 ```
 
 ## Two Dimensional Arrays

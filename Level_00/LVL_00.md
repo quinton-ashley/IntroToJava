@@ -274,14 +274,14 @@ Need to loop some code? Use a while loop! `if` statements run the code in their 
 
 Take a look at the following example. Imagine that the `pickACard` function returns a String with the name of the card taken from the top of the deck, such as "Two of Hearts" or "Nine of Clubs".
 
-```js
-let card; // no card picked yet
+```java
+String card; // no card picked yet
 
-while (card != 'Ace of Spades') {
+while (card.equals("Ace of Spades")) {
 	card = pickACard();
 }
 
-await alert('Found the Ace of Spades!');
+System.out.println("Found the Ace of Spades!");
 ```
 
 The while loop will loop until `card` is the Ace of Spades. What if the Ace of Spades wasn't in the deck though? Then every card in the deck will be picked until there are none left and then the program will keep trying to pick a card! This would result in an infinite loop, not good...
@@ -290,10 +290,10 @@ The while loop will loop until `card` is the Ace of Spades. What if the Ace of S
 
 If there are no cards left in the deck let's imagine the `pickACard` function would return `null`, a special value that means none. If there are no cards left in the deck, the Ace of Spades can not be found. The while loop condition would remain true forever, so the loop must be exited early by using the `break` keyword.
 
-```js
-let card;
+```java
+String card;
 
-while (card != 'Ace of Spades') {
+while (card.equals("Ace of Spades")) {
 	card = pickACard();
 
 	if (card == null) {
@@ -301,10 +301,10 @@ while (card != 'Ace of Spades') {
 	}
 }
 
-if (card == 'Ace of Spades') {
-	await alert('Found the Ace of Spades!');
+if (card.equals("Ace of Spades")) {
+	System.out.println("Found the Ace of Spades!");
 } else {
-	await alert('The Ace of Spades was not in the deck!');
+	System.out.println("The Ace of Spades was not in the deck!");
 }
 ```
 

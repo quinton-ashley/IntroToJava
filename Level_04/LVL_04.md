@@ -86,15 +86,15 @@ If `playerIsDead` gets set to `true` while the user is playing a game, then tell
 
 ```java
 if (playerIsDead == true) {
-	System.out.println('Game Over!');
+	System.out.println("Game Over!");
 }
 ```
 
 In Javascript you don't have to use `== true` in boolean conditions because checking for equivalence to `true` is implied. You can just put the variable in a boolean condition on it's own.
 
-```js
+```java
 if (playerIsDead) {
-	System.out.println('Game Over!');
+	System.out.println("Game Over!");
 }
 ```
 
@@ -143,6 +143,8 @@ String favColor = prompt("What is your favorite color?");
 alert(favColor + " is my favorite color too!"); // show message to user
 ```
 
+In a standard Java program `System.out.println` is used to print to the Java console, just a text output without the cool vintage computers (boring!).
+
 ## Changing the positions of prompts and alerts
 
 The position of prompt and alert windows can be changed by defining their row and column values just like with the `text` function.
@@ -165,12 +167,12 @@ The modulo operator `%` gets the gets the remainder of a division.
 ```java
 // true if x is even (divisible by 2)
 if (x % 2 == 0) {
-	System.out.println('x is even!');
+	System.out.println("x is even!");
 }
 
 // true if y is divisible by 5
 if (y % 5 == 0) {
-	System.out.println(y + ' is a multiple of 5');
+	System.out.println(y + " is a multiple of 5");
 }
 ```
 

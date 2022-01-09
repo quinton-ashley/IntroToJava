@@ -105,7 +105,7 @@ while (i < names.length) {
 } // in this loop i goes up from 0 to 1 to 3
 ```
 
-The code above prints out a numbered list of names in the JS console.
+The code above prints out a numbered list of names in the Java console.
 
 ```txt
 0. Jake
@@ -134,7 +134,7 @@ for (int i = 0; i < names.length; i++) {
 
 When the for loop starts `i` is set to 0, then is check the condtion. If the condition is true the for loop runs for the first time, this is called an iteration. When the for loop ends, the incrementor section of the for loop is run, in this case `i++` which increases the value of `i` by 1. The condition is checked again, if true the for loop will repeat again, doing another iteration. Until the condition is false the for loop will continue to repeat.
 
-The code above prints out a numbered list of names in the JS console.
+The code above prints out a numbered list of names in the Java console.
 
 ```txt
 1. Jake

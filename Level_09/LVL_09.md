@@ -11,8 +11,8 @@ https://p5js.org/examples/sound-load-and-play-sound.html
 You can make a callback function for when a sprite bounces off another sprite.
 
 ```java
-ball.bounce(paddle, () => {
-	log("ball bounced!");
+ball.bounce(paddle, () -> {
+	System.out.println("ball bounced!");
 });
 ```
 
@@ -38,7 +38,7 @@ for (int i = 0; i < 8; i++) {
 	if (i > 5) {
 		break;
 	}
-	log(i);
+	System.out.println(i);
 }
 ```
 

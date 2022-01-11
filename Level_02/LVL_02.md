@@ -77,15 +77,6 @@ It's a simple yellow and black smiley face image. 😃
 
 Note that you don't have to complete the width of each line with transparent pixels, you can just leave it blank.
 
-## Repeat
-
-To more easily create large Strings you can use a String function called repeat.
-
-```java
-String pattern = '><'.repeat(4);
-// pattern -> '><><><><';
-```
-
 ## p5.play Sprites
 
 To make Pong you'll need to have the ball move and bounce off the paddles. To acheive this use sprites!
@@ -112,12 +103,28 @@ Here's what you learned about in Level 2:
 
 - Processing basics
 - the `spriteArt` function
-- the `repeat` String function
 - how to create sprites and position them
 
 # Level 02 B
 
-# Level 02 B
+## spriteArt scaling
+
+```java
+PImage face = spriteArt(str, 2);
+```
+
+Multiple input parameters can be given to some functions. Input parameters are seperated by commas. The second input parameter to the `spriteArt` function is an optional scale value. By default each character in the string will be one pixel in the resulting image. If you change the scale to 2 then each character in the string will be represented by 4 pixels! This is useful for making larger images.
+
+## String.repeat(amount)
+
+To more easily create large Strings you can use a String function called [repeat](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
+
+```java
+String pattern = "><".repeat(4);
+// pattern -> "><><><><";
+```
+
+# Level 02 C
 
 Checking for intersections between the ball and paddle is harder because they are both moving objects.
 
@@ -147,7 +154,7 @@ ball.bounce(paddle);
 By default when sprites bounce of each other both objects will move. To prevent this, set the sprite to be immovable when another sprite bounces on it.
 
 ```java
-sprite.immovable = true;
+paddle.immovable = true;
 ```
 
 ## colorPal
@@ -158,6 +165,63 @@ sprite.immovable = true;
 background(colorPal("r"));
 ```
 
+# Level 02 D
+
+## Responding to key presses
+
+The `keyPressed` is a Processing function that is run whenever a key is pressed.
+
+```java
+void draw() {}
+void keyPressed() {
+	if (key == 'q') {
+		System.out.println("The q key was pressed!");
+	}
+}
+```
+
+Implement `keyPressed` outside the `draw` function.
+
+## Checking if a key is held
+
+```java
+void draw() {
+	if (keyIsDown("ArrowLeft")) {
+		player.x -= 2; // move the player left by 2 pixels
+	}
+	if (keyIsDown("ArrowRight")) {
+		player.x += 2; // move the player right by 2 pixels
+	}
+}
+```
+
+## Drawing text to the screen
+
+Text can be displayed on screen at a given text row and column.
+
+```java
+//  (text         , row, col)
+text("Hello World!", 10, 12);
+```
+
+## Level 02 E
+
+## Processing Java fill, stroke, and rect
+
+This example `draw` function draws a black background and then a blue rectangle with a red stroke (outline). The `colorPal` function can be use it inside p5.js functions like `background`, `fill`, and `stroke` that expect a color.
+
+```java
+void draw() {
+	background(colorPal('b'));
+
+	fill(colorPal('u'));
+	stroke(colorPal('r'));
+
+	//  ( x,  y,  w,  h)
+	rect(10, 20, 15, 55);
+}
+```
+
 ## Computer History: ZX Spectrum
 
 Excerpt from the last paragraph of Chapter 1 of "ZX81 BASIC PROGRAMMING" by Stephen Vickers:
@@ -166,19 +230,28 @@ Excerpt from the last paragraph of Chapter 1 of "ZX81 BASIC PROGRAMMING" by Step
 
 This level's computer is based on the ZX Spectrum, an 8-bit personal home computer developed by Sinclair Research. It was first released in the United Kingdom on the 23rd of April 1982 and went on to become Britain's best-selling microcomputer. Watch some of this video to hear what it was like for people to use the ZX Spectrum back then!
 
+https://youtu.be/nRlmTiynbd8?t=242
+
 - [Level 02 A](#level-02-a)
   - [What is Processing?](#what-is-processing)
   - [Creating functions 👷](#creating-functions-)
   - [Processing Basics](#processing-basics)
   - [spriteArt](#spriteart)
   - [Making Strings with Triple Quotes](#making-strings-with-triple-quotes)
-  - [Repeat](#repeat)
   - [p5.play Sprites](#p5play-sprites)
   - [End of Level 02 A](#end-of-level-02-a)
 - [Level 02 B](#level-02-b)
-- [Level 02 B](#level-02-b-1)
+  - [spriteArt scaling](#spriteart-scaling)
+  - [String.repeat(amount)](#stringrepeatamount)
+- [Level 02 C](#level-02-c)
   - [Vectors](#vectors)
   - [Bounces](#bounces)
   - [Immovable objects](#immovable-objects)
   - [colorPal](#colorpal)
+- [Level 02 D](#level-02-d)
+  - [Responding to key presses](#responding-to-key-presses)
+  - [Checking if a key is held](#checking-if-a-key-is-held)
+  - [Drawing text to the screen](#drawing-text-to-the-screen)
+  - [Level 02 E](#level-02-e)
+  - [Processing Java fill, stroke, and rect](#processing-java-fill-stroke-and-rect)
   - [Computer History: ZX Spectrum](#computer-history-zx-spectrum)

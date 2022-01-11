@@ -36,24 +36,6 @@ In the example code `a` is the names of the variable. `a` is assigned the number
 
 Use a semicolon `;` to end each line of code. 👁👅👁
 
-### Changing a variable's value
-
-Don't create variables twice!
-
-```java
-int x = 10;
-int x = 5; // ERROR! x already exists
-```
-
-Here's how to change the value of the variable `x`
-
-```java
-int x = 10;
-x = 5; // good :)
-```
-
-Double slash `//` is for making a comment, any text behind it on the same line will not be considered part of the code's instructions.
-
 ## Types of Variables 🔡
 
 ### Numbers
@@ -90,10 +72,10 @@ Strings are text, stored as lists of characters. You can think of them like lett
 String story = "The dog went to the dog park on 3rd Avenue.";
 ```
 
-If you don't use quotes, Java will think the words are variables!
+ERROR! If you don't use quotes, Java will think the words are variables!
 
 ```java
-String story = The dog went to the dog park on 3rd Avenue.; // ERROR!
+String story = The dog went to the dog park on 3rd Avenue.;
 ```
 
 ## Camel Case 🐫
@@ -105,6 +87,24 @@ String apple = "🍎";
 String applePie = "🍎 π";
 String applePieIceCream = "🍎 π 🍨";
 ```
+
+### Changing a variable's value
+
+Don't create variables twice!
+
+```java
+int x = 10;
+int x = 5; // ERROR! x already exists
+```
+
+Here's how to change the value of the variable `x`
+
+```java
+int x = 10;
+x = 5; // good :)
+```
+
+Double slash `//` is for making a comment, any text behind it on the same line will not be considered part of the code's instructions. Comments are used to describe what is happening in the code. You might want to make comments so other people can understand your programs or so that you can understand it yourself in case you forget what you did.
 
 ## Mathematical operators 🔢
 
@@ -155,7 +155,6 @@ if (value == 1.00) {
 
 ```txt
 Equivalence:              ==
-Not equal:                !=
 Less than:                <
 Less than or equal to:    <=
 Greater than:             >
@@ -180,11 +179,11 @@ This code for a robot remote control makes the robot power on, turn to the left,
 
 ## Globals 🌐
 
-Globals are special variables that are already available for you to use. You can also create global variables yourself but we'll learn how to do that later.
+Globals are special variables that are already available for you to use as part of the Java language.
 
 ## System
 
-`System` is an important global variable. Use `System.out.println()` to display text to the user. Usually this would make text appear in the console but with QuintOS the text will appear in an alert window.
+`System` is an important global variable. Use `System.out.println()` to display text to the user. Usually this would make text appear in the standard output (just a list of any text printed out) but with QuintOS the text will appear on a virtual computer in an alert window.
 
 ## Scanner
 
@@ -202,7 +201,7 @@ String favColor = sc.nextLine();
 System.out.println(favColor + " is my favorite color too!");
 ```
 
-With QuintOS, printing to the console using `System.out` and then using a Scanner object to get user input will cause a prompt window to appear.
+With QuintOS, printing to the console using `System.out` and then using a Scanner object to get user input will cause a prompt window to appear on the virtual computer.
 
 ## End of Level 00 A
 
@@ -228,8 +227,8 @@ At this point you should also know about the global object [Math](https://docs.o
 // Math.random() returns a random decimal number between 0 and 1 (not including 1)
 double x = Math.random(); // x could be .2364 or .928279 or 0.45398, it's random!
 
-Math.round(30.1); // -> 30
-Math.round(30.7); // -> 31
+double a = Math.round(30.1); // -> 30
+double b = Math.round(30.7); // -> 31
 // Math.round() rounds the number to the nearest integer
 
 double y = Math.floor(22.9); // y -> 22 (y gets assigned the value 22)
@@ -240,14 +239,14 @@ double z = Math.ceil(15.3); // z -> 16
 
 // casting to int forces a decimal number to become an int
 // drops the decimal (effectively rounding down)
-int casted = (int) (39.8); // casted -> 39
+int castedValue = (int) (39.8); // casted -> 39
 ```
 
 # Level 00 C
 
 ## Scopes
 
-Note that if you declare a variable in a code block it will only be available from the beginning to the end of the block. This is the scope of a variable.
+Note that if you declare a variable in a code block it will only be available from the beginning to the end of the block. This is the scope of a variable. The code block/scope begins with this opening squiggly bracket (aka curly brace) `{` and ends with a closing squiggly bracket `}`
 
 ```java
 if (orderNumber == 163) {
@@ -308,7 +307,7 @@ if (card.equals("Ace of Spades")) {
 }
 ```
 
-## End of Level 00 B
+## End of Level 00 C
 
 Here's a summary of everything we learned about:
 
@@ -327,13 +326,13 @@ This level's computer was inspired by the Casio FX-720P, which could run program
   - [What is Computer Science?](#what-is-computer-science)
   - [What is QuintOS?](#what-is-quintos)
   - [Creating Variables 🔡](#creating-variables-)
-    - [Changing a variable's value](#changing-a-variables-value)
   - [Types of Variables 🔡](#types-of-variables-)
     - [Numbers](#numbers)
     - [Boolean](#boolean)
     - [Characters](#characters)
     - [String](#string)
   - [Camel Case 🐫](#camel-case-)
+    - [Changing a variable's value](#changing-a-variables-value)
   - [Mathematical operators 🔢](#mathematical-operators-)
   - [Checking Equivalence ✅](#checking-equivalence-)
   - [Boolean operators 🐰](#boolean-operators-)
@@ -348,5 +347,5 @@ This level's computer was inspired by the Casio FX-720P, which could run program
   - [Scopes](#scopes)
   - [while loops](#while-loops)
   - [Breaking out of a loop early](#breaking-out-of-a-loop-early)
-  - [End of Level 00 B](#end-of-level-00-b)
+  - [End of Level 00 C](#end-of-level-00-c)
   - [Computer History: Casio FX-720P](#computer-history-casio-fx-720p)

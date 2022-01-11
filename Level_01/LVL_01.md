@@ -93,7 +93,7 @@ something"; // ERROR!
 To put part of a String on a newline use `\n` the newline character.
 
 ```java
-String example = 'I want to put something on a new line:\nsomething';
+String example = "I want to put something on a new line:\nsomething";
 ```
 
 ```txt
@@ -104,8 +104,8 @@ something
 The tab character `\t`, note that the `+` operator is used to add another String to the list on a new line in the JavaScript code.
 
 ```java
-String list = 'Grocery list:\n\n\t'
-	+ "Apples\n\tOranges\n\tBananas';
+String list = "Grocery list:\n\n\t"
+	+ "Apples\n\tOranges\n\tBananas";
 ```
 
 ```txt
@@ -225,6 +225,17 @@ String[] names = new String[]{"Amy", "Ellie", "Max"};
 Integer[] nums = new Integer[]{50, 21, 46, 83};
 ```
 
+## Array contains
+
+Check if an array contains a number by converting it to an ArrayList using `Arrays.asList` and then using the `contains` method. You'll learn what an ArrayList is in a future lessson.
+
+```java
+Intger num = 21;
+if (Arrays.asList(nums).contains(num)) {
+  // ...
+}
+```
+
 ## Array length
 
 length is a property of Array accessed using a period `.`
@@ -235,20 +246,12 @@ System.out.println("The names array has " + names.length + " names");
 
 This example code would print "The names array has 3 names" to the console.
 
-## Array contains
-
-Check if an array contains a number by converting it to an ArrayList using `Arrays.asList` and then using the `contains` method. You'll learn what an ArrayList is in a future lessson.
-
-```java
-Intger num = 21;
-Arrays.asList(nums).contains(num);
-```
-
 ## End of Level 01 C
 
 You learned how to:
 
 - create Arrays
+- how to check if something is included in an array
 - get the amount of items in an array using `.length`
 
 ## Computer History: Commodore PET
@@ -278,7 +281,7 @@ PETSCII character set: <https://style64.org/petscii/>
   - [End of Level 01 B](#end-of-level-01-b)
   - [Level 01 C](#level-01-c)
   - [Arrays](#arrays)
-  - [Array length](#array-length)
   - [Array contains](#array-contains)
+  - [Array length](#array-length)
   - [End of Level 01 C](#end-of-level-01-c)
   - [Computer History: Commodore PET](#computer-history-commodore-pet)

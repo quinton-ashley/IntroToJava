@@ -75,15 +75,9 @@ for (int i = 0; i < rows; i++) {
 
 How could we use a nested for loop to clear the board of all the pieces by assigning a blank space ' ' to every element in the `board` array?
 
-## End of Level 06 A
-
-- 2d Arrays
-- nested for loops
-
 - [Level 06 A](#level-06-a)
 	- [Coding Philosophy: Using functions effectively](#coding-philosophy-using-functions-effectively)
 	- [Return variables from a function](#return-variables-from-a-function)
 	- [Creating functions with input parameters](#creating-functions-with-input-parameters)
 	- [Two Dimensional Arrays](#two-dimensional-arrays)
 	- [Nested for loops](#nested-for-loops)
-	- [End of Level 06 A](#end-of-level-06-a)

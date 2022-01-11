@@ -9,7 +9,6 @@ In your `games_java` directory make a new folder `ClickAPath` and new file `Clic
 Add these lines to the beginning of the file after the package declaration to import QuintOS:
 
 ```java
-import games_java.QuintOS.*;
 import static games_java.QuintOS.*;
 ```
 

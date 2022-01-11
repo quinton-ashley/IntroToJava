@@ -51,37 +51,14 @@ let gumball = {
 };
 ```
 
-## for in loops
-
-`for in` loop iterates through the indexes/keys of an array or object.
-
-```js
-let list = {
-	apples: 2,
-	bananas: 10,
-	pears: 4
-};
-for (let item in list) {
-	console.log('I need to get ' + list[item] + ' ' + item + '!');
-}
-```
-
-Result:
-
-```txt
-I need to get 2 apples!
-I need to get 10 bananas!
-I need to get 4 pears!
-```
-
 ## for of loops
 
 `for of` loops iterate through the values of an array or object.
 
-```js
-let names = ['Jake', 'Ali', 'Max'];
-for (let name of names) {
-	console.log('Hello ' + name);
+```java
+String[] names = new String[] {"Jake", "Ali", "Max"};
+for (String name : names) {
+	System.out.println("Hello " + name);
 }
 ```
 
@@ -99,8 +76,12 @@ Hello Ben
 
 Up to this point whenever we worked with inputs we used `prompt()`, now we're going to be using inputs directly.
 
-```js
-let inp = input(value, x, y, onSubmit, onChange);
+```java
+Input inp = input(value, x, y, () -> {
+		onSubmit();
+	}, () -> {
+		onChange();
+	});
 ```
 
 `inp` is the the `Input` object created, cursor blinking on the screen at position (x, y).
@@ -115,14 +96,14 @@ let inp = input(value, x, y, onSubmit, onChange);
 
 Here's the code for the Calculator that runs after you exit the GuessTheNumber game. Load the calculator and check it out.
 
-```js
-let inp;
+```java
+Input inp;
 
 // value is the text the user entered in the input
-function calculate(value) {
+void calculate(value) {
 	// eval() is a global function that evaluates the String input value as
 	// JavaScript code, for example if value is "5+3", result will be the number 8
-	let result = eval(value); // evaluate what the user entered
+	double result = eval(value); // evaluate what the user entered
 
 	inp.erase(); // erase the old input
 
@@ -140,21 +121,21 @@ inp = input('', 0, 0, calculate);
 
 If you try playing two sounds, one after the other like this it will not work!
 
-```js
+```java
 sound0.play();
 sound1.play();
 ```
 
 Both sounds will be played at the same time! You have to use the `onended` function to be able to tell when the first sound has finished playing. `.onended(callback)` takes a callback function, the function is run aka "called" when the sound file stops playing.
 
-```js
+```java
 sound0.play();
-sound0.onended(() => {
+sound0.onended(() -> {
 	sound1.play();
 });
 ```
 
-Inside `onended` you can either put the name of a function to call or an anonymous function. In this example an anonymous function, a function that isn't given a name is used. Note that it uses the arrow `=>` syntax instead of the `function` keyword.
+Inside `onended` you can either put the name of a function to call or an anonymous function. In this example an anonymous function, a function that isn't given a name is used. Note that it uses the arrow lambda `->` syntax instead of the `function` keyword.
 
 # Level 11 D
 
@@ -259,16 +240,15 @@ async function playAllLetters() {
 This level's computer is based on the classic children's toy from the 1980s, the electronic [Speak and Spell](<https://en.wikipedia.org/wiki/Speak_%26_Spell_(toy)>) made by Texas Instruments.
 
 - [Level 11 A](#level-11-a)
-  - [Loading Sounds](#loading-sounds)
-  - [Creating Objects](#creating-objects)
-  - [for in loops](#for-in-loops)
-  - [for of loops](#for-of-loops)
+	- [Loading Sounds](#loading-sounds)
+	- [Creating Objects](#creating-objects)
+	- [for of loops](#for-of-loops)
 - [Level 11 B](#level-11-b)
-  - [Working with Inputs directly](#working-with-inputs-directly)
-  - [Example use of Inputs](#example-use-of-inputs)
+	- [Working with Inputs directly](#working-with-inputs-directly)
+	- [Example use of Inputs](#example-use-of-inputs)
 - [Level 11 C](#level-11-c)
-  - [Callback Chaining](#callback-chaining)
+	- [Callback Chaining](#callback-chaining)
 - [Level 11 D](#level-11-d)
-  - [Promises](#promises)
-  - [Promisfied p5.js Sound](#promisfied-p5js-sound)
-  - [Computer History: Speak and Spell](#computer-history-speak-and-spell)
+	- [Promises](#promises)
+	- [Promisfied p5.js Sound](#promisfied-p5js-sound)
+	- [Computer History: Speak and Spell](#computer-history-speak-and-spell)

@@ -4,11 +4,11 @@ Pick a Path stories, also known as [Choose your own Adventures](https://en.wikip
 
 ## Setup
 
-Copy the `PickAPath` folder into your `GAMES` directory. Start coding in the `pickAPath.js` file.
+Copy the `PickAPath` folder into your `GAMES` directory. Start coding in the `PickAPath.java` file.
 
 ## Instructions for PART A
 
-Note that prompt will return `null` instead of what the user enters if they press cancel. That's why this game's `while` loop condition is `choice != null`.
+Note that the prompt will return `null` instead of what the user enters if they press cancel. That's why this game's `while` loop condition is `choice != null`.
 
 Use formatting characters tab `\t` and newline `\n`
 

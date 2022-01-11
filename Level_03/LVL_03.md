@@ -87,6 +87,10 @@ animal[8] = 'b'; // error
 
 Strings are immutable, meaning individual characters in the String can not be changed.
 
+## End of Level 03 B
+
+# Level 03 C
+
 ## Counting with while loops
 
 The number of loops a while loop does can be counted with a variable.
@@ -114,9 +118,7 @@ The code above prints out a numbered list of names in the Java console.
 3. Cam
 ```
 
-## End of Level 03 B
-
-# Level 03 C
+# Level 03 D
 
 ## for loops
 
@@ -185,9 +187,10 @@ https://www.youtube.com/watch?v=CxJwy8NsXFs
 	- [Getting String input from the user](#getting-string-input-from-the-user)
 	- [Accessing items in an Array](#accessing-items-in-an-array)
 	- [Accessing characters in a String](#accessing-characters-in-a-string)
-	- [Counting with while loops](#counting-with-while-loops)
 	- [End of Level 03 B](#end-of-level-03-b)
 - [Level 03 C](#level-03-c)
+	- [Counting with while loops](#counting-with-while-loops)
+- [Level 03 D](#level-03-d)
 	- [for loops](#for-loops)
 	- [String equals](#string-equals)
 	- [Computer History: Apple II](#computer-history-apple-ii)

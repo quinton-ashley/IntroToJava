@@ -16,7 +16,7 @@ After the player clicks a button it should get erased. Do not attempt to erase a
 
 ## Instructions for PART C
 
-Place an alert window with instructions in the middle of the screen.
+Before the game starts be sure to tell the user how to play. Place an alert window with instructions in the middle of the screen.
 
 After the player clicks 10 buttons, show the user some results regarding how fast they clicked the buttons. To find the speed at which they click between buttons you'll first need to create an array of times. Track how fast it takes the player to click the button using `Instant.now().toEpochMilli()`. Each time they click a button add the current time in milliseconds to the array of times. HINT: Make an array called `times` of type `long` with a size of 10 to store the times. Use a counter variable to keep track of how many times the player has clicked the button.
 
@@ -40,8 +40,8 @@ Add a background pattern to the game that should cover the entire space within t
 Remember! You can use the `repeat` String function
 
 ```java
-String pattern = '><'.repeat(4);
-// pattern -> '><><><><';
+String pattern = "><".repeat(4);
+// pattern -> "><><><><";
 ```
 
 Try making a cool geometric pattern like this! HINT: use the modulo operator to make alternating lines

@@ -421,8 +421,10 @@ String[] speech = new String[] {
 
 /* PART A0: Load all the letter sounds and apostrophe */
 
-// example loading the "spell" sound
-PSound letterSoundA = loadSound(QuintOS.dir + "/sounds/letters/A.mp3");
+void preload() {
+	// example loading the "spell" sound
+	SoundFile letterSoundA = loadSound(QuintOS.dir + "/sounds/letters/A.mp3");
+}
 
 Input inp;
 
@@ -450,4 +452,6 @@ void startGame() {
 	nextWord();
 }
 
-startGame();
+void setup() {
+	startGame();
+}

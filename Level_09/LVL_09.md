@@ -2,9 +2,19 @@
 
 ## Loading and Playing Sounds
 
-Load and play sounds using p5.js sound:
+Example code for playing a jump sound when the player jumps:
 
-https://p5js.org/examples/sound-load-and-play-sound.html
+```java
+void preload() {
+	SoundFile jumpSound = loadSound('/sounds/jumpSound_92.mp3');
+}
+
+void keyPressed() {
+	if (key == ' ') {
+		jumpSound.play();
+	}
+}
+```
 
 ## bounce callback
 

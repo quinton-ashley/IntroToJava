@@ -21,8 +21,6 @@ button("Click me!", 5, 5, () -> {
 });
 ```
 
-# Level 04 B
-
 ## Recursion
 
 Recursion is when a function calls itself. It's another way to loop code in addition to for loops and while loops.
@@ -48,6 +46,8 @@ void doRecursion() {
 	}
 }
 ```
+
+# Level 04 B
 
 ## Erasing a button
 
@@ -189,8 +189,8 @@ Originally developed for business executives, GRiDs were also used by the U.S. m
 
 - [Level 04 A](#level-04-a)
 	- [Creating a Button](#creating-a-button)
-- [Level 04 B](#level-04-b)
 	- [Recursion](#recursion)
+- [Level 04 B](#level-04-b)
 	- [Erasing a button](#erasing-a-button)
 	- [Implied boolean conditions](#implied-boolean-conditions)
 	- [How to check if a variable is defined](#how-to-check-if-a-variable-is-defined)

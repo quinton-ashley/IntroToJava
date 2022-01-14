@@ -15,7 +15,7 @@ public class QuickClicks {
 	// so the first line of the button will be at the proper
 	// row value
 
-	public QuickClicks() {
+	void makeButton() {
 		/* PART A0: change the values of row and col to be random */
 		// screen size is 80 cols x 30 rows
 		// target is 8w x 6h
@@ -33,6 +33,10 @@ public class QuickClicks {
 		/* PART C: Limit clicks to 20, calculate stats */
 
 		/* PART D: Make a background pattern */
+	}
+
+	public QuickClicks() {
+		makeButton();
 	}
 
 	public static void main(String[] args) {

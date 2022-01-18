@@ -1,26 +1,22 @@
 # Level 00 A
 
+# Level 00 A
+
 ## What is Computer Science?
 
 Why is this field of study called "Computer Science" and not "Program Writing" or "Code Mathematics"? It's because coding requires research and experimentation! You'll often need to test your programs to learn from unexpected errors, then make changes to get the results you want.
 
-These lessons will teach you how to code in Java, which is required for the AP Computer Science A curriculum. You will have to memorize some vocabulary, grammar, and syntax to learn this new language. However, learning to code isn't what programming is all about, you will also learn how to think like a programmer!
-
-In the 21st century, even if you don't want to become a professional programmer, it is valuable to study Computer Science. Unlike in Hollywood movies, which depict programmers as super genius nerds, in reality anyone can learn how to code! You don't even have to be good at or enjoy Math. You'll be able to use your programming skills to do many things: create art, make robots, design websites, do scientific research, help run a business, develop apps, etc.
-
-Learning to program will change the way you view the world by improving your logical reasoning and abstract problem solving skills. Programming has a language arts aspect too. You will not only strive to write efficient code for the computer but also code that can be easily understood by other programmers.
+These lessons will teach you how to code in Java as part of the AP Computer Science A curriculum. You will have to memorize some vocabulary, grammar, and syntax to learn this new language. However, learning to code isn't what programming is all about, you will also learn how to think like a programmer! Learning to program will improve your logical reasoning and abstract problem solving skills. Programming has a language arts aspect too. You will not only strive to write efficient code for the computer but also code that can be easily understood by other programmers.
 
 ## What is QuintOS?
 
-Issac Newton once said, "we stand on the shoulders of giants", millions of programmers and computer engineers have done incredible work over several decades for you to be able to write programs using the advanced modern programming languages we have today like Java. To understand how software is developed today it's important to learn a bit about the history of computers.
+The famous 17th century scientist, Issac Newton, once said, "we stand on the shoulders of giants". To understand how software is developed today it's important to learn a bit about the history of computers.
 
 If you signed up for this course you might want to know how video games work and how to make your own! If not, making games will hopefully be a fun way for you to learn how to code.
 
-QuintOS is a retro game engine I created for this course. During each lesson you'll develop a QuintOS game that runs on virtual computers displayed in your web browser: Google Chrome, Firefox, or Opera. As you level up your coding skills, your virtual computer will get upgraded. Since you're just starting out, the first game you make will be for... a programmable calculator. 😜
+QuintOS is a retro game engine I created for this course. During each lesson you'll develop a QuintOS game that runs on virtual computers displayed in your web browser: Google Chrome, Firefox, or Opera. As you level up your coding skills, the virtual computer will get upgraded too. Since you're just starting out, the first game you make will be for... a programmable calculator. 😜
 
 ![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen0.jpg)
-
-You might like to know, "How long will it take to become an expert programmer?". Well, just like any other skill, programming can take many years to master. I will say that if you finish this course, you will have a very good understanding of Java.
 
 This first lesson will require you to learn a lot of information before we can even make a simple game. It may be a bit overwhelming for you but don't worry! You'll get a lot of practice with these concepts so that you will fully understand them. Let's get started! 🥳
 
@@ -283,39 +279,6 @@ while (card.equals("Ace of Spades")) {
 System.out.println("Found the Ace of Spades!");
 ```
 
-The while loop will loop until `card` is the Ace of Spades. What if the Ace of Spades wasn't in the deck though? Then every card in the deck will be picked until there are none left and then the program will keep trying to pick a card! This would result in an infinite loop, not good...
-
-## Breaking out of a loop early
-
-If there are no cards left in the deck let's imagine the `pickACard` function would return `null`, a special value that means none. If there are no cards left in the deck, the Ace of Spades can not be found. The while loop condition would remain true forever, so the loop must be exited early by using the `break` keyword.
-
-```java
-String card;
-
-while (card.equals("Ace of Spades")) {
-	card = pickACard();
-
-	if (card == null) {
-		break; // exit the while loop
-	}
-}
-
-if (card.equals("Ace of Spades")) {
-	System.out.println("Found the Ace of Spades!");
-} else {
-	System.out.println("The Ace of Spades was not in the deck!");
-}
-```
-
-## End of Level 00 C
-
-Here's a summary of everything we learned about:
-
-- more about code blocks/scopes `{}`
-- `while` loops, used to repeat a code block
-- `null`, a special value that means none or nothing
-- `break`, a keyword used to exit a loop early
-
 ## Computer History: Casio FX-720P
 
 This level's computer was inspired by the Casio FX-720P, which could run programs in a programming language called BASIC. Portable programmable calculators were limited by their small button keyboards and display limitations, but when slotted into a dock that had little printer, they could be used to print out graphs and many lines of text. The calculator could also load programs from tape cassettes.
@@ -323,6 +286,7 @@ This level's computer was inspired by the Casio FX-720P, which could run program
 <https://youtu.be/d3NIe1jTZMc?t=760>
 
 - [Level 00 A](#level-00-a)
+- [Level 00 A](#level-00-a-1)
   - [What is Computer Science?](#what-is-computer-science)
   - [What is QuintOS?](#what-is-quintos)
   - [Creating Variables 🔡](#creating-variables-)
@@ -346,6 +310,4 @@ This level's computer was inspired by the Casio FX-720P, which could run program
 - [Level 00 C](#level-00-c)
   - [Scopes](#scopes)
   - [while loops](#while-loops)
-  - [Breaking out of a loop early](#breaking-out-of-a-loop-early)
-  - [End of Level 00 C](#end-of-level-00-c)
   - [Computer History: Casio FX-720P](#computer-history-casio-fx-720p)

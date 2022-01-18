@@ -158,17 +158,40 @@ String fruitColor;
 if (fruit.equals("banana")) {
 	// set the fruitColor to yellow
 	fruitColor = "yellow";
-} else if (fruit.equals("pear")) {
-	// else if the fruit is a pear, set the fruitColor to green
-	fruitColor = "green";
-} else if (fruit.equals("orange")) {
-	fruitColor = "orange";
-} else if (fruit.equals("grape")) {
-	fruitColor = "purple";
+}
+```
+
+## Breaking out of a loop early
+
+Take a look at this example code that searches for the Ace of Spades in a deck of cards.
+
+```js
+let card; // no card picked yet
+
+while (card != 'Ace of Spades') {
+	card = pickACard();
+}
+
+await alert('Found the Ace of Spades!');
+```
+
+If there are no cards left in the deck, the Ace of Spades can not be found. The while loop would keep looping infinitely! Let's imagine the `pickACard` function would return `null`, a special value that means none if there are no cards left in the deck. The while loop condition would remain true forever, so the loop must be exited early by using the `break` keyword.
+
+```java
+String card;
+
+while (!card.equals("Ace of Spades")) {
+	card = pickACard();
+
+	if (card == null) {
+		break; // exit the while loop
+	}
+}
+
+if (card.equals("Ace of Spades")) {
+	System.out.println("Found the Ace of Spades!");
 } else {
-	// else the fruit was not a banana, pear, orange, or grape
-	// the fruitColor is unknown
-	fruitColor = "unknown";
+	System.out.println("The Ace of Spades was not in the deck!");
 }
 ```
 
@@ -193,4 +216,5 @@ https://www.youtube.com/watch?v=CxJwy8NsXFs
 - [Level 03 D](#level-03-d)
 	- [for loops](#for-loops)
 	- [String equals](#string-equals)
+	- [Breaking out of a loop early](#breaking-out-of-a-loop-early)
 	- [Computer History: Apple II](#computer-history-apple-ii)

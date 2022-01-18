@@ -419,20 +419,22 @@ String[] speech = new String[] {
 	"you_win"
 };
 
+Input inp;
+SoundFile letterSoundA;
+
 /* PART A0: Load all the letter sounds and apostrophe */
 
 void preload() {
 	// example loading the "spell" sound
-	SoundFile letterSoundA = loadSound(QuintOS.dir + "/sounds/letters/A.mp3");
+	letterSoundA = loadSound(QuintOS.dir + "/sounds/letters/A.mp3");
+	letterSoundA.setVolume(0.3);
 }
 
-Input inp;
-
 // value is the text the user entered in the input
-void onSubmit(value) {}
+void onSubmit(String value) {}
 
 // called everytime the user enters text in the input
-void onChange(value) {
+void onChange(String value) {
 	letterSoundA.play(); // example plays letter A sound
 }
 
@@ -440,18 +442,21 @@ void nextWord() {
 	erase(); // erase the screen
 
 	// create the input for letters
-	inp = input('', 0, 0, () -> {
-		onSubmit();
+	inp = input("", 0, 0, () -> {
+		this.onSubmit();
 	}, () -> {
-		onChange();
+		this.onChange();
 	});
 }
 
 void startGame() {
-	alert('Press enter to start');
+	alert("Press enter to start");
 	nextWord();
 }
 
 void setup() {
 	startGame();
+}
+
+void draw() {
 }

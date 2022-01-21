@@ -272,7 +272,7 @@ Take a look at the following example. Imagine that the `pickACard` function retu
 ```java
 String card; // no card picked yet
 
-while (card.equals("Ace of Spades")) {
+while (!card.equals("Ace of Spades")) {
 	card = pickACard();
 }
 

@@ -174,8 +174,8 @@ The `keyPressed` is a Processing function that is run whenever a key is pressed.
 ```java
 void draw() {}
 void keyPressed() {
-	if (key == 'q') {
-		System.out.println("The q key was pressed!");
+	if (key == 'ArrowRight') {
+		System.out.println("The right arrow key was pressed!");
 	}
 }
 ```
@@ -186,10 +186,10 @@ Implement `keyPressed` outside the `draw` function.
 
 ```java
 void draw() {
-	if (keyIsDown("ArrowLeft")) {
+	if (keyIsDown(LEFT_ARROW)) {
 		player.x -= 2; // move the player left by 2 pixels
 	}
-	if (keyIsDown("ArrowRight")) {
+	if (keyIsDown(RIGHT_ARROW)) {
 		player.x += 2; // move the player right by 2 pixels
 	}
 }

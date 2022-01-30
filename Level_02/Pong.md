@@ -24,15 +24,15 @@ Make the ball bounce off the walls. To easily test your code for this, make the 
 
 Use the ball's velocity property to move it instead of changing it's x and y values. When you change the x and y velocities of the ball then the p5.play `drawSprites` function will change its position.
 
-Make the ball bounce off the paddles. You can implement checking for the bounce yourself or use the p5.play `bounce` function.
+Make the ball bounce off the paddles. As a challenge you can implement the bounce yourself or use the p5.play `bounce` function.
 
 Place the ball back in the middle of the screen when it goes off the edge of the screen.
 
-When the ball is served make it go away from the player that lost the ball. Make the ball move in a diagonal, have it be random whether it goes up or down, don't let it go straight left and right.In level 9 you'll learn how to make the ball move at different angles without changing its total speed.
+When the ball is served make it go away from the player that lost the ball. Make the ball move in a diagonal, have it be random whether it goes up or down, don't let it go straight left and right. In level 9 you'll learn how to make sprites move at different angles without changing their total speed.
 
 ## Instructions for PART D
 
-Implement key controls to enable two players to play your Pong game.
+Implement key controls to enable two players to play your Pong game. Don't let players move the paddles off the screen.
 
 Show the score on screen at all times. HINT: Use the `text` function
 

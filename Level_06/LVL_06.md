@@ -20,12 +20,14 @@ int gimmeFive() {
 int upHigh = gimmeFive() + gimmeFive();
 ```
 
+Note that the function's return type is `int`.
+
 ## Creating functions with input parameters
 
 function with input parameters x and y, returns the value of x^2 \* y^2
 
 ```java
-int doMyMathHomework(x, y) {
+int doMyMathHomework(int x, int y) {
 	return x * x * y * y;
 }
 
@@ -39,7 +41,7 @@ A two dimensional array (aka 2D array) is an array of arrays.
 
 ```java
 // red and black checkers on a checkerboard
-char[][] board = new char[]{
+char[][] board = new char[][] {
 	new char[]{' ', ' ', ' ', 'r', ' ', 'B', ' ', ' '},
 	new char[]{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
 	new char[]{' ', ' ', ' ', ' ', ' ', ' ', ' ', 'r'},

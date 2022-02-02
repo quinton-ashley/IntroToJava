@@ -4,19 +4,21 @@
 
 ## Instructions for PART A
 
-Split the `words` String into an array of words, assign the array to the `words` variables. HINT: use the `split` String function.
+Split the `wordsList` String into an array of words, call it `words`. HINT: use the `split` String function.
 
 Pick a random word from the array of words. HINT: Remember `.length` can be use to get the length of an array. Reference your use of `Math.random()` and `Math.floor(x)` in the GuessTheNumber game.
 
 ## Instructions for PART B
 
-Create a `lines` array with the same amount of underscores as the choosen word. For example, if the word is "quiz" the `lines` array should have four dashes: `['_', '_', '_', '_']`. HINT: Use `word.length` and the `repeat` and `split` String functions.
+Create a `lines` array with the same amount of underscores as the choosen word. For example, if the word is "quiz" the `lines` array should have four dashes: `['_', '_', '_', '_']`. HINT: Use `word.length` and the `repeat` and `toCharArray` functions.
 
 ## Instructions for PART C
 
 Display the `lines` array like this `_ _ _ _` in the prompt on a new line below the hangman text drawing. HINT: use a while loop with a counter variable
 
-If the player guesses a letter which occurs in the word, edit the `lines` array so the letter will be displayed in all its correct positions. For example if the word is "avenue" and the player has guessed "e", "x", "b", "r", "v" your prompt should display: `_ v e _ _ e`
+If the player guesses a letter which occurs in the word, edit the `lines` array so the letter will be displayed in all its correct positions. For example if the word is "avenue" and the player has guessed "e", "x", "b", "r", "v" your prompt should display: `_ v e _ _ e` HINT: use a while loop with a counter variable to loop through each letter in the word.
+
+Make the game loop! HINT: What condition must be true for the player to keep guessing letters?
 
 ## Instructions for PART D
 

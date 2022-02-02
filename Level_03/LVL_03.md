@@ -22,37 +22,6 @@ Strings have a lot of useful functions we can use. Oracle is a really great reso
 // -> ["the", "red", "fox"]
 ```
 
-## Create an array of characters from a String
-
-This example creates an array of characters from a String that contains the english alphabet.
-
-```java
-char[] letters = "abcdefghijklmnopqrstuvwxyz".toCharArray();
-```
-
-## End of Level 03 A
-
-We learned how to:
-
-- split Strings
-
-# Level 02 B
-
-## Getting String input from the user
-
-You can get a String from the user via the standard input, `System.in`, by using the `nextLine` method of the Scanner class.
-
-```java
-Scanner sc = new Scanner(System.in);
-
-System.out.println("What's your name?");
-String name = sc.nextLine();
-```
-
-## Getting the length of a String
-
-`.length` is used to get the amount of items in an array but in Java you must use the `.length()` function to get the amount of characters in a String.
-
 ## Accessing items in an Array
 
 The `[]` square brackets are used to create arrays and are also used to access items in an array.
@@ -74,6 +43,33 @@ nums[1] = 36;
 // edits the list: 50, 36, 42, 83
 ```
 
+## Getting String input from the user
+
+You can get a String from the user via the standard input, `System.in`, by using the `nextLine` method of the Scanner class.
+
+```java
+Scanner sc = new Scanner(System.in);
+
+System.out.println("What's your name?");
+String name = sc.nextLine();
+```
+
+# Level 02 B
+
+## Getting the length of a String
+
+`.length` is used to get the amount of items in an array but in Java you must use the `.length()` function to get the amount of characters in a String.
+
+## Create an array of characters from a String
+
+This example creates an array of characters from a String that contains the english alphabet.
+
+```java
+char[] letters = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+```
+
+# Level 03 C
+
 ## Accessing characters in a String
 
 Remember that the data type `char` stores a single character but a String can store many characters.
@@ -90,10 +86,6 @@ animal[8] = 'b'; // error
 ```
 
 Strings are immutable, meaning individual characters in the String can not be changed.
-
-## End of Level 03 B
-
-# Level 03 C
 
 ## Counting with while loops
 
@@ -208,15 +200,13 @@ https://www.youtube.com/watch?v=CxJwy8NsXFs
 - [Level 03 A](#level-03-a)
 	- [Coding Philosophy: Naming variables](#coding-philosophy-naming-variables)
 	- [String.split(seperator)](#stringsplitseperator)
-	- [Create an array of characters from a String](#create-an-array-of-characters-from-a-string)
-	- [End of Level 03 A](#end-of-level-03-a)
-- [Level 02 B](#level-02-b)
-	- [Getting String input from the user](#getting-string-input-from-the-user)
-	- [Getting the length of a String](#getting-the-length-of-a-string)
 	- [Accessing items in an Array](#accessing-items-in-an-array)
-	- [Accessing characters in a String](#accessing-characters-in-a-string)
-	- [End of Level 03 B](#end-of-level-03-b)
+	- [Getting String input from the user](#getting-string-input-from-the-user)
+- [Level 02 B](#level-02-b)
+	- [Getting the length of a String](#getting-the-length-of-a-string)
+	- [Create an array of characters from a String](#create-an-array-of-characters-from-a-string)
 - [Level 03 C](#level-03-c)
+	- [Accessing characters in a String](#accessing-characters-in-a-string)
 	- [Counting with while loops](#counting-with-while-loops)
 - [Level 03 D](#level-03-d)
 	- [for loops](#for-loops)

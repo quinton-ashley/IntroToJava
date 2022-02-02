@@ -1,8 +1,8 @@
 # TicTacAIO
 
-Artificial Intelligence Os!
+Make an artificial intelligence player that places Os on the grid!
 
-## Instructions
+## Instructions for PART A
 
 For TicTacAIO you'll just be adding onto your code from 'TicTacToe'. Copy and paste the code into your `ticTacAIO.js` file.
 
@@ -11,8 +11,16 @@ Make buttons to let the user pick between starting a two player game or one play
 Make three levels of AI player:
 
 - Easy : picks the first available space
-- Medium : picks any available space randomly
+- Medium : picks one of the available spaces left (not from tbe whole grid)
 - Hard : picks a winning move if available, blocks opponent's winning moves if they have any, otherwise it picks any available space
+
+Start by making the easy AI.
+
+## Instructions for PART B
+
+Make the medium AI, which should only pick a space from a list of available spaces. HINT: Use an ArrayList!
+
+Then implement the hard AI.
 
 Also make a "Challenge Mode" option for the AI difficulty. Make it progressive, so the player has to beat the easy AI, then the medium AI, before they play against the hard AI.
 

@@ -49,6 +49,10 @@ System.out.println("What's your name?");
 String name = sc.nextLine();
 ```
 
+## Getting the length of a String
+
+`.length` is used to get the amount of items in an array but in Java you must use the `.length()` function to get the amount of characters in a String.
+
 ## Accessing items in an Array
 
 The `[]` square brackets are used to create arrays and are also used to access items in an array.
@@ -208,6 +212,7 @@ https://www.youtube.com/watch?v=CxJwy8NsXFs
 	- [End of Level 03 A](#end-of-level-03-a)
 - [Level 02 B](#level-02-b)
 	- [Getting String input from the user](#getting-string-input-from-the-user)
+	- [Getting the length of a String](#getting-the-length-of-a-string)
 	- [Accessing items in an Array](#accessing-items-in-an-array)
 	- [Accessing characters in a String](#accessing-characters-in-a-string)
 	- [End of Level 03 B](#end-of-level-03-b)

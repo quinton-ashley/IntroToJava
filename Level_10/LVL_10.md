@@ -28,7 +28,7 @@ void guestArrived(String name) {
 }
 ```
 
-Get the names of the first and last guests to arrive at the wedding.
+Get the names of the first and last guests to arrive at the wedding using the `get` function instead of `[]` used for primitive arrays.
 
 ```js
 String firstGuest = guestBook.get(0);

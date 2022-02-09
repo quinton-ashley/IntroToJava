@@ -117,12 +117,6 @@ player.collide(walls);
 
 The `player` sprite would not be able to move through any of the sprites in the `walls` group. This function can also be used for groups colliding with other groups and sprites colliding with other sprites.
 
-## Rotate a Sprite
-
-```js
-sprite.rotation = 90; // rotate the sprite 90 degrees
-```
-
 # Level 12 D
 
 ## Group array
@@ -131,6 +125,14 @@ Get the array of sprites from a sprite group.
 
 ```js
 spriteGroup.toArray();
+```
+
+## Remove a sprite
+
+To remove a sprite from the screen and any sprite group it's a part of, simply use the `remove` function.
+
+```js
+sprite.remove();
 ```
 
 - [Level 12 A](#level-12-a)
@@ -147,6 +149,6 @@ spriteGroup.toArray();
 - [Level 12 C](#level-12-c)
 	- [Groups](#groups)
 	- [Check for Collisions](#check-for-collisions)
-	- [Rotate a Sprite](#rotate-a-sprite)
 - [Level 12 D](#level-12-d)
 	- [Group array](#group-array)
+	- [Remove a sprite](#remove-a-sprite)

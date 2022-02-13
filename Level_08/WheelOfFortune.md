@@ -2,7 +2,7 @@
 
 The TV show, "Wheel of Fortune", features many different mini-games that contestants play. You'll make one of the hangman inspired mini-games. In this mini-game blank boxes representing all the letters in a phrase are presented to the player. Letters are revealed to the player slowly, one by one, in their correct positions. The sooner the player presses the buzzer and correctly guesses the phrase, the more points they win!
 
-## Instructions
+## Instructions for PART A
 
 Split the `phrasesList` into an array of `phrases`. Select a random phrase, call it `fullPhrase`, and split it into an array of words called `phrase`. HINT: Review your Hangman program.
 
@@ -29,10 +29,12 @@ Make boxes using `textRect` around the blank spaces and letters just like in the
 └─┘└─┘└─┘└─┘└─┘
 ```
 
+## Instructions for PART B
+
 Create an `addLetter` function that uses the `delay` function to delay the rate at which random letters in the phrase are revealed to the player. HINT: Do not reveal the same letters more than once, your `addLetter` function should only reveal a letter at a position in the phrase which has not been revealed previously.
 
-If the player guesses the phrase correctly their score should be increased by the number of blank spaces left in the `board`.
+When the player presses the buzzer button, cover it with a prompt window. If the player guesses the phrase correctly their score should be increased by the number of blank spaces left in the `board`. HINT: use the `prompt` function.
 
 If the player guesses wrong or press cancel in the prompt, their score should be decreased by 1 point but the game should keep going and the player should have the opportunity to guess again.
 
-If the player is too slow and all the letters in the phrase are shown, they should lose that round and their score should be decreased by 3 points.
+If the player is too slow and all the letters in the phrase are shown, they should lose that round and their score should be decreased by 3 points. Pick another word and start a new round.

@@ -6,11 +6,13 @@ Contain is a 1 player or 2-4 player co-op variant of Pong, with the goal being t
 
 Copy and paste your code from Pong into the empty `Contain.java` file.
 
+When the ball hits a paddle make a sound file play to have it sound like the ball is bouncing off the paddle. HINT: use the `bounce` function with a callback
+
+When the player loses a ball and it goes off screen, play a different sound file.
+
 Remove the walls but keep the paddles on the left and right sides of the screen. Add horizontal paddles to the top and bottom of the screen. You will have to make new sprite art for the horizontal paddles using the `spriteArt()` function. They should look like the other paddles rotated 90 degrees.
 
 Move all four paddles using the mouse position coordinates: `mouseX` and `mouseY`.
-
-Use the `bounce` function with a callback to play a sound when the ball bounces off a paddle.
 
 Make four balls on the screen at once! Make an array called `balls`. The goal of this game is for players to contain at least two of the four balls.
 
@@ -20,7 +22,7 @@ Make a `for` loop in the Processing `draw` function to loop through all of the b
 
 ## Instructions for PART B
 
-Make a new property `active` on the ball object, a boolean to store whether the ball is actively on the screen or not. By default set this property to false. Set `active` to true when the ball is served.
+Make a new property `active` on the ball objects, a boolean to store whether a ball is actively on the screen or not. By default set this property to false. Set `active` to true when the ball is served.
 
 In the for loop for the balls in the Processing `draw` function, skip the iteration of the loop using `continue` if the ball is inactive. The program doesn't need to check for collisions between the paddles and the balls that are offscreen.
 

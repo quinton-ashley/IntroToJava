@@ -5,8 +5,12 @@
 Example code for playing a jump sound when the player jumps:
 
 ```java
+SoundFile jumpSound; // class variable
+
 void preload() {
-	SoundFile jumpSound = loadSound('/sounds/jumpSound_92.mp3');
+	// QuintOS.dir is the game folder
+	jumpSound = loadSound(QuintOS.dir + "/sounds/jumpSound_92.mp3");
+	jumpSound.setVolume(0.3); // 0.0-1.0
 }
 
 void keyPressed() {
@@ -27,14 +31,6 @@ ball.bounce(paddle, () -> {
 ```
 
 # Level 09 B
-
-## Adding properties to an existing object
-
-Adding properties to an existing object is super easy, just give it a value as if the property already exisited!
-
-```java
-ball.active = true;
-```
 
 ## Skip iterations of a for loop
 

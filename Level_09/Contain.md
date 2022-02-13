@@ -22,7 +22,7 @@ Make a `for` loop in the Processing `draw` function to loop through all of the b
 
 ## Instructions for PART B
 
-Make a new property `active` on the ball objects, a boolean to store whether a ball is actively on the screen or not. By default set this property to false. Set `active` to true when the ball is served.
+Make an array of four booleans that store whether each ball is actively on the screen or not. By default set them all to false. When a ball is served set its active boolean to true.
 
 In the for loop for the balls in the Processing `draw` function, skip the iteration of the loop using `continue` if the ball is inactive. The program doesn't need to check for collisions between the paddles and the balls that are offscreen.
 

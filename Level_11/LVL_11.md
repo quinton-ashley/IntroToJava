@@ -1,11 +1,5 @@
 # Level 11 A
 
-## Loading Sounds
-
-To make the Speak and Spell game we'll be loading sounds using the p5.js sound library (a core add-on to p5.js that I've added for you).
-
-https://p5js.org/examples/sound-load-and-play-sound.html
-
 ## Creating Objects
 
 Objects have properties, aka key/value pairs. Everything in Javascript (Number, String, Array, etc.) is actually an Object too! You've already used some properties that these objects have such as `.length` for Strings.
@@ -240,7 +234,6 @@ async function playAllLetters() {
 This level's computer is based on the classic children's toy from the 1980s, the electronic [Speak and Spell](<https://en.wikipedia.org/wiki/Speak_%26_Spell_(toy)>) made by Texas Instruments.
 
 - [Level 11 A](#level-11-a)
-	- [Loading Sounds](#loading-sounds)
 	- [Creating Objects](#creating-objects)
 	- [for of loops](#for-of-loops)
 - [Level 11 B](#level-11-b)

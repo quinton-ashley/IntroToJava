@@ -4,7 +4,7 @@ Make an artificial intelligence player that places Os on the grid!
 
 ## Instructions
 
-For TicTacAIO you'll just be adding onto your code from 'TicTacToe'. Copy and paste the code into your `ticTacAIO.js` file.
+For TicTacAIO you'll just be adding onto your code from 'TicTacToe'. Copy and paste the code into your `TicTacAIO.java` file.
 
 Make buttons to let the user pick between starting a two player game or one player game against your AI player.
 

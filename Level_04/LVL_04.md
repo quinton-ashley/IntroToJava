@@ -23,7 +23,7 @@ button("Click me!", 5, 5, () -> {
 
 ## Recursion
 
-Recursion is when a function calls itself. It's another way to loop code in addition to for loops and while loops.
+In the past few lessons you've learned about `for` loops and `while` loops. Recursion is another way to loop code. It is simply a function that calls itself inside its own defintion.
 
 ```java
 void doRecursion() {
@@ -31,18 +31,23 @@ void doRecursion() {
 }
 ```
 
-Example of a recursion loop that ends when the player's score reaches 20.
+Here's example of a recursion loop that ends when the player losses all their health points.
 
-```java
-int score = 0;
+```js
+player.health = 100; // initial health
 
-void doRecursion() {
+function gameLoop() {
 	//
 	// ... game code here ...
-	score++;
 	//
-	if (score < 20) {
-		doRecursion();
+	if (enemy.attack(player) == true) {
+		player.health -= enemy.damage;
+	}
+	//
+	if (player.health > 0) {
+		gameLoop();
+	} else {
+		gameOver();
 	}
 }
 ```
@@ -97,6 +102,36 @@ if (robo != null) {
 
 # Level 04 C
 
+## prompts and alerts
+
+In previous lessons you've used `System.out.println` to create alert windows and a scanner `sc.next` to create prompt windows. You can also use the QuintOS functions `prompt` and `alert` directly.
+
+```java
+// waits for the user to type something and press enter
+String favColor = prompt("What is your favorite color?");
+// the user's response to the prompt is assigned to favColor
+
+// waits for user to read the message in the alert and press enter
+alert(favColor + " is my favorite color too!"); // show message to user
+```
+
+In a standard Java program `System.out.println` is used to print to the Java console, which is just a line by line text output. Boring!
+
+## Changing the positions of prompts and alerts
+
+The position of prompt and alert windows can be changed by defining their row and column values just like with the `text` function.
+
+```java
+//   (text           , row, col, w)
+alert("I can move too!", 5, 20, 16);
+```
+
+A fourth input paramter can be used to restrict the width of the window. Text that is longer than the specified width will be put on new lines. This width limiter can be used with the `text`, `alert`, and `prompt` functions.
+
+If row, column, and width are not defined, default position values are used, which are different for each of the QuintOS virtual computers.
+
+# Level 04 D
+
 ## Instant
 
 Take a look at the Java documentation for the [Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) class.
@@ -105,14 +140,14 @@ Take a look at the Java documentation for the [Instant](https://docs.oracle.com/
 long time = Instant.now().toEpochMilli();
 ```
 
-`time` is set to the current time in milliseconds since the epoch of January 1, 1970 at midnight.
+`time` is set to the current time in milliseconds since the epoch of January 1, 1970 at midnight. `long` is a Java type used to store numbers which are too big to be stored as `int`.
 
 ## Creating Arrays of defined length
 
-The following example asks the user security questions and records their answers. Since we already know there are three questions there will be three answers, but we don't know what the answers will be so they can't be defined when we create the array.
+The following example asks the user security questions and records their answers. Since we already know there are three questions there will be three answers. However we don't know what the answers will be, so they can't be defined when we create the array. Instead, the amount of items the array will store can be defined in the `[]` square brackets. Then you can add the values by assigning them to positions in the array.
 
 ```java
-String[] questions = new String[]{
+String[] questions = new String[] {
 	"What was your first pet's name?",
 	"What's your mother's maiden name?",
 	"In what city or town did your parents meet?"
@@ -125,37 +160,7 @@ for (int i = 0; i < 3; i++) {
 }
 ```
 
-You can put the length of the array in the brackets when creating it inside of defining its values. Then you can add the values by assigning them to positions in the array.
-
-## prompts and alerts
-
-In previous lessons you've used `System.out.println` to create alert windows and a scanner `sc.next` to create prompt windows. You can also use the QuintOS functions `prompt` and `alert` to create them directly.
-
-```java
-// waits for the user to type something and press enter
-String favColor = prompt("What is your favorite color?");
-// the user's response to the prompt is assigned to favColor
-
-// waits for user to read the message in the alert and press enter
-alert(favColor + " is my favorite color too!"); // show message to user
-```
-
-In a standard Java program `System.out.println` is used to print to the Java console, just a text output without the cool vintage computers (boring!).
-
-## Changing the positions of prompts and alerts
-
-The position of prompt and alert windows can be changed by defining their row and column values just like with the `text` function.
-
-```java
-//   (text           , row, col, w)
-alert("I can move too!", 5, 20, 16);
-```
-
-A fourth input paramter can be used to restrict the width of the window. This also works with the `text` and `prompt` functions but not the `button` function. Text that is longer than the specified width will be put on new lines.
-
-If row, column, and width are not defined, default position values are used, which are different for each of the QuintOS virtual computers.
-
-# Level 04 D
+# Level 04 E
 
 ## modulo operator
 
@@ -195,10 +200,11 @@ Originally developed for business executives, GRiDs were also used by the U.S. m
 	- [Implied boolean conditions](#implied-boolean-conditions)
 	- [How to check if a variable is defined](#how-to-check-if-a-variable-is-defined)
 - [Level 04 C](#level-04-c)
-	- [Instant](#instant)
-	- [Creating Arrays of defined length](#creating-arrays-of-defined-length)
 	- [prompts and alerts](#prompts-and-alerts)
 	- [Changing the positions of prompts and alerts](#changing-the-positions-of-prompts-and-alerts)
 - [Level 04 D](#level-04-d)
+	- [Instant](#instant)
+	- [Creating Arrays of defined length](#creating-arrays-of-defined-length)
+- [Level 04 E](#level-04-e)
 	- [modulo operator](#modulo-operator)
 	- [Computer History: GRiD Compass](#computer-history-grid-compass)

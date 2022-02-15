@@ -161,14 +161,14 @@ if (fruit.equals("banana")) {
 
 Take a look at this example code that searches for the Ace of Spades in a deck of cards.
 
-```js
-let card; // no card picked yet
+```java
+String card; // no card picked yet
 
-while (card != 'Ace of Spades') {
+while (card != "Ace of Spades") {
 	card = pickACard();
 }
 
-await alert('Found the Ace of Spades!');
+System.out.println("Found the Ace of Spades!");
 ```
 
 If there are no cards left in the deck, the Ace of Spades can not be found. The while loop would keep looping infinitely! Let's imagine the `pickACard` function would return `null`, a special value that means none if there are no cards left in the deck. The while loop condition would remain true forever, so the loop must be exited early by using the `break` keyword.

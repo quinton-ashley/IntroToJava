@@ -8,7 +8,7 @@ Create two paddle sprites and place them on opposite ends of the screen.
 
 Make the ball move to the right. Then try moving it to the left. Then try moving the ball in a diagonal. Get a sense of how changing the ball's x and y values will affect its trajectory. HINT: Do this inside the draw function.
 
-You will notice that when the ball moves it leaves a trail of ball images behind it. That's because everything drawn to the p5.js canvas stays there, it doesn't become a blank slate everytime the draw function is used to make a new frame. To clear the screen draw a background using the background function with `0` as the input argument `background(0)` (0 is black 255 is white)
+You will notice that when the ball moves it leaves a trail of ball images behind it. That's because everything drawn to the Processing canvas stays there, it doesn't become a blank slate everytime the draw function is used to make a new frame. To clear the screen draw a background using the background function with `0` as the input argument `background(0)` (0 is black 255 is white)
 
 Usually Pong is a two player game but to easily test the game you can change the position of both paddles using your mouse. `mouseX` and `mouseY` store the position of the mouse at all times. HINT: Change the y position of the paddles to `mouseY`.
 

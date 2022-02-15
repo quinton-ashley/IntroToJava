@@ -128,10 +128,10 @@ String pattern = "><".repeat(4);
 
 The `+=` operator can be used to add to the existing value of a variable.
 
-```js
-let x = 5;
+```java
+int x = 5;
 x += 2;
-log(x); // x -> 7
+System.out.println(x); // x -> 7
 ```
 
 `-=`, `*=`, and `/=` operators can be used in Java too.

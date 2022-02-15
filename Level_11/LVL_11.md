@@ -1,48 +1,41 @@
 # Level 11 A
 
-## Creating Objects
+## Creating Classes
 
-Objects have properties, aka key/value pairs. Everything in Javascript (Number, String, Array, etc.) is actually an Object too! You've already used some properties that these objects have such as `.length` for Strings.
+Classes in Java are like blueprints that can be used to create objects. A class defines all the properties and functions
 
 Let's take a look at how we could use an object to store attributes about Gumball, a character from the Cartoon Network show The Amazing World of Gumball.
 
-```js
-let gumball = {
-	name: ['Gumball', 'Tristopher', 'Watterson'],
-	species: 'cat',
-	age: 12,
-	grade: 7,
-	studentID: '000029083',
-	teacher: 'Ms. Simian'
-};
+```java
+class Student {
+	String[] name;
+	String species;
+	int age;
+	int grade;
+	String studentID;
+
+	Student(String[] name, String species, int age, int grade, String studentID) {
+		this.name = name;
+		this.species = species;
+		this.age = age;
+		this.grade = grade;
+		this.studentID = studentID;
+	}
+}
+
+Student gumball = new Student(new String[] {"Gumball", "Tristopher", "Watterson"},
+	"cat", 12, 7, "000029083");
 ```
 
-Properties can be accessed using the dot syntax or with the `[]` square brackets.
+Properties can be accessed using the dot syntax.
 
-```js
+```java
 gumball.age; // -> 12
-gumball['age']; // same thing
 
-gumball.name[2]; // -> 'Watterson'
+gumball.name[2]; // -> "Watterson"
 
-// editing the animal for property 'c'
+// edit gumball's grade level
 gumball.grade = 8;
-// adding new content to the object
-gumball.brother = 'Darwin';
-```
-
-What does the `gumball` object look like after these changes?
-
-```js
-let gumball = {
-	name: ['Gumball', 'Tristopher', 'Watterson'],
-	species: 'cat',
-	age: 12,
-	grade: 8,
-	studentID: '000029083',
-	teacher: 'Ms. Simian',
-	brother: 'Darwin'
-};
 ```
 
 ## for of loops
@@ -72,9 +65,9 @@ Up to this point whenever we worked with inputs we used `prompt()`, now we're go
 
 ```java
 Input inp = input(value, x, y, () -> {
-		onSubmit();
+		this.onSubmit();
 	}, () -> {
-		onChange();
+		this.onChange();
 	});
 ```
 
@@ -109,122 +102,14 @@ void calculate(value) {
 inp = input('', 0, 0, calculate);
 ```
 
-# Level 11 C
-
-## Callback Chaining
-
-If you try playing two sounds, one after the other like this it will not work!
-
-```java
-sound0.play();
-sound1.play();
-```
-
-Both sounds will be played at the same time! You have to use the `onended` function to be able to tell when the first sound has finished playing. `.onended(callback)` takes a callback function, the function is run aka "called" when the sound file stops playing.
-
-```java
-sound0.play();
-sound0.onended(() -> {
-	sound1.play();
-});
-```
-
-Inside `onended` you can either put the name of a function to call or an anonymous function. In this example an anonymous function, a function that isn't given a name is used. Note that it uses the arrow lambda `->` syntax instead of the `function` keyword.
-
 # Level 11 D
 
-If you have to use callbacks to play five sounds this is what it might look like. It's awful!
-
-```js
-sound0.play();
-sound0.onended(() => {
-	sound1.play();
-	sound1.onended(() => {
-		sound2.play();
-		sound2.onended(() => {
-			sound3.play();
-			sound3.onended(() => {
-				sound4.play();
-			});
-		});
-	});
-});
-```
-
-You might be thinking that callback chaining is not as neat and simple as using async and await like we did with other asynchronous code like prompts and alerts. Wouldn't it be great if we could do this instead?
-
-```js
-await play(sound0);
-await play(sound1);
-await play(sound2);
-await play(sound3);
-await play(sound4);
-```
-
-To make a play function that we can `await`, we have to wrap it in a Promise.
-
-## Promises
-
-Back in my day... when I was a young lad first learning JavaScript in 2017... async/await and Promises were not part of JavaScript yet! We had to use callbacks for everything asynchronous and it was awful. Check out what you'd have to do to delay some code:
-
-```js
-console.log('start timer');
-setTimeout(() => {
-	console.log('2 seconds passed');
-}, 2000);
-```
-
-I may sound like a grumpy old man but it really is true. Promises made JavaScript so much better. Let's learn how to make one! Here's `setTimeout()` wrapped in a promise.
-
-```js
-function delay(time) => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve();
-    }, time);
-  });
-};
-
-async function timer() {
-	console.log('start timer');
-	await delay(2000); // delay program execution asynchronously for two seconds
-	console.log('2 seconds passed');
-}
-```
-
-`await` is used to wait until a Promise resolves or is rejected.
-
-Some devs call this "promisify-ing". Read more about promises here:
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
-
-A Promise will be in one of these states:
-
-    pending: initial state, neither fulfilled nor rejected.
-    fulfilled: meaning that the operation was completed successfully.
-    rejected: meaning that the operation failed.
-
-## Promisfied p5.js Sound
-
-```js
-function play(sound) {
-	return new Promise((resolve, reject) => {
-		sound.play();
-		sound.onended(() => {
-			resolve();
-		});
-	});
-}
-```
-
-Now we could even use a for loop to play a lot of sounds!
-
-```js
-async function playAllLetters() {
-	let alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-	for (let i = 0; i < 26; i++) {
-		let letter = alphabet[i];
-		await play(letterSounds[letter]);
+```java
+void playAllLetters() {
+	String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	for (int i = 0; i < 26; i++) {
+		char letter = alphabet.charAt(i);
+		play(letterSounds.get(letter));
 	}
 }
 ```
@@ -234,14 +119,10 @@ async function playAllLetters() {
 This level's computer is based on the classic children's toy from the 1980s, the electronic [Speak and Spell](<https://en.wikipedia.org/wiki/Speak_%26_Spell_(toy)>) made by Texas Instruments.
 
 - [Level 11 A](#level-11-a)
-	- [Creating Objects](#creating-objects)
+	- [Creating Classes](#creating-classes)
 	- [for of loops](#for-of-loops)
 - [Level 11 B](#level-11-b)
 	- [Working with Inputs directly](#working-with-inputs-directly)
 	- [Example use of Inputs](#example-use-of-inputs)
-- [Level 11 C](#level-11-c)
-	- [Callback Chaining](#callback-chaining)
 - [Level 11 D](#level-11-d)
-	- [Promises](#promises)
-	- [Promisfied p5.js Sound](#promisfied-p5js-sound)
 	- [Computer History: Speak and Spell](#computer-history-speak-and-spell)

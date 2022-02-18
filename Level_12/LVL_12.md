@@ -4,10 +4,10 @@
 
 The `createTiles` function can be used to create a grid of tiles of a certain size. The tile at row 0, column 0 is placed at the given x, y coordinates.
 
-```js
-let tiles = createTiles(tileSize, x, y);
+```java
+Tiles tiles = createTiles(tileSize, x, y);
 
-let player = tiles.createSprite(row, col, layer);
+Sprite player = tiles.createSprite(row, col, layer);
 ```
 
 The `createSprite` function of the Tile object works a bit differently than the normal `createSprite` function. It uses row, column position on the tile grid to position the sprite instead of x, y coordinates.
@@ -18,7 +18,7 @@ Layer represents the depth of the Sprite in relation to the rest of the tiles in
 
 Sprite sheets are images which have a lot of smaller images in them. These could be images of character animations, items, or background enviroment tiles.
 
-```js
+```java
 tiles.spriteSheet = loadImage(img0);
 
 player.spriteSheet = loadImage(img1);
@@ -30,8 +30,8 @@ This property can be used to store the sprite sheet image of Tile and Sprite obj
 
 `loadAni` loads animations that has multiple frames.
 
-```js
-player.loadAni('walk-down', { pos: [2, 0], frames: 4 });
+```java
+player.loadAni("walk-down", { pos: [2, 0], frames: 4 });
 ```
 
 Loads a 4 frame animation from row 2, column 0 in the player's SpriteSheet.

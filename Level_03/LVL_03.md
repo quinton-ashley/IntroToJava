@@ -141,6 +141,8 @@ The code above prints out a numbered list of names in the Java console.
 4. Cam
 ```
 
+# Level 04 E
+
 ## String equals
 
 Unfortunately in Java, Strings can't be checked if one is equal to another using double equals `==`. Only primitive types like `int` can be compared directly with the `==`. In Java, Objects like Strings must be compared using the Object's `.equals()` method.
@@ -210,6 +212,7 @@ https://www.youtube.com/watch?v=CxJwy8NsXFs
 	- [Counting with while loops](#counting-with-while-loops)
 - [Level 03 D](#level-03-d)
 	- [for loops](#for-loops)
+- [Level 04 E](#level-04-e)
 	- [String equals](#string-equals)
 	- [Breaking out of a loop early](#breaking-out-of-a-loop-early)
 	- [Computer History: Apple II](#computer-history-apple-ii)

@@ -1,28 +1,41 @@
 # Level 13 A
 
-## Classes
+## Creating Classes
 
-Classes in JavaScript are blueprints for objects. They're useful for creating multiple objects that have the same variables (properties) and behaviors (functions). To declare a class, you use the class keyword with the name of the class ("Rectangle" here). The class blueprint goes inside the `{}` squiggly brackets. All classes must have a `constructor` function which is used to create the object.
+Classes in Java are like blueprints that can be used to create objects. A class defines all the properties and functions
 
-```js
-class Rectangle {
-	constructor(width, height) {
-		this.x = 0;
-		this.y = 0;
-		this.w = width;
-		this.h = height;
-	}
+Let's take a look at how we could use an object to store attributes about Gumball, a character from the Cartoon Network show The Amazing World of Gumball.
 
-	draw() {
-		rect(this.x, this.y, this.w, this.h);
+```java
+class Student {
+	String[] name;
+	String species;
+	int age;
+	int grade;
+	String studentID;
+
+	Student(String[] name, String species, int age, int grade, String studentID) {
+		this.name = name;
+		this.species = species;
+		this.age = age;
+		this.grade = grade;
+		this.studentID = studentID;
 	}
 }
 
-let box0 = new Rectangle(2, 4);
-let box1 = new Rectangle(3, 2);
-let box2 = new Rectangle(5, 6);
+Student gumball = new Student(new String[] {"Gumball", "Tristopher", "Watterson"},
+	"cat", 12, 7, "000029083");
+```
+
+Properties can be accessed using the dot syntax.
+
+```java
+gumball.age; // -> 12
+
+gumball.name[2]; // -> "Watterson"
+
+// edit gumball's grade level
+gumball.grade = 8;
 ```
 
 This kind of programming is called object-oriented programming. Since this mode of thinking is similar to how us humans perceive objects in real life it makes it easier to use them when coding.
-
-Note that you shouldn't use the keyword `function` when defining functions in a class.

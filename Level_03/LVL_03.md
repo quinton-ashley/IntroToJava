@@ -81,8 +81,8 @@ String animal = "the red fox";
 char c = animal.charAt(4);
 System.out.println(c); // prints 'r'
 
-animal[8] = 'b'; // error
-// will not change fox String to 'the red box'
+animal[8] = 'b'; // ERROR: will not change fox String to 'the red box'
+animal = "the red box"; // this will work!
 ```
 
 Strings are immutable, meaning individual characters in the String can not be changed.

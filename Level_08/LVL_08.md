@@ -17,6 +17,8 @@ Use `for` loops to make all the boxes for the phrase!
 └─┘└─┘└─┘└─┘└─┘
 ```
 
+# Level 08 B
+
 ## delay
 
 Use the `delay` function to delay the rate at which letters are displayed.
@@ -31,8 +33,6 @@ void takeFive() {
 
 takeFive();
 ```
-
-# Level 08 B
 
 What if you need to make an array but you don't know what it will store or how big it will be beforehand?
 

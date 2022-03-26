@@ -1,16 +1,16 @@
 # Level 00 A
 
-# Level 00 A
-
 ## What is Computer Science?
 
 Why is this field of study called "Computer Science" and not "Program Writing" or "Code Mathematics"? It's because coding requires research and experimentation! You'll often need to test your programs to learn from unexpected errors, then make changes to get the results you want.
 
-These lessons will teach you how to code in Java as part of the AP Computer Science A curriculum. You will have to memorize some vocabulary, grammar, and syntax to learn this new language. However, learning to code isn't what programming is all about, you will also learn how to think like a programmer! Learning to program will improve your logical reasoning and abstract problem solving skills. Programming has a language arts aspect too. You will not only strive to write efficient code for the computer but also code that can be easily understood by other programmers.
+These lessons will teach you how to code in Java as part of the AP Computer Science A curriculum. You will have to memorize some vocabulary, grammar, and syntax to learn this new language. However, learning to code isn't what programming is all about, you will also learn how to think like a programmer!
+
+Learning to program will improve your logical reasoning and abstract problem solving skills. Programming has a language arts aspect too. You will not only strive to write efficient code for the computer but also code that can be easily understood by other programmers.
 
 ## What is QuintOS?
 
-The famous 17th century scientist, Issac Newton, once said, "we stand on the shoulders of giants". To understand how software is developed today it's important to learn a bit about the history of computers.
+The famous 17th century scientist, Issac Newton, once said, "we stand on the shoulders of giants". To understand how software is developed today, it's important to learn a bit about the history of computers.
 
 If you signed up for this course you might want to know how video games work and how to make your own! If not, making games will hopefully be a fun way for you to learn how to code.
 
@@ -28,11 +28,13 @@ First of all, what is a variable? Variables in Java store data in your computer'
 int a = 0;
 ```
 
-In the example code `a` is the names of the variable. `a` is assigned the number `0`.
+In the example code `a` is the names of the variable. `a` is assigned the number `0`. `int` is used to create the variable and specifies what type of variable it is.
 
-Use a semicolon `;` to end each line of code. 👁👅👁
+In Java a semicolon `;` must be used to end each line of code. 👁👅👁
 
 ## Types of Variables 🔡
+
+To create a variable in Java, you must specify the type of data it stores.
 
 ### Numbers
 
@@ -42,7 +44,7 @@ float y = -49.8;
 double z = 9504.159392000393888;
 ```
 
-`int` is for whole numbers. `float` is for decimal numbers. `double` should be used when a higher degree of percision is needed for decimal numbers. All of these types of numbers can be positive or negative.
+`int` (integer) is for whole numbers. `float` (floating point) is for decimal numbers. `double` should be used when a higher degree of percision is needed for decimal numbers. All of these types of numbers can be positive or negative.
 
 ### Boolean
 
@@ -52,7 +54,7 @@ Booleans are either `true` or `false`
 boolean codingIsFun = true;
 ```
 
-### Characters
+### Character
 
 ```java
 char letter = 'a';
@@ -62,7 +64,7 @@ The variable `letter` stores the single character `a`.
 
 ### String
 
-Strings are text, stored as lists of characters. You can think of them like lettered beads on a charm bracelet string. They are defined using quotes " "
+Strings are text, contained within "quotes".
 
 ```java
 String story = "The dog went to the dog park on 3rd Avenue.";
@@ -74,9 +76,25 @@ ERROR! If you don't use quotes, Java will think the words are variables!
 String story = The dog went to the dog park on 3rd Avenue.;
 ```
 
+To remember that the data type for text is called String, you can think of lettered beads on a charm bracelet string.
+
+### functions
+
+functions are a reference to other sections of code which you can run using `()` parenthesis. Input parameters to a function go in the parenthesis.
+
+```java
+powerOn();
+turn("left");
+moveForward(10);
+turn("right");
+moveForward(2);
+```
+
+This code for a robot remote control makes the robot power on, turn left, move forward ten steps, turn right, and then move forward two steps. Note that functions can do different things depending on their input values!
+
 ## Camel Case 🐫
 
-Variables in Java can't have spaces, 🙅‍♂️ so for variables that have multiple words, the first letter of the words after the first word are capitalized. This naming convention is called camel case because the capitalized letters are like the humps on a camel.
+Variables in Java can't have spaces, 🙅‍♂️ so for variables that have multiple words, use camel case! Capitalize the first letter of the words after the first word.
 
 ```java
 String apple = "🍎";
@@ -84,42 +102,49 @@ String applePie = "🍎 π";
 String applePieIceCream = "🍎 π 🍨";
 ```
 
-### Changing a variable's value
+Note that using this naming convention isn't required for Java to run, it's just something that most professional Java programmers do to make variable names easier to read. Camel case is a naming convention specific to Java, other programming languages have their own conventions.
 
-Don't create variables twice!
+## Globals 🌐
+
+Globals are special variables that are already available for you to use anywhere in your code.
+
+### System
+
+`System` is an important global variable. Use `System.out.println()` to display text to the user. Usually this would make text appear in the standard output (just a list of any text printed out) but with QuintOS the text will appear on a virtual computer in an alert window.
+
+### Scanner
+
+Scanner can be used for user interaction with `System.in` for user input.
 
 ```java
-int x = 10;
-int x = 5; // ERROR! x already exists
+// create a new Scanner of the system input
+Scanner sc = new Scanner(System.in);
+
+// waits for the user to type something and press enter
+// the user's response to the prompt is assigned to favColor
+System.out.println("What's your favorite color?");
+String favColor = sc.nextLine();
+
+System.out.println(favColor + " is my favorite color too!");
 ```
 
-Here's how to change the value of the variable `x`
+With QuintOS, printing to the console using `System.out` and then using a Scanner object to get user input will cause a prompt window to appear on the virtual computer's screen.
 
-```java
-int x = 10;
-x = 5; // good :)
-```
+## Comments
 
 Double slash `//` is for making a comment, any text behind it on the same line will not be considered part of the code's instructions. Comments are used to describe what is happening in the code. You might want to make comments so other people can understand your programs or so that you can understand it yourself in case you forget what you did.
 
-## Mathematical operators 🔢
+## End of Level 00 A
 
-```txt
-Addition:       +
-Subtraction:    -
-Multiplication: *
-Division:       /
-```
+Now you're ready to start making your first game! 🥳 [Click here for the GuessTheNumber instructions.](https://github.com/quinton-ashley/IntroToJava/blob/main/Level_00/GuessTheNumber.md)
 
-The multiplication symbol is the asterisk, NOT the letter `x`!
+# Level 00 B
 
-```java
-int x = 5 * 8; // x -> 40
-```
+Did you complete `GuessTheNumber` part A and are ready to learn more? Before we can finish the game we have to learn a bit more stuff!
 
 ## Checking Equivalence ✅
 
-Single equals `=` is for assigning values to variables. Double equals `==` is a boolean operator used for checking equivalence.
+Single equals `=` is for assigning values to variables. Double equals `==` is a boolean operator used for checking equivalence. What is a boolean operator? It performs an operation that results in either a true or false (boolean) value.
 
 `if` statements use a boolean condition, which goes in parenthesis after the keyword `if`. If the boolean condition is `true`, the code block `{}`, whatever's inside the squiggly brackets, is run.
 
@@ -128,6 +153,8 @@ Single equals `=` is for assigning values to variables. Double equals `==` is a 
 Take a look at the example below which assigns the name of the coin to the variable `coin` based on the value of `value`.
 
 ```java
+System.out.println("What's the value of your lucky coin?");
+float value = sc.nextLine();
 String coin; // variables can be created without a value assigned to them
 
 if (value == 1.00) {
@@ -145,6 +172,8 @@ if (value == 1.00) {
 } else {
   coin = "Unknown";
 }
+
+System.out.println("Your lucky coin is a " + coin + " and has a value of " + value);
 ```
 
 ## Boolean operators 🐰
@@ -157,63 +186,24 @@ Greater than:             >
 Greater than or equal to: >=
 ```
 
-Use boolean (true/false) operators in the boolean conditions (inside the parenthesis) of `if` and `else if` statements.
+Boolean operations evaulate to either true or false. Use them in the boolean conditions (inside the parenthesis) of `if` and `else if` statements.
 
-### functions
+# Level 00 C
 
-functions are a reference to other sections of code which you can run using the parenthesis. Input parameters to a function go in the parenthesis.
+## Mathematical operators 🔢
 
-```java
-powerOn();
-turn("left");
-moveForward(10);
-turn("right");
-moveForward(2);
+```txt
+Addition:       +
+Subtraction:    -
+Multiplication: *
+Division:       /
 ```
 
-This code for a robot remote control makes the robot power on, turn to the left, then move forward ten steps, turn to the right, then move forward two steps.
-
-## Globals 🌐
-
-Globals are special variables that are already available for you to use as part of the Java language.
-
-## System
-
-`System` is an important global variable. Use `System.out.println()` to display text to the user. Usually this would make text appear in the standard output (just a list of any text printed out) but with QuintOS the text will appear on a virtual computer in an alert window.
-
-## Scanner
-
-Scanner can be used for user interaction with `System.in` for user input.
+The multiplication symbol is the asterisk, NOT the letter `x`!
 
 ```java
-// create a new Scanner of the system input
-Scanner sc = new Scanner(System.in);
-
-// waits for the user to type something and press enter
-// the user's response to the prompt is assigned to favColor
-System.out.println("What's your favorite color?");
-String favColor = sc.nextLine();
-
-System.out.println(favColor + " is my favorite color too!");
+int x = 5 * 8; // x -> 40
 ```
-
-With QuintOS, printing to the console using `System.out` and then using a Scanner object to get user input will cause a prompt window to appear on the virtual computer.
-
-## End of Level 00 A
-
-That was a LOT of information! Here's a summary of everything we learned about:
-
-- types of variables: numbers, booleans, characters, Strings and functions
-- making boolean conditions to test if something is `true` or `false`
-- using double equals to `==` check for equivalence
-- `if`, `else if`, and `else` statements
-- globals like `System`
-
-Now you're ready to start making your first game! 🥳 [Click here for the GuessTheNumber instructions.](https://github.com/quinton-ashley/IntroToJava/blob/main/Level_00/GuessTheNumber.md)
-
-# Level 00 B
-
-Did you complete `GuessTheNumber` part A and are ready to learn more? Before we can finish the game we have to learn a bit more stuff!
 
 ## Math functions
 
@@ -238,7 +228,39 @@ double z = Math.ceil(15.3); // z -> 16
 int castedValue = (int) (39.8); // casted -> 39
 ```
 
-# Level 00 C
+## Changing a variable's value
+
+Don't create variables twice!
+
+```java
+int x = 10;
+int x = 5; // ERROR! x already exists
+```
+
+Here's how to change the value of the variable `x`
+
+```java
+int x = 10;
+x = 5; // good :)
+```
+
+# Level 00 D
+
+## Code Execution Order
+
+Note that you can not use a variable before you create it. You will get an error saying the variable is not defined, meaning that Java doesn't have a variable with that name in its memory.
+
+```js
+System.out.println(message); // ERROR: message is not defined
+String message = "Hi!";
+```
+
+Create variables before you use them.
+
+```js
+String message = "Hi!";
+System.out.println(message); // good!
+```
 
 ## Scopes
 
@@ -281,33 +303,35 @@ System.out.println("Found the Ace of Spades!");
 
 ## Computer History: Casio FX-720P
 
-This level's computer was inspired by the Casio FX-720P, which could run programs in a programming language called BASIC. Portable programmable calculators were limited by their small button keyboards and display limitations, but when slotted into a dock that had little printer, they could be used to print out graphs and many lines of text. The calculator could also load programs from tape cassettes.
+This level's computer was inspired by the Casio FX-720P, which could run programs in a programming language called BASIC. Portable programmable calculators were limited by their small button keyboards and displays, but when slotted into a dock that had little printer, they could be used to print out graphs and many lines of text. The calculator could also load programs from tape cassettes.
 
 <https://youtu.be/d3NIe1jTZMc?t=760>
 
 - [Level 00 A](#level-00-a)
-- [Level 00 A](#level-00-a-1)
   - [What is Computer Science?](#what-is-computer-science)
   - [What is QuintOS?](#what-is-quintos)
   - [Creating Variables 🔡](#creating-variables-)
   - [Types of Variables 🔡](#types-of-variables-)
     - [Numbers](#numbers)
     - [Boolean](#boolean)
-    - [Characters](#characters)
+    - [Character](#character)
     - [String](#string)
-  - [Camel Case 🐫](#camel-case-)
-    - [Changing a variable's value](#changing-a-variables-value)
-  - [Mathematical operators 🔢](#mathematical-operators-)
-  - [Checking Equivalence ✅](#checking-equivalence-)
-  - [Boolean operators 🐰](#boolean-operators-)
     - [functions](#functions)
+  - [Camel Case 🐫](#camel-case-)
   - [Globals 🌐](#globals-)
-  - [System](#system)
-  - [Scanner](#scanner)
+    - [System](#system)
+    - [Scanner](#scanner)
+  - [Comments](#comments)
   - [End of Level 00 A](#end-of-level-00-a)
 - [Level 00 B](#level-00-b)
-  - [Math functions](#math-functions)
+  - [Checking Equivalence ✅](#checking-equivalence-)
+  - [Boolean operators 🐰](#boolean-operators-)
 - [Level 00 C](#level-00-c)
+  - [Mathematical operators 🔢](#mathematical-operators-)
+  - [Math functions](#math-functions)
+  - [Changing a variable's value](#changing-a-variables-value)
+- [Level 00 D](#level-00-d)
+  - [Code Execution Order](#code-execution-order)
   - [Scopes](#scopes)
   - [while loops](#while-loops)
   - [Computer History: Casio FX-720P](#computer-history-casio-fx-720p)

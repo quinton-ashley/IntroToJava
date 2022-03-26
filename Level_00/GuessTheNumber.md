@@ -6,7 +6,7 @@ A simple guess the number game! The computer chooses a random number between 1 a
 
 _Read Level 00 A in the `LVL_00.md` file first!_
 
-On Level 01 you'll learn how to setup your own computer for development but just to get you started as quick as possible, use the online editor CodePen for your first game!
+Just to get you started coding as quick as possible, use the online editor CodePen for your first game! For the next game you'll learn how to setup your own computer for development.
 
 Create an account on Github:
 
@@ -26,21 +26,23 @@ Since you're just starting to write this program, don't make the number random y
 
 Tell the player to guess a number using `System.out.println` put your message (String) inside the parenthesis of the `println` function. Create the variable `guess` using `int`, assign it to the user's response to `sc.nextInt()`.
 
-After each guess, the player should be told if their guess was right or wrong. If they were wrong, the player should be told whether their guess was too high or too low. They should also be told when they guess the number correctly. Use the `System.out.println` function inside the code blocks `{}` of `if` and `else if` statements!
-
 [Now you can click here to move onto Level 00 B](https://github.com/quinton-ashley/IntroToJava#level-00-b).
 
 ## Instructions for PART B
 
 _Read Level 00 B in the `LVL_00.md` file before doing this section_
 
-Use `Math` functions to have the computer pick a random whole number between 1 and 100.
+After each guess, the player should be told whether their guess was too high, too low, or if they guessed the number correctly! Use the `System.out.println` function inside the code blocks `{}` of `if` and `else if` statements!
 
 ## Instructions for PART C
 
-_Read Level 00 C in the `LVL_00.md` file before doing this section_
+Use `Math` functions to enable your computer pick a random whole number between 1 and 100 for the player to guess. To test your code, try using `System.out.println` to display the number your computer picks. When you are sure it is working, remove that line.
 
-Make the game loop by using a while loop. Think about what condition must remain true for the player to keep playing the game.
+## Instructions for PART D
+
+Make the game loop by using a while loop! Think about what condition must remain true for the player to keep playing the game.
+
+Congrats! You finished your first game in Java!
 
 ## CHALLENGE SECTION
 

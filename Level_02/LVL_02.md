@@ -4,11 +4,11 @@
 
 ## What is Processing?
 
-To make Pong we're going to use 2D graphics instead of text based graphics. Processing is a Java graphics library for creative coding, with a focus on making coding accessible and inclusive for artists, designers, educators, beginners, and anyone else!
+To make Pong we're going to use Processing, a 2D graphics library for creative coding!
 
 ## Creating functions 👷
 
-How do we create our own functions? Use the `void` keyword to create a function that returns nothing. After `void` put the name of the function followed by the parenthesis. The function's code goes in the code block.
+How do we create our own functions? Use the `void` keyword to create a basic function that returns nothing. After `void` put the name of the function followed by the parenthesis. The function's code goes in the code block.
 
 ```java
 // create the function
@@ -19,15 +19,25 @@ void sayHello() {
 sayHello(); // run the function
 ```
 
-The code inside a function is not run until the function is called/invoked by using it's name and the parenthesis.
+The code inside a function is not run until the function is called/invoked by using its name and the parenthesis.
 
 ## Processing Basics
 
 You need to make two functions, `setup` and `draw`, in your Processing programs.
 
-The Processing `setup` function is run by Processing once at the start of the game and should contain code for setting up the game, such as setting the inital positions of everything in the game.
+The Processing `setup` function is run by Processing once at the start of the game and should contain code for creating all the sprites and setting their initial positions.
 
-The Processing `draw` function should contain code for drawing an image (frame). Processing will run it 60 times per second, this is called the frame rate. To animate objects on screen simply change their position everytime the draw function is run.
+The p5.js `draw` function should contain code for drawing an image (frame). Behind the scenes, p5.js will run it 60 times per second, this is called the frame rate. This allows you to move objects on the screen by animating them, moving them a little bit when each new frame is drawn to the screen.
+
+## p5.play Sprites
+
+Sprites are characters or items in 2D video games that typically move above the background layer(s). Sprite objects in the p5.play library have attributes such as their x and y position.
+
+```java
+Sprite ball = createSprite(imgBall);
+ball.x = 5;
+ball.y = 12
+```
 
 ## spriteArt
 
@@ -73,39 +83,23 @@ PImage bigImg = spriteArt(str);
 
 Can you tell what the image is?
 
+...
+
 It's a simple yellow and black smiley face image. 😃
 
-Note that you don't have to complete the width of each line with transparent pixels, you can just leave it blank.
+## p5.js global variables
 
-## p5.play Sprites
+Note that p5.js adds a lot of variables to the global scope. Note that `width` and `height` refer to the size of the screen in pixels.
 
-To make Pong you'll need to have the ball move and bounce off the paddles. To acheive this use sprites!
+# Level 02 B
 
-Sprite objects have attributes such as their x and y position.
+# Getting a Sprite's width and height
 
-```java
-Sprite ball = createSprite(imgBall);
-ball.x = width / 2;
-ball.y = height / 2;
-```
-
-Note that `width` and `height` refer to the size of the screen in pixels.
-
-When you create a sprite using an image the width and height of the sprite is automatically assigned to the sprite based on the size of the image. They can be accessed using `.w` and `.h`
+When you create a sprite using an image the width and height of the sprite is automatically assigned to the sprite based on the size of the image. These attributes can be accessed using `.width` and `.height` or with `.w` and `.h`
 
 ```java
 System.out.println("size of the ball: " + ball.w + "x" + ball.h);
 ```
-
-## End of Level 02 A
-
-Here's what you learned about in Level 2:
-
-- Processing basics
-- the `spriteArt` function
-- how to create sprites and position them
-
-# Level 02 B
 
 ## spriteArt scaling
 
@@ -123,18 +117,6 @@ To more easily create large Strings you can use a String function called [repeat
 String pattern = "><".repeat(4);
 // pattern -> "><><><><";
 ```
-
-## += operator
-
-The `+=` operator can be used to add to the existing value of a variable.
-
-```java
-int x = 5;
-x += 2;
-System.out.println(x); // x -> 7
-```
-
-`-=`, `*=`, and `/=` operators can be used in Java too.
 
 # Level 02 C
 
@@ -170,7 +152,7 @@ paddle.immovable = true;
 `colorPal` retreives the color associated with the given letter from the retro computer's color palette. Here's some example code for making a red background:
 
 ```java
-background(colorPal("r"));
+background(colorPal('r'));
 ```
 
 # Level 02 D
@@ -180,9 +162,8 @@ background(colorPal("r"));
 The `keyPressed` is a Processing function that is run whenever a key is pressed.
 
 ```java
-void draw() {}
 void keyPressed() {
-	if (key == 'ArrowUp') {
+	if (key == "ArrowUp") {
 		System.out.println("The up arrow key was pressed!");
 	}
 }
@@ -194,10 +175,10 @@ Implement `keyPressed` outside the `draw` function.
 
 ```java
 void draw() {
-	if (isKeyDown('ArrowLeft')) {
+	if (isKeyDown("ArrowLeft")) {
 		player.x -= 2; // move the player left by 2 pixels
 	}
-	if (isKeyDown('ArrowRight')) {
+	if (isKeyDown("ArrowRight")) {
 		player.x += 2; // move the player right by 2 pixels
 	}
 }
@@ -213,6 +194,18 @@ text("Hello World!", 10, 12);
 ```
 
 ## Level 02 E
+
+## += operator
+
+The `+=` operator can be used to add to the existing value of a variable.
+
+```java
+int x = 5;
+x += 2;
+System.out.println(x); // x -> 7
+```
+
+`-=`, `*=`, and `/=` operators can be used in Java too.
 
 ## Processing Java fill, stroke, and rect
 
@@ -244,14 +237,14 @@ https://youtu.be/nRlmTiynbd8?t=242
   - [What is Processing?](#what-is-processing)
   - [Creating functions 👷](#creating-functions-)
   - [Processing Basics](#processing-basics)
+  - [p5.play Sprites](#p5play-sprites)
   - [spriteArt](#spriteart)
   - [Making Strings with Triple Quotes](#making-strings-with-triple-quotes)
-  - [p5.play Sprites](#p5play-sprites)
-  - [End of Level 02 A](#end-of-level-02-a)
+  - [p5.js global variables](#p5js-global-variables)
 - [Level 02 B](#level-02-b)
+- [Getting a Sprite's width and height](#getting-a-sprites-width-and-height)
   - [spriteArt scaling](#spriteart-scaling)
   - [String.repeat(amount)](#stringrepeatamount)
-  - [+= operator](#-operator)
 - [Level 02 C](#level-02-c)
   - [Vectors](#vectors)
   - [Bounces](#bounces)
@@ -262,5 +255,6 @@ https://youtu.be/nRlmTiynbd8?t=242
   - [Check if a key is held](#check-if-a-key-is-held)
   - [Drawing text to the screen](#drawing-text-to-the-screen)
   - [Level 02 E](#level-02-e)
+  - [+= operator](#-operator)
   - [Processing Java fill, stroke, and rect](#processing-java-fill-stroke-and-rect)
   - [Computer History: ZX Spectrum](#computer-history-zx-spectrum)

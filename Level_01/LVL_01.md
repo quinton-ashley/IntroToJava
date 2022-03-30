@@ -58,7 +58,10 @@ Press F1 on your keyboard (hold Fn then press F1 on macOS). Search the menu for 
 "prettier.singleQuote": true,
 "prettier.trailingComma": "none",
 "prettier.useTabs": true,
-"prettier.printWidth": 120
+"prettier.printWidth": 120,
+"diffEditor.wordWrap": "on",
+"liveServer.settings.donotShowInfoMsg": true,
+"editor.folding": false
 ```
 
 ## Loading QuintOS Games

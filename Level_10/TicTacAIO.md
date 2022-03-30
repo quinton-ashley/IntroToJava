@@ -1,31 +1,29 @@
 # TicTacAIO
 
-Make an artificial intelligence player that places Os on the grid!
+Artificial Intelligence Os!
 
 ## Instructions
 
-For TicTacAIO you'll just be adding onto your code from 'TicTacToe'. Copy and paste the code into your `TicTacAIO.java` file.
+For TicTacAIO you'll just be adding onto your code from 'TicTacToe'. Copy and paste the code from `ticTacToe.js` into your `ticTacAIO.js` file.
 
-Make buttons to let the user pick between starting a two player game or one player game against your AI player.
+Make buttons for starting a two player game or one player game against your AI player. Remove these buttons from the screen when they start
 
-Make three levels of AI player:
+Start by making the most simple AI player possible. It should pick the first available space.
 
-- Easy : picks the first available space
-- Medium : picks one of the available spaces left (not from tbe whole grid)
-- Hard : picks a winning move if available, blocks opponent's winning moves if they have any, otherwise it picks any available space
+Make buttons for choosing between AI difficulty levels: easy, medium, or hard. These buttons should appear after the user clicks the "One Player Start" button.
 
-Start by making the easy AI.
+The medium level AI should pick between remaining available spaces on the Tic Tac Toe grid randomly.
 
-Make the medium AI, which should only pick a space from a list of available spaces. HINT: Use an ArrayList!
+The hard level AI should pick a winning move if available, blocks opponent's winning moves if they have any, and otherwise it should fallback to the medium AI level code (picking a random available space).
 
-Then implement the hard AI.
-
-Also make a "Challenge Mode" option for the AI difficulty. Make it progressive, so the player has to beat the easy AI, then the medium AI, before they play against the hard AI.
+BUG FIX! Prevent human players from making moves while any alert windows are being displayed, that includes "game won", "draw", and "this space is taken" alerts.
 
 ## CHALLENGE SECTION
 
-TicTacToe is a solved game, meaning that if both players always play their best moves, the game will end in a forced draw.
+TicTacToe is a solved game, meaning that if both players always play their best moves the game will end in a forced draw.
 
 Try implementing a Very Hard AI player that's unbeatable and uses strategies to win against unskilled players.
 
-First make a 0 player mode to test your Very Hard AI against your Hard AI. Have a limit to the number of matches that will be played. You should be able to view the results of each match.
+Test out your AI with a 0 player mode. Make your Very Hard AI play hundreds of games against your Hard AI. When they finish playing you should be able to view the score and the results of every match in the console.
+
+If the Hard AI is able to win a match against the Very Hard AI, something is wrong with your Very Hard AI code, you should try to fix it.

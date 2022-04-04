@@ -250,14 +250,14 @@ x = 5; // good :)
 
 Note that you can not use a variable before you create it. You will get an error saying the variable is not defined, meaning that Java doesn't have a variable with that name in its memory.
 
-```js
+```java
 System.out.println(message); // ERROR: message is not defined
 String message = "Hi!";
 ```
 
 Create variables before you use them.
 
-```js
+```java
 String message = "Hi!";
 System.out.println(message); // good!
 ```

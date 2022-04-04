@@ -31,13 +31,15 @@ The p5.js `draw` function should contain code for drawing an image (frame). Behi
 
 ## p5.play Sprites
 
-Sprites are characters or items in 2D video games that typically move above the background layer(s). Sprite objects in the p5.play library have attributes such as their x and y position.
+Sprites are characters or items in 2D video games that typically move above the background layer(s).
 
 ```java
-Sprite ball = createSprite(imgBall);
-ball.x = 5;
-ball.y = 12
+Sprite sprite = createSprite(img);
+sprite.x = 5;
+sprite.y = 12
 ```
+
+Sprite objects in Processing have attributes such as their x and y position. A sprite's x position is its horizontal position on the screen. A sprite's y position is its vertical position on the screen.
 
 ## spriteArt
 
@@ -46,24 +48,24 @@ Processing has it's own `createImage` function, but it's a bit complicated. I cr
 The first parameter to `spriteArt` is a String representing the color values of pixels.
 
 ```java
-PImage img = spriteArt('w.w');
+PImage img = spriteArt('wgw');
 ```
 
-This example code would create an image with one white pixel, followed by a transparent pixel, and then another white pixel. You can also use spaces to indicate transparent pixels.
+This example code would create an image with one white pixel, followed by a green pixel, and then another white pixel.
 
-Here's the full color palette you can use for this game. They are the same colors as the real ZX Spectrum, which this level's computer is based on.
+Here's the limited color palette you can use for this game. They are the same colors as the real ZX Spectrum, which this level's computer is based on.
 
-| letter |     color      |
-| :----: | :------------: |
-|   .    | transparent 🔳 |
-|   b    |    Black ⬛    |
-|   u    |    blUe 🟦     |
-|   r    |     Red 🟥     |
-|   m    |   Magenta 🔴   |
-|   g    |    Green 🟩    |
-|   c    |    Cyan 🔵     |
-|   y    |   Yellow 🟨    |
-|   w    |    White ⬜    |
+|   letter   |     color      |
+| :--------: | :------------: |
+| '.' or ' ' | transparent 🔳 |
+|    'b'     |    Black ⬛    |
+|    'u'     |    blUe 🟦     |
+|    'r'     |     Red 🟥     |
+|    'm'     |   Magenta 🔴   |
+|    'g'     |    Green 🟩    |
+|    'c'     |    Cyan 🔵     |
+|    'y'     |   Yellow 🟨    |
+|    'w'     |    White ⬜    |
 
 ## Making Strings with Triple Quotes
 
@@ -103,11 +105,13 @@ System.out.println("size of the ball: " + ball.w + "x" + ball.h);
 
 ## spriteArt scaling
 
+By default each character in the string will be one pixel in the resulting sprite art image. Yet, if you change the scale to 2 then each character in the string will be represented by 4 pixels! This is useful for making larger images.
+
 ```java
 PImage face = spriteArt(str, 2);
 ```
 
-Multiple input parameters can be given to some functions. Input parameters are seperated by commas. The second input parameter to the `spriteArt` function is an optional scale value. By default each character in the string will be one pixel in the resulting image. If you change the scale to 2 then each character in the string will be represented by 4 pixels! This is useful for making larger images.
+The second input parameter to the `spriteArt` function is an optional scale value. Input parameters are seperated by commas.
 
 ## String.repeat(amount)
 
@@ -117,6 +121,34 @@ To more easily create large Strings you can use a String function called [repeat
 String pattern = "><".repeat(4);
 // pattern -> "><><><><";
 ```
+
+## += operator
+
+The `+=` operator can be used to add to the existing value of a variable.
+
+```java
+String story = "The cow";
+story += " jumped over the moon.";
+// story -> "The cow jumped over the moon"
+```
+
+You can use `+=` with numbers too!
+
+````java
+int x = 5;
+x += 2;
+System.out.println(x); // x -> 7
+```
+
+`-=`, `*=`, and `/=` operators can also be used with numbers.
+
+## colorPal
+
+`colorPal` retreives the color associated with the given letter from the retro computer's color palette. Here's some example code for making a red background:
+
+```java
+background(colorPal('r'));
+````
 
 # Level 02 C
 
@@ -133,7 +165,7 @@ ball.velocity.y = 1;
 
 ## Bounces
 
-You can easily check for bounces between sprites using the p5.play sprite bounce function.
+You can easily check for bounces between sprites using the p5.play sprite bounce function inside the `draw` function.
 
 ```java
 ball.bounce(paddle);
@@ -147,14 +179,6 @@ By default when sprites bounce off each other both objects will move. To prevent
 paddle.immovable = true;
 ```
 
-## colorPal
-
-`colorPal` retreives the color associated with the given letter from the retro computer's color palette. Here's some example code for making a red background:
-
-```java
-background(colorPal('r'));
-```
-
 # Level 02 D
 
 ## Respond to keyboard input
@@ -163,8 +187,8 @@ The `keyPressed` is a Processing function that is run whenever a key is pressed.
 
 ```java
 void keyPressed() {
-	if (key == "ArrowUp") {
-		System.out.println("The up arrow key was pressed!");
+	if (key.equals("w")) {
+		System.out.println("The 'w' key was pressed!");
 	}
 }
 ```
@@ -194,18 +218,6 @@ text("Hello World!", 10, 12);
 ```
 
 ## Level 02 E
-
-## += operator
-
-The `+=` operator can be used to add to the existing value of a variable.
-
-```java
-int x = 5;
-x += 2;
-System.out.println(x); // x -> 7
-```
-
-`-=`, `*=`, and `/=` operators can be used in Java too.
 
 ## Processing Java fill, stroke, and rect
 
@@ -245,16 +257,13 @@ https://youtu.be/nRlmTiynbd8?t=242
 - [Getting a Sprite's width and height](#getting-a-sprites-width-and-height)
   - [spriteArt scaling](#spriteart-scaling)
   - [String.repeat(amount)](#stringrepeatamount)
-- [Level 02 C](#level-02-c)
-  - [Vectors](#vectors)
+  - [+= operator](#-operator)
   - [Bounces](#bounces)
   - [Immovable objects](#immovable-objects)
-  - [colorPal](#colorpal)
 - [Level 02 D](#level-02-d)
   - [Respond to keyboard input](#respond-to-keyboard-input)
   - [Check if a key is held](#check-if-a-key-is-held)
   - [Drawing text to the screen](#drawing-text-to-the-screen)
   - [Level 02 E](#level-02-e)
-  - [+= operator](#-operator)
   - [Processing Java fill, stroke, and rect](#processing-java-fill-stroke-and-rect)
   - [Computer History: ZX Spectrum](#computer-history-zx-spectrum)

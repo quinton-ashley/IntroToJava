@@ -18,13 +18,6 @@ public class WheelOfFortune {
 		 * array of words
 		 */
 
-		/* Make a board array to represent the letters in the phrase */
-		// phrase -> ['Community', 'Chest']
-		// board -> [
-		// [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
-		// [' ', ' ', ' ', ' ', ' ']
-		// ]
-
 		/* Create the buzzer button */
 		button(bigBuzzer, 18, 5, () -> {
 			this.buzz();

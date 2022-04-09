@@ -12,15 +12,6 @@ fullPhrase -> "Community Chest"
 phrase -> {"Community", "Chest"}
 ```
 
-Make a 2D `board` array that should be initialized to store blank space strings for all the letters in the phrase. Similar to TicTacToe, you will use this `board` to keep track of which letters have been revealed. HINT: Use the `repeat` and `toCharArray` String functions.
-
-```
-board -> {
-  {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
-  {' ', ' ', ' ', ' ', ' '}
-}
-```
-
 Make boxes using `textRect` around the blank spaces and letters just like in the Wheel of Fortune TV show. Use `for` loops to make all the boxes for the phrase! HINT: Review your TicTacToe progam.
 
 ```txt
@@ -31,10 +22,23 @@ Make boxes using `textRect` around the blank spaces and letters just like in the
 
 ## Instructions for PART B
 
-Create an `addLetter` function that uses the `delay` function to delay the rate at which random letters in the phrase are revealed to the player. HINT: Do not reveal the same letters more than once, your `addLetter` function should only reveal a letter at a position in the phrase which has not been revealed previously.
+Create an `addLetter` function that uses the `delay` function to delay the rate at which random letters in the phrase are revealed to the player. HINT: Do not reveal the same letters more than once, your `addLetter` function should only reveal a letter at a position in the phrase which has not been revealed previously. Use the ArrayList `.remove()` function.
 
-When the player presses the buzzer button, cover it with a prompt window. If the player guesses the phrase correctly their score should be increased by the number of blank spaces left in the `board`. HINT: use the `prompt` function.
+If the player presses the buzzer, the game should stop adding letters and provide a prompt window so that the player can guess the phrase.
 
 If the player guesses wrong or press cancel in the prompt, their score should be decreased by 1 point but the game should keep going and the player should have the opportunity to guess again.
 
-If the player is too slow and all the letters in the phrase are shown, they should lose that round and their score should be decreased by 3 points. Pick another word and start a new round.
+If the player guesses the phrase correctly their score should be increased by the number of blank spaces left in the `board`.
+
+If the player is too slow and all the letters in the phrase are shown, they should lose that round and their score should be decreased by 3 points.
+
+## Instructions for PART C
+
+When the game restarts and a new phrase is choosen, make sure not to use any phrase that the player has already guessed at.
+
+Even though your `addLetter` function works, it could be better. When there is one letter remaining in the phrase it might take a lot of loops to randomly pick that letter. This method of coding in which randomness must produce a desirable outcome is not efficient and with larger sets of data could actually cause the program to seem as if it temporarily crashed as it loops repeatedly. The phrases in this game are too small for this to happen in practice. Nevertheless you should modify your `addLetter` function to pick from an array of available space coordinates. When a letter is added, remove that letter's coordinate from the `avail` array. This way the program will only be able to randomly choose between available coordinates.
+
+```js
+// phrase -> ['Community', 'Chest']
+// avail -> [[0,0], [0,1], [0,2], ... [1,2], [1,3], [1,4]]
+```

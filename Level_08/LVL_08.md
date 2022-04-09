@@ -54,3 +54,9 @@ Get the names of the first and last guests to arrive at the wedding using the `g
 String firstGuest = guestBook.get(0);
 String lastGuest = guestBook.get(guestBook.size() - 1);
 ```
+
+You can also easily removes items from an ArrayList using the `remove` method.
+
+```java
+guestBook.remove(name);
+```

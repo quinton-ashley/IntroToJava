@@ -15,10 +15,7 @@ public class WheelOfFortune {
 	}
 
 	void setupGame() {
-		/*
-		 * Make an array of phrases, pick a random phrase, and split pharse into an
-		 * array of words
-		 */
+		/* load text file */
 
 		/* Create the buzzer button */
 		button(bigBuzzer, 18, 5, () -> {

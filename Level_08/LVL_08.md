@@ -49,6 +49,14 @@ fileScanner.close();
 
 # Level 08 B
 
+## eraseRect
+
+```java
+eraseRect(row, col, w, h);
+```
+
+Erases text within the specified rectangle.
+
 ## textRect
 
 Make boxes using `textRect(row, col, w, h)` around the blank spaces and letters just like in the Wheel of Fortune TV show.
@@ -66,6 +74,8 @@ Use `for` loops to make all the boxes for the phrase!
 └─┘└─┘└─┘└─┘└─┘
 ```
 
+# Level 08 C
+
 ## delay
 
 Use the `delay` function to delay the rate at which letters are displayed.
@@ -80,6 +90,41 @@ void takeFive() {
 
 takeFive();
 ```
+
+## toUpperCase and toLowerCase String
+
+```java
+String str = 'Hello!';
+String up = str.toUpperCase(); // up -> "HELLO!"
+String low = str.toLowerCase(); // low -> "hello!"
+```
+
+These functions do not change the original value of the string.
+
+## replace String
+
+```java
+String str = 'The cat jumped over the moon. The cat meowed.';
+String result = str.replace("cat", "dog");
+System.out.println(result);
+// -> "The dog jumped over the moon. The cat meowed."
+```
+
+This function takes two input parameters, the first input parameter is replaced in the string by the second. Note that it only does one replacement.
+
+This function does not change the original value of the string.
+
+## substring String
+
+```java
+str.substring(start, end);
+```
+
+This function returns a subsection of the string, starting at the start index and ending and the end index. It does not change the original value of the string. The `end` index is optional.
+
+# Level 08 D
+
+## ArrayList remove
 
 You can also easily removes items from an ArrayList using the `remove` method.
 

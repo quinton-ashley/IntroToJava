@@ -36,11 +36,11 @@ After each guess, the player should be told whether their guess was too high, to
 
 ## Instructions for PART C
 
-Use `Math` functions to enable your computer pick a random whole number between 1 and 100 for the player to guess. To test your code, try using `System.out.println` to display the number your computer picks. When you are sure it is working, remove that line.
+Make the game loop by using a while loop! Think about what condition must remain true for the player to keep playing the game.
 
 ## Instructions for PART D
 
-Make the game loop by using a while loop! Think about what condition must remain true for the player to keep playing the game.
+Use `Math` functions to enable your computer pick a random whole number between 1 and 100 for the player to guess. To test your code, try using `System.out.println` to display the number your computer picks. When you are sure it is working, remove that line.
 
 Congrats! You finished your first game in Java!
 

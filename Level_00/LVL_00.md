@@ -204,44 +204,6 @@ Boolean operations evaulate to either true or false. Use them in the boolean con
 
 # Level 00 C
 
-## Mathematical operators 🔢
-
-```txt
-Addition:       +
-Subtraction:    -
-Multiplication: *
-Division:       /
-```
-
-The multiplication symbol is the asterisk, NOT the letter `x`!
-
-```java
-int x = 5 * 8; // x -> 40
-```
-
-## Math functions
-
-At this point you should also know about the global object [Math](https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html), which has many useful functions. You will use `.random()` and `.ceil()` to make this game.
-
-```java
-// Math.random() returns a random decimal number between 0 and 1 (not including 1)
-double x = Math.random(); // x could be .2364 or .928279 or 0.45398, it's random!
-
-double a = Math.round(30.1); // -> 30
-double b = Math.round(30.7); // -> 31
-// Math.round() rounds the number to the nearest integer
-
-double y = Math.floor(22.9); // y -> 22 (y gets assigned the value 22)
-// Math.floor() always rounds down
-
-double z = Math.ceil(15.3); // z -> 16
-// Math.ceil() always rounds up (ceil for ceiling)
-
-// casting to int forces a decimal number to become an int
-// drops the decimal (effectively rounding down)
-int castedValue = (int) (39.8); // casted -> 39
-```
-
 ## Changing a variable's value
 
 Don't create variables twice!
@@ -257,8 +219,6 @@ Here's how to change the value of the variable `x`
 int x = 10;
 x = 5; // good :)
 ```
-
-# Level 00 D
 
 ## Code Execution Order
 
@@ -315,6 +275,46 @@ while (!card.equals("Ace of Spades")) {
 System.out.println("Found the Ace of Spades!");
 ```
 
+# Level 00 D
+
+## Mathematical operators 🔢
+
+```txt
+Addition:       +
+Subtraction:    -
+Multiplication: *
+Division:       /
+```
+
+The multiplication symbol is the asterisk, NOT the letter `x`!
+
+```java
+int x = 5 * 8; // x -> 40
+```
+
+## Math functions
+
+At this point you should also know about the global object [Math](https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html), which has many useful functions. You will use `.random()` and `.ceil()` to make this game.
+
+```java
+// Math.random() returns a random decimal number between 0 and 1 (not including 1)
+double x = Math.random(); // x could be .2364 or .928279 or 0.45398, it's random!
+
+double a = Math.round(30.1); // -> 30
+double b = Math.round(30.7); // -> 31
+// Math.round() rounds the number to the nearest integer
+
+double y = Math.floor(22.9); // y -> 22 (y gets assigned the value 22)
+// Math.floor() always rounds down
+
+double z = Math.ceil(15.3); // z -> 16
+// Math.ceil() always rounds up (ceil for ceiling)
+
+// casting to int forces a decimal number to become an int
+// drops the decimal (effectively rounding down)
+int castedValue = (int) (39.8); // casted -> 39
+```
+
 ## Computer History: Casio FX-720P
 
 This level's computer was inspired by the Casio FX-720P, which could run programs in a programming language called BASIC. Portable programmable calculators were limited by their small button keyboards and displays, but when slotted into a dock that had little printer, they could be used to print out graphs and many lines of text. The calculator could also load programs from tape cassettes.
@@ -343,11 +343,11 @@ This level's computer was inspired by the Casio FX-720P, which could run program
   - [else if chaining](#else-if-chaining)
   - [Boolean operators 🐰](#boolean-operators-)
 - [Level 00 C](#level-00-c)
-  - [Mathematical operators 🔢](#mathematical-operators-)
-  - [Math functions](#math-functions)
   - [Changing a variable's value](#changing-a-variables-value)
-- [Level 00 D](#level-00-d)
   - [Code Execution Order](#code-execution-order)
   - [Scopes](#scopes)
   - [while loops](#while-loops)
+- [Level 00 D](#level-00-d)
+  - [Mathematical operators 🔢](#mathematical-operators-)
+  - [Math functions](#math-functions)
   - [Computer History: Casio FX-720P](#computer-history-casio-fx-720p)

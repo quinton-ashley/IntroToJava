@@ -43,6 +43,9 @@ Live Server auto-refreshes the browser when you make changes to your code.
 Press F1 on your keyboard (hold Fn then press F1 on macOS). Search the menu for "Preferences: Open Settings (JSON)". Use these settings in VSCode's `settings.json` file:
 
 ```json
+"[java]": {
+  "editor.defaultFormatter": "redhat.java"
+},
 "editor.defaultFormatter": "esbenp.prettier-vscode",
 "editor.guides.bracketPairs": true,
 "editor.bracketPairColorization.enabled": true,
@@ -63,6 +66,7 @@ Press F1 on your keyboard (hold Fn then press F1 on macOS). Search the menu for 
 "prettier.printWidth": 120,
 "diffEditor.wordWrap": "on",
 "liveServer.settings.donotShowInfoMsg": true,
+"editor.glyphMargin": false,
 "editor.folding": false
 ```
 

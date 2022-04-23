@@ -4,6 +4,79 @@ Do the GuessTheNumber challenge section before starting level 04!
 
 ![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen3.jpg)
 
+## package
+
+```java
+package parent_folder.ExampleClass;
+```
+
+The first line of a Java file declares the package (aka folder) that the Java file is in relative to where it is being run. In package declarations, the path to the file is seperated by `.` dots instead of slashes.
+
+For example, you are running your Java files from the `quintos-games` folder. So the package of this game is: `games_java.QuickClicks`
+
+## imports
+
+Not all Java classes are available by default. To keep the size of a compiled Java program small, developers are required to import only the classes necessary for the program to run. For example, `Scanner` is not available as part of the Java language by default, it must be imported into your project.
+
+```java
+import java.util.Scanner;
+```
+
+QuintOS must also be imported. It is a static import, meaning you can use QuintOS methods without referencing the QuintOS class first like you must do with `Math.random()` for example or with `Instant.now().toEpochMilli()`. Static imports are not common in Java and have only been added in later versions, don't worry too much about them.
+
+```java
+import static games_java.QuintOS.*;
+```
+
+## Classes in Java
+
+When making a simple game you can put all the game's code in the main method, but if you want to make a more complex games with multiple methods then you will need to know how to create a class. (When you created your Pong game, Processing turned your code file into a Java class for you.)
+
+This example shows the start of a student's implementation of the game Chess in Java.
+
+```java
+package Chess;
+
+import java.util.Scanner;
+
+public class Chess {
+	Scanner sc;
+	String white;
+	String black;
+
+	void takeTurn() {
+		System.out.println("Which position would you like to move to?");
+		String position = sc.nextLine();
+		// TODO: update game board
+	}
+
+	void startGame() {
+		sc = new Scanner(System.in);
+
+		System.out.println("Who will move the white pieces?");
+		white = sc.nextLine();
+		System.out.println("Who will move the black pieces?");
+		white = sc.nextLine();
+
+		System.out.println(white + " it is your turn.");
+		takeTurn();
+	}
+
+	// class constructor
+	public Chess() {
+		startGame();
+	}
+
+	public static void main(String[] args) {
+		new Chess();
+	}
+}
+```
+
+The class constructor is a function that is run when an Object of that class is created. Objects can be created using the keyword `new` followed by the class constructor function. From inside the class constructor you can call other methods of that class.
+
+A class is like a blueprint for an Object. A class for a game is like the rules of the game, the game board, and all the pieces. An Object made using that game class is one particular instance of playing the game. Object variables for a chess game should store things like the names of the players, the position of pieces on the board, the game clock if the game is timed, etc. These variables (also called properties of the object) are available to use in any of the object's methods.
+
 ## substring String
 
 ```java
@@ -111,16 +184,6 @@ If row, column, and width are not defined, default position values are used, whi
 
 Callbacks are non-linear, so they are good for handling events (like button clicks) that in some cases we wouldn't want our program to wait for. For example if you gave the user a choice between clicking a "Yes" or "No" button you wouldn't want the program to wait for them to click "Yes" because they might click "No". A seperate callback function is needed to handle each response.
 
-## Instant
-
-Take a look at the Java documentation for the [Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) class.
-
-```java
-long time = Instant.now().toEpochMilli();
-```
-
-`time` is set to the current time in milliseconds since the epoch of January 1, 1970 at midnight. `long` is a Java type used to store numbers which are too big to be stored as `int`.
-
 ## Creating Arrays of defined length
 
 The following example asks the user security questions and records their answers. Since we already know there are three questions there will be three answers. However we don't know what the answers will be, so they can't be defined when we create the array. Instead, the amount of items the array will store can be defined in the `[]` square brackets. Then you can add the values by assigning them to positions in the array.
@@ -138,6 +201,16 @@ for (int i = 0; i < 3; i++) {
 	answers[i] = sc.nextLine();
 }
 ```
+
+## Instant
+
+Take a look at the Java documentation for the [Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) class.
+
+```java
+long time = Instant.now().toEpochMilli();
+```
+
+`time` is set to the current time in milliseconds since the epoch of January 1, 1970 at midnight. `long` is a Java type used to store numbers which are too big to be stored as `int`.
 
 # Level 04 E
 
@@ -195,6 +268,9 @@ Of course, all of these great features raised the price significantly. At $8150,
 Originally developed for business executives, GRiDs were also used by the U.S. military 'in the field', and by NASA on the Space Shuttles during the 1980's and 90's. It's even been said that the US President's "nuclear football" at one time included a GRiD computer.
 
 - [Level 04 A](#level-04-a)
+	- [package](#package)
+	- [imports](#imports)
+	- [Classes in Java](#classes-in-java)
 	- [substring String](#substring-string)
 	- [Create a Button](#create-a-button)
 - [Level 04 B](#level-04-b)
@@ -206,8 +282,8 @@ Originally developed for business executives, GRiDs were also used by the U.S. m
 	- [Changing the positions of prompts and alerts](#changing-the-positions-of-prompts-and-alerts)
 - [Level 04 D](#level-04-d)
 	- [Callbacks](#callbacks)
-	- [Instant](#instant)
 	- [Creating Arrays of defined length](#creating-arrays-of-defined-length)
+	- [Instant](#instant)
 - [Level 04 E](#level-04-e)
 	- [modulo operator](#modulo-operator)
 	- [for loops with non-standard incrementation](#for-loops-with-non-standard-incrementation)

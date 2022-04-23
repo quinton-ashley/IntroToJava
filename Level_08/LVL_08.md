@@ -78,13 +78,18 @@ Use `for` loops to make all the boxes for the phrase!
 
 ## delay
 
-Use the `delay` function to delay the rate at which letters are displayed.
+Use the `sleep` function of the `Thread` class to delay the rate at which letters are displayed.
 
 ```java
 // you need to make the function asynchronous to use await
 void takeFive() {
 	System.out.println("start!");
-	delay(5000); // waits for a delay of 5000ms aka 5 seconds
+	try {
+			// waits for a delay of 5000ms aka 5 seconds
+			Thread.sleep(1000);
+	} catch (InterruptedException e) {
+		System.err.println("delay failed");
+	}
 	System.out.println("5 seconds passed");
 }
 

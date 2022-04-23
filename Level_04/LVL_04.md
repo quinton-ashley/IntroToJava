@@ -4,11 +4,30 @@ Do the GuessTheNumber challenge section before starting level 04!
 
 ![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen3.jpg)
 
-## Creating a Button
+## substring String
 
-Let's learn how to add a button. The `button` function is just like `text` but you can add a fourth input parameter, a callback function that gets run when the button is clicked.
+```java
+String str = "hello".substring(1);
+log(str); // -> "ello"
+```
 
-This callback uses a lambda arrow function `() -> {}` to call `btnClick`. This is the more modern version of a Java Runnable.
+`substring` returns a part of the original string which starts at the index provided as the first input parameter.
+
+## Create a Button
+
+Buttons glow when hovered over and are clickable. The `button` function is quite similar to the `text` function.
+
+```java
+//    (text, row, col)
+button("Yes", 5, 5);
+button("No", 5, 9);
+```
+
+# Level 04 B
+
+## Respond to button clicks
+
+Let's learn how to add a button. The `button` function is just like the `text` function but you can add a fourth input parameter, a callback function that gets run when the button is clicked. This callback uses a lambda arrow function `() -> {}` to call `btnClick`. This is the more modern version of a Java Runnable.
 
 ```java
 void btnClick() {
@@ -33,18 +52,14 @@ void doRecursion() {
 
 Here's a more practical example of a recursion loop that ends when the player losses all their health points.
 
-```js
-player.health = 100; // initial health
+```java
+int health = 100; // initial health
 
-function gameLoop() {
+void gameLoop() {
 	//
 	// ... game code here ...
 	//
-	if (enemy.attack(player) == true) {
-		player.health -= enemy.damage;
-	}
-	//
-	if (player.health > 0) {
+	if (health > 0) {
 		gameLoop();
 	} else {
 		gameOver();
@@ -52,55 +67,15 @@ function gameLoop() {
 }
 ```
 
-# Level 04 B
-
-## Erasing a button
-
-To remove a button from the screen, store it in a variable and then use the button's erase function.
-
-```java
-Button btn = button("Click this!", 10, 10);
-btn.erase();
-```
-
-## Implied boolean conditions
-
-In this example, `playerIsDead` is a boolean varible.
-
-```java
-boolean playerIsDead = false;
-```
-
-If `playerIsDead` gets set to `true` while the user is playing a game, then tell the user "Game Over!".
-
-```java
-if (playerIsDead == true) {
-	System.out.println("Game Over!");
-}
-```
-
-In Java you don't have to use `== true` in boolean conditions because checking for equivalence to `true` is implied. You can just put the variable in a boolean condition on it's own.
-
-```java
-if (playerIsDead) {
-	System.out.println("Game Over!");
-}
-```
-
-## How to check if a variable is defined
-
-In Java you can set variables to be `null` (nothing) before you give them a value.
-
-```java
-Robot robo = null; // robot created but not defined
-
-// only have the robot shoot lasers if it is defined!
-if (robo != null) {
-	robo.shootLasers();
-}
-```
-
 # Level 04 C
+
+## Erase
+
+```java
+erase();
+```
+
+Use erase to remove all text and buttons from the screen.
 
 ## prompts and alerts
 
@@ -131,6 +106,10 @@ A fourth input paramter can be used to restrict the width of the window. Text th
 If row, column, and width are not defined, default position values are used, which are different for each of the QuintOS virtual computers.
 
 # Level 04 D
+
+## Callbacks
+
+Callbacks are non-linear, so they are good for handling events (like button clicks) that in some cases we wouldn't want our program to wait for. For example if you gave the user a choice between clicking a "Yes" or "No" button you wouldn't want the program to wait for them to click "Yes" because they might click "No". A seperate callback function is needed to handle each response.
 
 ## Instant
 
@@ -216,16 +195,17 @@ Of course, all of these great features raised the price significantly. At $8150,
 Originally developed for business executives, GRiDs were also used by the U.S. military 'in the field', and by NASA on the Space Shuttles during the 1980's and 90's. It's even been said that the US President's "nuclear football" at one time included a GRiD computer.
 
 - [Level 04 A](#level-04-a)
-	- [Creating a Button](#creating-a-button)
-	- [Recursion](#recursion)
+	- [substring String](#substring-string)
+	- [Create a Button](#create-a-button)
 - [Level 04 B](#level-04-b)
-	- [Erasing a button](#erasing-a-button)
-	- [Implied boolean conditions](#implied-boolean-conditions)
-	- [How to check if a variable is defined](#how-to-check-if-a-variable-is-defined)
+	- [Respond to button clicks](#respond-to-button-clicks)
+	- [Recursion](#recursion)
 - [Level 04 C](#level-04-c)
+	- [Erase](#erase)
 	- [prompts and alerts](#prompts-and-alerts)
 	- [Changing the positions of prompts and alerts](#changing-the-positions-of-prompts-and-alerts)
 - [Level 04 D](#level-04-d)
+	- [Callbacks](#callbacks)
 	- [Instant](#instant)
 	- [Creating Arrays of defined length](#creating-arrays-of-defined-length)
 - [Level 04 E](#level-04-e)

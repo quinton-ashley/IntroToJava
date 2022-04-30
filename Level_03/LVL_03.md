@@ -8,7 +8,7 @@ Good code should be easy for other programmers (humans) to read and efficient fo
 
 Above all, it's important to put effort into thinking of GOOD names for your variables. Good variable names in Java are short and concise descriptors. Write sufficiently detailed comments in your code too.
 
-## String.split(seperator)
+## String.split(separator)
 
 Strings have a lot of useful functions we can use. Oracle is a really great resource for learning Java. Documentation for the String class can be found here:
 
@@ -130,7 +130,7 @@ for (int i = 0; i < names.length; i++) {
 }
 ```
 
-When the for loop starts `i` is set to 0, then is check the condtion. If the condition is true the for loop runs for the first time, this is called an iteration. When the for loop ends, the incrementor section of the for loop is run, in this case `i++` which increases the value of `i` by 1. The condition is checked again, if true the for loop will repeat again, doing another iteration. Until the condition is false the for loop will continue to repeat.
+When the for loop starts `i` is set to 0, then is check the condition. If the condition is true the for loop runs for the first time, this is called an iteration. When the for loop ends, the incrementation section of the for loop is run, in this case `i++` which increases the value of `i` by 1. The condition is checked again, if true the for loop will repeat again, doing another iteration. Until the condition is false the for loop will continue to repeat.
 
 The code above prints out a numbered list of names in the Java console.
 
@@ -201,7 +201,7 @@ https://www.youtube.com/watch?v=CxJwy8NsXFs
 
 - [Level 03 A](#level-03-a)
 	- [Coding Philosophy: Naming variables](#coding-philosophy-naming-variables)
-	- [String.split(seperator)](#stringsplitseperator)
+	- [String.split(separator)](#stringsplitseparator)
 	- [Accessing items in an Array](#accessing-items-in-an-array)
 	- [Getting String input from the user](#getting-string-input-from-the-user)
 - [Level 02 B](#level-02-b)

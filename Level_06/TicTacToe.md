@@ -12,24 +12,28 @@ Create 9 buttons for all the empty spaces on the grid. Use `bigSpace` for the te
 
 Now create all the buttons using a nested for loop instead of doing them one by one. Pay attention to the intervals at which the buttons are placed.
 
-Make a `takeTurn` function with row and column input parameters. Inside the button click callback function run `takeTurn(row, col)`. For now try drawing a `bigX` on the clicked button using the `text` function.
+Make a `takeTurn` function with row and column input parameters. The click callback function for all the buttons should be an anonymous arrow function. Inside the anonymous function run `takeTurn(row, col)`. For now try drawing a `bigX` on the clicked button using the `text` function.
 
-After player X takes their turn, playe O should be able to place their `bigO` mark on the grid.
+After player X takes their turn, player O should be able to place their `bigO` mark on the grid.
 
 ## Instructions for PART C
 
-If a player tries to place their 'x' or 'o' on a space that is not empty, do not let them overwrite that space. Start by storing the position of the marks the players make in a two dimensional `board` array.
+If a player tries to place their 'x' or 'o' on a space that is not empty, do not let them overwrite that space. To achieve this, start by storing the position of the marks the players make in a two dimensional `board` array.
 
-When a player clicks a button the `takeTurn` function should check if the corresponding position in the board array is empty. Show the player an alert window that explains they can't put their mark there because the space is not empty.
+When a player clicks a button the `takeTurn` function should check if the corresponding position in the board array is empty. Show the player an alert window that explains they can't put their mark there because the space is not empty. You may notice the alert is not placed in an ideal location haha.
 
-Show the alerts on the bottom right of the screen, don't let them overlap with the Tic Tac Toe grid or it will get erased when the alert window gets erased. HINT: Remember that the alert function accepts an optional width limit as a 4th input parameter: `alert(text, row, col, w)`
+## Instructions for PART D
 
-Create a function called `checkForWinner` that should take a mark ('x' or 'o') as an input parameter. First try checking for winners (three Xs or three Os in a row) on the first row. If there is a winner return `true`, if there's not return `false`.
+Show alerts on the bottom right of the screen, don't let them overlap with the Tic Tac Toe grid or it will get erased when the alert window gets erased. HINT: Remember that the alert function accepts an optional width limit as a 4th input parameter: `alert(text, row, col, w)`
 
-Now check all horizontal rows and vertical columns using a single for loop. Also check for the two diagonals, no loop required. Use the `checkForWinner` function in `takeTurn` and tell the players who won.
+Create a function called `checkForWinner` that should take a mark ('x' or 'o') as an input parameter. First try checking for winners (three Xs or three Os in a row) on the first row. If there is a winner return `true`, if there's not return `false`. Use the `checkForWinner` function in `takeTurn` and tell the players who won using an alert.
 
-Create a function called `checkForDraw` that checks for a draw. Use the function in `takeTurn` and tell the players there was a draw.
+Now implement checking for a winner in all horizontal rows and vertical columns using a single for loop. Also check for the two diagonals, no loop required.
 
-After a game is complete, start a new game. Always show whose turn it is and a tally of the score in the top right corner.
+Create a function called `checkForDraw` that checks for a draw (all spaces filled and no winner). Use the function in `takeTurn` and tell the players there was a draw.
+
+After a game is complete, start a new game.
+
+Always show whose turn it is and a tally of the score in the top right corner. Use the `text` function, not alerts.
 
 Make it random who starts first in the beginning or in case of a draw, otherwise, let the player who lost go first.

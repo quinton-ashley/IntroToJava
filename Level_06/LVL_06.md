@@ -81,7 +81,7 @@ How could we access the red piece on the top row?
 board[0][3]; // row is 0, column is 3
 ```
 
-`board[0]` gets the first row in board array and the `[3]` after that gets us the piece at column 3 in that row array. How could we access the red peice in the middle of the board?
+`board[0]` gets the first row in board array and the `[3]` after that gets us the piece at column 3 in that row array. How could we access the red piece in the middle of the board?
 
 ## Using nested for loops with 2D arrays
 

@@ -111,7 +111,7 @@ By default each character in the string will be one pixel in the resulting sprit
 PImage face = spriteArt(str, 2);
 ```
 
-The second input parameter to the `spriteArt` function is an optional scale value. Input parameters are seperated by commas.
+The second input parameter to the `spriteArt` function is an optional scale value. Input parameters are separated by commas.
 
 ## String.repeat(amount)
 
@@ -144,7 +144,7 @@ System.out.println(x); // x -> 7
 
 ## colorPal
 
-`colorPal` retreives the color associated with the given letter from the retro computer's color palette. Here's some example code for making a red background:
+`colorPal` retrieves the color associated with the given letter from the retro computer's color palette. Here's some example code for making a red background:
 
 ```java
 background(colorPal('r'));
@@ -239,7 +239,7 @@ void draw() {
 
 Excerpt from the last paragraph of Chapter 1 of "ZX81 BASIC PROGRAMMING" by Stephen Vickers:
 
-"Whatever else you do, keep using the computer. If you have a question 'What does it do if I tell it such & such?' then the answer is easy:type it in & see. Whenever the manual tells you to type something in, always ask yourself, 'What could I type instead?' & try out your replies. The more of your own stuff you write, the better you will understand the ZX81. (This is called unprogrammed learning.) Regardless of what you type in, you cannot damage the computer."
+"Whatever else you do, keep using the computer. If you have a question 'What does it do if I tell it such & such?' then the answer is easy:type it in & see. Whenever the manual tells you to type something in, always ask yourself, 'What could I type instead?' & try out your replies. The more of your own stuff you write, the better you will understand the ZX81. (This is called un-programmed learning.) Regardless of what you type in, you cannot damage the computer."
 
 This level's computer is based on the ZX Spectrum, an 8-bit personal home computer developed by Sinclair Research. It was first released in the United Kingdom on the 23rd of April 1982 and went on to become Britain's best-selling microcomputer. Watch some of this video to hear what it was like for people to use the ZX Spectrum back then!
 

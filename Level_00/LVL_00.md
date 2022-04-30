@@ -44,7 +44,7 @@ float y = -49.8;
 double z = 9504.159392000393888;
 ```
 
-`int` (integer) is for whole numbers. `float` (floating point) is for decimal numbers. `double` should be used when a higher degree of percision is needed for decimal numbers. All of these types of numbers can be positive or negative.
+`int` (integer) is for whole numbers. `float` (floating point) is for decimal numbers. `double` should be used when a higher degree of precision is needed for decimal numbers. All of these types of numbers can be positive or negative.
 
 ### Boolean
 
@@ -200,7 +200,7 @@ Greater than:             >
 Greater than or equal to: >=
 ```
 
-Boolean operations evaulate to either true or false. Use them in the boolean conditions (inside the parenthesis) of `if` and `else if` statements.
+Boolean operations evaluate to either true or false. Use them in the boolean conditions (inside the parenthesis) of `if` and `else if` statements.
 
 # Level 00 C
 

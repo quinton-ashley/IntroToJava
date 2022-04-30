@@ -6,7 +6,7 @@
 
 Good code should be easy for other programmers (humans) to read and efficient for your computer to run. Here are some guidelines for how to write good code!
 
-Above all, it's important to put effort into thinking of GOOD names for your variables. Good variable names in Javascript are short and concise descriptors. Write sufficiently detailed comments in your code too.
+Above all, it's important to put effort into thinking of GOOD names for your variables. Good variable names in Java are short and concise descriptors. Write sufficiently detailed comments in your code too.
 
 ## String.split(seperator)
 

@@ -10,7 +10,7 @@ Do the GuessTheNumber challenge section before starting level 04!
 package parent_folder.ExampleClass;
 ```
 
-The first line of a Java file declares the package (aka folder) that the Java file is in relative to where it is being run. In package declarations, the path to the file is seperated by `.` dots instead of slashes.
+The first line of a Java file declares the package (aka folder) that the Java file is in relative to where it is being run. In package declarations, the path to the file is separated by `.` dots instead of slashes.
 
 For example, you are running your Java files from the `quintos-games` folder. So the package of this game is: `games_java.QuickClicks`
 
@@ -115,7 +115,7 @@ button("Click me!", 5, 5, () -> {
 
 ## Recursion
 
-In the past few lessons you've learned about `for` loops and `while` loops. Recursion is another way to loop code. It is simply a function that calls itself inside its own defintion.
+In the past few lessons you've learned about `for` loops and `while` loops. Recursion is another way to loop code. It is simply a function that calls itself inside its own definition.
 
 ```java
 void doRecursion() {
@@ -174,7 +174,7 @@ The position of prompt and alert windows can be changed by defining their row an
 alert("I can move too!", 5, 20, 16);
 ```
 
-A fourth input paramter can be used to restrict the width of the window. Text that is longer than the specified width will be put on new lines. This width limiter can be used with the `text`, `alert`, and `prompt` functions.
+A fourth input parameter can be used to restrict the width of the window. Text that is longer than the specified width will be put on new lines. This width limiter can be used with the `text`, `alert`, and `prompt` functions.
 
 If row, column, and width are not defined, default position values are used, which are different for each of the QuintOS virtual computers.
 
@@ -182,7 +182,7 @@ If row, column, and width are not defined, default position values are used, whi
 
 ## Callbacks
 
-Callbacks are non-linear, so they are good for handling events (like button clicks) that in some cases we wouldn't want our program to wait for. For example if you gave the user a choice between clicking a "Yes" or "No" button you wouldn't want the program to wait for them to click "Yes" because they might click "No". A seperate callback function is needed to handle each response.
+Callbacks are non-linear, so they are good for handling events (like button clicks) that in some cases we wouldn't want our program to wait for. For example if you gave the user a choice between clicking a "Yes" or "No" button you wouldn't want the program to wait for them to click "Yes" because they might click "No". A separate callback function is needed to handle each response.
 
 ## Creating Arrays of defined length
 

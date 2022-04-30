@@ -39,9 +39,8 @@ Input inp;
 
 // value is the text the user entered in the input
 void calculate(value) {
-	// eval() is a global function that evaluates the String input value as
-	// JavaScript code, for example if value is "5+3", result will be the number 8
-	double result = eval(value); // evaluate what the user entered
+	// eval is a hypothetical function that evaluates what the user entered
+	double result = eval(value);
 
 	inp.erase(); // erase the old input
 

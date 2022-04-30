@@ -92,7 +92,7 @@ You've finished the install process! Read the next lesson section before startin
 
 ## Special characters
 
-When you make Strings using quotes they can't be on multiple lines of your JavaScript file.
+When you make Strings using quotes they can't be on multiple lines of your Java file.
 
 ```java
 String example = "I want to put something on a new line:
@@ -110,7 +110,7 @@ I want to put something on a new line:
 something
 ```
 
-The tab character `\t`, note that the `+` operator is used to add another String to the list on a new line in the JavaScript code.
+The tab character `\t`, note that the `+` operator is used to add another String to the list on a new line in the Java code.
 
 ```java
 String list = "Grocery list:\n\n\t"
@@ -219,7 +219,7 @@ x y z
 
 ## Arrays
 
-[Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are lists of variables with numbered indexes.
+[Arrays](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Arrays.html) are lists of variables with numbered indexes.
 
 ```java
 String[] names = new String[]{"Amy", "Ellie", "Max"};

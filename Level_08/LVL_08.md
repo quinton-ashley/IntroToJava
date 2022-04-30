@@ -1,51 +1,8 @@
 # Level 08 A
 
-## ArrayList
+## Coding Philosophy: How to approach complex problems
 
-What if you need to make an array but you don't know what it will store or how big it will be beforehand?
-
-Normal arrays have a size limit for adding new items. To add items to an array that is already full, the contents of that array would have to be transferred to a new larger array. `ArrayList` does this behind the scenes so that new items can be added seamlessly!
-
-Here's an example of a wedding guest book. When guests arrive their name is added to the guestBook ArrayList.
-
-```java
-ArrayList<String> guestBook = new ArrayList<String>();
-
-void guestArrived(String name) {
-	guestBook.add(name);
-}
-```
-
-Get the names of the first and last guests to arrive at the wedding using the `get` function instead of `[]` used for primitive arrays.
-
-```java
-String firstGuest = guestBook.get(0);
-String lastGuest = guestBook.get(guestBook.size() - 1);
-```
-
-## Reading Files in Java
-
-```java
-String dir = System.getProperty("user.dir") + "/games_java/GameFolder";
-File file = new File(dir + "/file.txt");
-Scanner fileScanner;
-try {
-	fileScanner = new Scanner(file);
-} catch (FileNotFoundException e) {
-	e.printStackTrace();
-	return;
-}
-```
-
-`System.getProperty("user.dir")` gets the current working directory, the folder Java files are run from on the command line. When using Visual Studio Code to run Java this method will return the path to your quintos-games project folder. Use `Scanner` with a `File` object to read the file.
-
-```java
-ArrayList<String> lines = new ArrayList<String>();
-while (fileScanner.hasNextLine()) {
-	lines.add(fileScanner.nextLine());
-}
-fileScanner.close();
-```
+Solve complex problems by thinking algorithmically! That means breaking problems down step by step. "A journey of a thousand miles begins with a single step". If you get stuck on a problem you may be overcomplicating it. Keep things as simple as possible at first and test often after adding new code! Doing this will help prevent you from getting stuck.
 
 # Level 08 B
 

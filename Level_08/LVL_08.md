@@ -1,8 +1,8 @@
 # Level 08 A
 
-## Coding Philosophy: How to approach complex problems
+## Coding Philosophy: Debugging
 
-Solve complex problems by thinking algorithmically! That means breaking problems down step by step. "A journey of a thousand miles begins with a single step". If you get stuck on a problem you may be overcomplicating it. Keep things as simple as possible at first and test often after adding new code! Doing this will help prevent you from getting stuck.
+If you have problems with your code try printing out the value of your variables using `System.out.println` or the QuintOS `log` function. `log` shows the value of variables in the JavaScript console so you can see how your code is actually working.
 
 # Level 08 B
 

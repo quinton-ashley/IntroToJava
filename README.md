@@ -32,22 +32,22 @@ Join the [QuintOS Discord server](https://discord.gg/5pcyKWRwSB) to chat with ot
 
 ## Games List
 
-GuessTheNumber : a random number is generated, player tries to guess it  
-PickAPath : a "Choose Your Own Adventure" type game  
-Pong : the classic tennis arcade game  
-Hangman : a random word from a word list is picked, player tries to guess it  
-QuickClicks : tests player's mouse movement speed with a mouse  
-ClickAPath : illustrated "remaster" of PickAPath  
-TicTacToe : play Tic Tac Toe against a friend or an AI  
-WorldWideWeb : create a web page using HTML and CSS  
-WheelOfFortune : a mini-game from the "Wheel of Fortune" TV show  
-SpeakAndSpell : the classic 80s educational talking toy  
-Contain : 4 paddle variant of Pong for 1-4 players  
-SketchBook : a drawing program for creating pixel art images  
-Snake : move fast to collect food pellets but don't hit your tail!  
-SuperJump : an endless vertical platform jumping game  
-Sokoban : a Japanese puzzle game, move boxes into the correct positions  
-CosmicDebris : navigate two spaceships through dangerous cosmic debris fields
+**GuessTheNumber** : a random number is generated, player tries to guess it  
+**PickAPath** : a "Choose Your Own Adventure" type game  
+**Pong** : the classic tennis arcade game  
+**Hangman** : a random word from a word list is picked, player tries to guess it  
+**QuickClicks** : tests player's mouse movement speed with a mouse  
+**ClickAPath** : illustrated "remaster" of PickAPath  
+**TicTacToe** : play Tic Tac Toe against a friend or an AI  
+**WorldWideWeb** : create a web page using HTML and CSS  
+**WheelOfFortune** : a mini-game from the "Wheel of Fortune" TV show  
+**SpeakAndSpell** : the classic 80s educational talking toy  
+**Contain** : 4 paddle variant of Pong for 1-4 players  
+**SketchBook** : a drawing program for creating pixel art images  
+**Snake** : move fast to collect food pellets but don't hit your tail!  
+**SuperJump** : an endless vertical platform jumping game  
+**Sokoban** : a Japanese puzzle game, move boxes into the correct positions  
+**CosmicDebris** : navigate two spaceships through dangerous cosmic debris fields
 
 ## Credits
 

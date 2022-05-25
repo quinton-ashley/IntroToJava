@@ -6,7 +6,7 @@ Pick a Path stories, also known as [Choose your own Adventures](https://en.wikip
 
 Copy the `PickAPath` folder into your `games_java` directory. Start coding in the `PickAPath.java` file.
 
-## Instructions for PART A
+## Instructions for Part A
 
 Here are some ideas for the kind of PickAPath game you could make:
 
@@ -19,7 +19,7 @@ Here are some ideas for the kind of PickAPath game you could make:
 
 Use the formatting characters tab `\t` and newline `\n` in your messages. After you get your story started, read part B in the `LVL_01.md` lesson file.
 
-## Instructions for PART B
+## Instructions for Part B
 
 Continue writing your story! Use boolean OR at least once to make two or more choices have the same result.
 
@@ -38,12 +38,12 @@ You could make a number variable to store how many of that item the player has: 
 
 You could also make a String variable to store what kind of item the player is holding: `String primaryWeapon = "knife";`.
 
-## Instructions for PART C
+## Instructions for Part C
 
 Reject invalid choices by the user, don't let them skip ahead!
 
 Make an `options` array and in each decision branch assign it to the valid options for that choice.
 
-Check if the number the user inputs is included in the `options` array of valid options. If it is change the `choice` variable to the user's input. Otherwise alert the user they've made an incorrect choice and keep the `choice` variable the same and prompt them to make a decision again.
+If the number the user entered, their input, is a valid option change the `choice` variable to the user's input. Otherwise alert the user they've made an incorrect choice.
 
 At the end of the game, on paths where the player has no choices to make, give them the option to play again or exit the game.

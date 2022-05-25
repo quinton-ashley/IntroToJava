@@ -7,7 +7,7 @@ public class QuickClicks {
 
 	void makeTargets() {
 		/*
-		 * PART A0: change the values of row and col to be random, within the bounds of
+		 * Part A0: change the values of row and col to be random, within the bounds of
 		 * the screen.
 		 */
 		int row = 1;

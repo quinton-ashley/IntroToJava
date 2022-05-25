@@ -62,7 +62,9 @@ String name = sc.nextLine();
 
 ## Create an array of characters from a String
 
-This example creates an array of characters from a String that contains the english alphabet.
+Remember that the data type `char` stores a single character but a `String` can store many characters.
+
+This example creates a `char` array from a `String` that contains the english alphabet.
 
 ```java
 char[] letters = "abcdefghijklmnopqrstuvwxyz".toCharArray();
@@ -71,8 +73,6 @@ char[] letters = "abcdefghijklmnopqrstuvwxyz".toCharArray();
 # Level 03 C
 
 ## Accessing characters in a String
-
-Remember that the data type `char` stores a single character but a String can store many characters.
 
 To access characters in a String you should use the `charAt` method. Note that you can't edit them like you can with arrays.
 

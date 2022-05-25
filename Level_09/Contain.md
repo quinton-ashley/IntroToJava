@@ -2,7 +2,7 @@
 
 Contain is a 1 player or 2-4 player co-op variant of Pong, with the goal being to keep multiple balls within a square surrounded by four small paddles. Contain at least two balls or it's game over!
 
-## Instructions for PART A
+## Instructions for Part A
 
 Copy and paste your code from Pong into the empty `Contain.java` file.
 
@@ -20,7 +20,7 @@ Since we don't want all the balls to be served at once, make a new function call
 
 Make a `for` loop in the Processing `draw` function to loop through all of the balls and check for bounces with the paddles.
 
-## Instructions for PART B
+## Instructions for Part B
 
 Make an array of four booleans that store whether each ball is actively on the screen or not. By default set them all to false. When a ball is served set its active boolean to true.
 

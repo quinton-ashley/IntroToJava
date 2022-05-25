@@ -35,7 +35,7 @@ String[] speech = new String[] {
 Input inp;
 SoundFile letterSoundA;
 
-/* PART A0: Load all the letter sounds and apostrophe */
+/* Part A0: Load all the letter sounds and apostrophe */
 
 void preload() {
 	// example loading the "spell" sound

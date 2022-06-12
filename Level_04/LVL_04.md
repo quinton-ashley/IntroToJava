@@ -22,7 +22,7 @@ Not all Java classes are available by default. To keep the size of a compiled Ja
 import java.util.Scanner;
 ```
 
-QuintOS must also be imported. It is a static import, meaning you can use QuintOS methods without referencing the QuintOS class first like you must do with `Math.random()` for example or with `Instant.now().toEpochMilli()`. Static imports are not common in Java and have only been added in later versions, don't worry too much about them.
+QuintOS must also be imported. It is a static import, meaning you can use QuintOS methods without referencing the QuintOS class first like you must do with `Math.random()`.
 
 ```java
 import static games_java.QuintOS.*;
@@ -30,7 +30,7 @@ import static games_java.QuintOS.*;
 
 ## Classes in Java
 
-When making a simple game you can put all the game's code in the main method, but if you want to make a more complex games with multiple methods then you will need to know how to create a class. (When you created your Pong game, Processing turned your code file into a Java class for you.)
+When making a simple game you can put all the game's code in the main method, but if you want to make a more complex games with multiple methods then you will need to know how to create a class.
 
 This example shows the start of a student's implementation of the game Chess in Java.
 
@@ -100,7 +100,7 @@ button("No", 5, 9);
 
 ## Respond to button clicks
 
-Let's learn how to add a button. The `button` function is just like the `text` function but you can add a fourth input parameter, a callback function that gets run when the button is clicked. This callback uses a lambda arrow function `() -> {}` to call `btnClick`. This is the more modern version of a Java Runnable.
+You can add a fourth input parameter to the `button` function, a callback function that gets run when the button is clicked.
 
 ```java
 void btnClick() {
@@ -112,6 +112,8 @@ button("Click me!", 5, 5, () -> {
 	this.btnClick();
 });
 ```
+
+This example uses the lambda arrow function syntax: `() -> { }`
 
 ## Recursion
 
@@ -242,7 +244,7 @@ for (int i = 0; i < 10; i++) {
 }
 ```
 
-## for loops with non-standard incrementation
+## for loops with non-standard increments
 
 This code does the same kind of alternation.
 
@@ -286,5 +288,5 @@ Originally developed for business executives, GRiDs were also used by the U.S. m
 	- [Instant](#instant)
 - [Level 04 E](#level-04-e)
 	- [modulo operator](#modulo-operator)
-	- [for loops with non-standard incrementation](#for-loops-with-non-standard-incrementation)
+	- [for loops with non-standard increments](#for-loops-with-non-standard-increments)
 	- [Computer History: GRiD Compass](#computer-history-grid-compass)

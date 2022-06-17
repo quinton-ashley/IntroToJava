@@ -20,12 +20,23 @@ void keyPressed() {
 }
 ```
 
-## bounce callback
+## overlap
 
-You can make a callback function for when a sprite bounces off another sprite.
+You can disable collisions between sprites by using the overlap function.
 
 ```java
-ball.bounce(paddle, () -> {
+spriteA.overlap(spriteB);
+spriteA.overlap(spriteC);
+```
+
+spriteB will still collide with spriteC.
+
+## collide/overlap with callback
+
+You can add a callback function to `collide` and `overlap` that gets run when a sprite collides or overlaps with another sprite.
+
+```java
+ball.collide(paddle, () -> {
 	System.out.println("ball bounced!");
 });
 ```

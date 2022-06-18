@@ -15,10 +15,14 @@ public class QuickClicks {
 		button(target, row, col);
 	}
 
+	void startGame() {
+		makeTargets();
+	}
+
 	/* don't edit the code below this line */
 
 	public QuickClicks() {
-		makeTargets();
+		startGame();
 	}
 
 	public static void main(String[] args) {

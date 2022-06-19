@@ -33,7 +33,7 @@ Use `for` loops to make all the boxes for the phrase!
 
 # Level 08 C
 
-## delay
+## Thread.sleep
 
 Use the `sleep` function of the `Thread` class to delay the rate at which letters are displayed.
 
@@ -53,7 +53,7 @@ void takeFive() {
 takeFive();
 ```
 
-## toUpperCase and toLowerCase String
+## String toUpperCase and toLowerCase
 
 ```java
 String str = 'Hello!';
@@ -62,6 +62,14 @@ String low = str.toLowerCase(); // low -> "hello!"
 ```
 
 These functions do not change the original value of the string.
+
+## substring String
+
+```java
+str.substring(start, end);
+```
+
+This function returns a subsection of the string, starting at the start index and ending and the end index. It does not change the original value of the string. The `end` index is optional.
 
 ## replace String
 
@@ -75,21 +83,3 @@ System.out.println(result);
 This function takes two input parameters, the first input parameter is replaced in the string by the second. Note that it only does one replacement.
 
 This function does not change the original value of the string.
-
-## substring String
-
-```java
-str.substring(start, end);
-```
-
-This function returns a subsection of the string, starting at the start index and ending and the end index. It does not change the original value of the string. The `end` index is optional.
-
-# Level 08 D
-
-## ArrayList remove
-
-You can also easily removes items from an ArrayList using the `remove` method.
-
-```java
-guestBook.remove(name);
-```

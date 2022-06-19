@@ -133,6 +133,34 @@ These functions do not change the original value of the string.
 
 # Level 05 B
 
+## File Paths in Java
+
+You can read the data from a file in Java by using a Scanner object.
+
+```java
+File file = new File("games_java/Game/file.txt");
+
+Scanner fileScanner;
+try {
+	fileScanner = new Scanner(file);
+} catch (FileNotFoundException e) {
+	e.printStackTrace();
+	return;
+}
+
+String data = "";
+
+while (fileScanner.hasNextLine()) {
+	data += fileScanner.nextLine();
+}
+
+fileScanner.close();
+```
+
+Use `Scanner` with a `File` object to read the file.
+
+# Level 05 C
+
 ## ASCII art
 
 ASCII art is text based art made exclusively from symbols in the original ASCII 128 character set or extended ASCII 256 character sets. Here are a few example:

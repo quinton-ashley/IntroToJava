@@ -109,7 +109,7 @@ void btnClick() {
 
 //    (text,     row, col, function)
 button("Click me!", 5, 5, () -> {
-	this.btnClick();
+	btnClick();
 });
 ```
 

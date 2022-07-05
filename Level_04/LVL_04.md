@@ -1,292 +1,218 @@
-# Level 04 A
+# Level 03 A
 
-Do the GuessTheNumber challenge section before starting level 04!
+![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen2.jpg)
 
-![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen3.jpg)
+## Coding Philosophy: Naming variables
 
-## package
+Good code should be easy for other programmers (humans) to read and efficient for your computer to run. Here are some guidelines for how to write good code!
+
+Above all, it's important to put effort into thinking of GOOD names for your variables. Good variable names in Java are short and concise descriptors. Write sufficiently detailed comments in your code too.
+
+## String.split(separator)
+
+Strings have a lot of useful functions we can use. Oracle is a really great resource for learning Java. Documentation for the String class can be found here:
+
+<https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html>
+
+`.split(String regex)` splits a String by a pattern creating an array of Strings
 
 ```java
-package parent_folder.ExampleClass;
+// split by " " to get an array of words
+"the red fox".split(" ");
+// -> ["the", "red", "fox"]
 ```
 
-The first line of a Java file declares the package (aka folder) that the Java file is in relative to where it is being run. In package declarations, the path to the file is separated by `.` dots instead of slashes.
+## Accessing items in an Array
 
-For example, you are running your Java files from the `quintos-games` folder. So the package of this game is: `games_java.QuickClicks`
-
-## imports
-
-Not all Java classes are available by default. To keep the size of a compiled Java program small, developers are required to import only the classes necessary for the program to run. For example, `Scanner` is not available as part of the Java language by default, it must be imported into your project.
+The `[]` square brackets are used to create arrays and are also used to access items in an array.
 
 ```java
-import java.util.Scanner;
+String[] names = new String[]{"Amy", "Ellie", "Max"};
+int[] nums = new int[]{50, 21, 46, 83};
+
+System.out.println(names[0]); // prints "Amy"
+System.out.println(nums[1]); // prints 21
 ```
 
-QuintOS must also be imported. It is a static import, meaning you can use QuintOS methods without referencing the QuintOS class first like you must do with `Math.random()`.
+Items in an array can also be edited using `[]` (aka sub or at).
 
 ```java
-import static games_java.QuintOS.*;
+names[2] = "Ben";
+// edits the list: "Amy", "Ellie", "Ben"
+nums[1] = 36;
+// edits the list: 50, 36, 42, 83
 ```
 
-## Classes in Java
+## Getting String input from the user
 
-When making a simple game you can put all the game's code in the main method, but if you want to make a more complex games with multiple methods then you will need to know how to create a class.
-
-This example shows the start of a student's implementation of the game Chess in Java.
+You can get a String from the user via the standard input, `System.in`, by using the `nextLine` method of the Scanner class.
 
 ```java
-package Chess;
+Scanner sc = new Scanner(System.in);
 
-import java.util.Scanner;
+System.out.println("What's your name?");
+String name = sc.nextLine();
+```
 
-public class Chess {
-	Scanner sc;
-	String white;
-	String black;
+# Level 02 B
 
-	void takeTurn() {
-		System.out.println("Which position would you like to move to?");
-		String position = sc.nextLine();
-		// TODO: update game board
-	}
+## Getting the length of a String
 
-	void startGame() {
-		sc = new Scanner(System.in);
+`.length` is used to get the amount of items in an array but in Java you must use the `.length()` function to get the amount of characters in a String.
 
-		System.out.println("Who will move the white pieces?");
-		white = sc.nextLine();
-		System.out.println("Who will move the black pieces?");
-		white = sc.nextLine();
+## Create an array of characters from a String
 
-		System.out.println(white + " it is your turn.");
-		takeTurn();
-	}
+Remember that the data type `char` stores a single character but a `String` can store many characters.
 
-	// class constructor
-	public Chess() {
-		startGame();
-	}
+This example creates a `char` array from a `String` that contains the english alphabet.
 
-	public static void main(String[] args) {
-		new Chess();
-	}
+```java
+char[] letters = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+```
+
+# Level 03 C
+
+## Accessing characters in a String
+
+To access characters in a String you should use the `charAt` method. Note that you can't edit them like you can with arrays.
+
+```java
+String animal = "the red fox";
+char c = animal.charAt(4);
+System.out.println(c); // prints 'r'
+
+animal[8] = 'b'; // ERROR: will not change fox String to 'the red box'
+animal = "the red box"; // this will work!
+```
+
+Strings are immutable, meaning individual characters in the String can not be changed.
+
+## Counting with while loops
+
+The number of loops a while loop does can be counted with a variable.
+
+```java
+String[] names = new String[]{"Jake", "Ali", "Ben", "Cam"};
+
+int i = 0; // initialize i to 0
+
+// loop while i is less than names.length which is 4
+while (i < names.length) {
+	// print the next name in the list
+	System.out.println(i + '. ' + names[i]);
+
+	i = i + 1;
+} // in this loop i goes up from 0 to 1 to 3
+```
+
+The code above prints out a numbered list of names in the Java console.
+
+```txt
+0. Jake
+1. Ali
+2. Ben
+3. Cam
+```
+
+# Level 03 D
+
+## for loops
+
+Scroll up and take another look at the example of the while loop with a counter variable, then check out this for loop! It does the same thing but all the steps related to the index variable are written as one line. The order of their operation is still the same.
+
+```java
+String[] names = new String[]{"Jake", "Ali", "Ben", "Cam"};
+
+// (INITIALIZER; CONDITION; INCREMENATION)
+for (int i = 0; i < names.length; i++) {
+	// print the next name in the list
+	System.out.println(i + '. ' + names[i]);
 }
 ```
 
-The class constructor is a function that is run when an Object of that class is created. Objects can be created using the keyword `new` followed by the class constructor function. From inside the class constructor you can call other methods of that class.
+When the for loop starts `i` is set to 0, then is check the condition. If the condition is true the for loop runs for the first time, this is called an iteration. When the for loop ends, the incrementation section of the for loop is run, in this case `i++` which increases the value of `i` by 1. The condition is checked again, if true the for loop will repeat again, doing another iteration. Until the condition is false the for loop will continue to repeat.
 
-A class is like a blueprint for an Object. A class for a game is like the rules of the game, the game board, and all the pieces. An Object made using that game class is one particular instance of playing the game. Object variables for a chess game should store things like the names of the players, the position of pieces on the board, the game clock if the game is timed, etc. These variables (also called properties of the object) are available to use in any of the object's methods.
+The code above prints out a numbered list of names in the Java console.
 
-## substring String
-
-```java
-String str = "hello".substring(1);
-log(str); // -> "ello"
+```txt
+1. Jake
+2. Ali
+3. Ben
+4. Cam
 ```
-
-`substring` returns a part of the original string which starts at the index provided as the first input parameter.
-
-## Create a Button
-
-Buttons glow when hovered over and are clickable. The `button` function is quite similar to the `text` function.
-
-```java
-//    (text, row, col)
-button("Yes", 5, 5);
-button("No", 5, 9);
-```
-
-# Level 04 B
-
-## Respond to button clicks
-
-You can add a fourth input parameter to the `button` function, a callback function that gets run when the button is clicked.
-
-```java
-void btnClick() {
-	System.out.println("You clicked the button!");
-}
-
-//    (text,     row, col, function)
-button("Click me!", 5, 5, () -> {
-	btnClick();
-});
-```
-
-This example uses the lambda arrow function syntax: `() -> { }`
-
-## Recursion
-
-In the past few lessons you've learned about `for` loops and `while` loops. Recursion is another way to loop code. It is simply a function that calls itself inside its own definition.
-
-```java
-void doRecursion() {
-	doRecursion(); // infinite loop! OH NO!
-}
-```
-
-Here's a more practical example of a recursion loop that ends when the player losses all their health points.
-
-```java
-int health = 100; // initial health
-
-void gameLoop() {
-	//
-	// ... game code here ...
-	//
-	if (health > 0) {
-		gameLoop();
-	} else {
-		gameOver();
-	}
-}
-```
-
-# Level 04 C
-
-## Erase
-
-```java
-erase();
-```
-
-Use erase to remove all text and buttons from the screen.
-
-## prompts and alerts
-
-In previous lessons you've used `System.out.println` to create alert windows and a scanner `sc.next` to create prompt windows. You can also use the QuintOS functions `prompt` and `alert` directly.
-
-```java
-// waits for the user to type something and press enter
-String favColor = prompt("What is your favorite color?");
-// the user's response to the prompt is assigned to favColor
-
-// waits for user to read the message in the alert and press enter
-alert(favColor + " is my favorite color too!"); // show message to user
-```
-
-In a standard Java program `System.out.println` is used to print to the Java console, which is just a line by line text output. Boring!
-
-## Changing the positions of prompts and alerts
-
-The position of prompt and alert windows can be changed by defining their row and column values just like with the `text` function.
-
-```java
-//   (text           , row, col, w)
-alert("I can move too!", 5, 20, 16);
-```
-
-A fourth input parameter can be used to restrict the width of the window. Text that is longer than the specified width will be put on new lines. This width limiter can be used with the `text`, `alert`, and `prompt` functions.
-
-If row, column, and width are not defined, default position values are used, which are different for each of the QuintOS virtual computers.
-
-# Level 04 D
-
-## Callbacks
-
-Callbacks are non-linear, so they are good for handling events (like button clicks) that in some cases we wouldn't want our program to wait for. For example if you gave the user a choice between clicking a "Yes" or "No" button you wouldn't want the program to wait for them to click "Yes" because they might click "No". A separate callback function is needed to handle each response.
-
-## Creating Arrays of defined length
-
-The following example asks the user security questions and records their answers. Since we already know there are three questions there will be three answers. However we don't know what the answers will be, so they can't be defined when we create the array. Instead, the amount of items the array will store can be defined in the `[]` square brackets. Then you can add the values by assigning them to positions in the array.
-
-```java
-String[] questions = new String[] {
-	"What was your first pet's name?",
-	"What's your mother's maiden name?",
-	"In what city or town did your parents meet?"
-};
-String[] answers = new String[3];
-
-for (int i = 0; i < 3; i++) {
-	System.out.println(questions[i]);
-	answers[i] = sc.nextLine();
-}
-```
-
-## Instant
-
-Take a look at the Java documentation for the [Instant](https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html) class.
-
-```java
-long time = Instant.now().toEpochMilli();
-```
-
-`time` is set to the current time in milliseconds since the epoch of January 1, 1970 at midnight. `long` is a Java type used to store numbers which are too big to be stored as `int`.
 
 # Level 04 E
 
-## modulo operator
+## String equals
 
-The modulo operator `%` gets the gets the remainder of a division.
+Unfortunately in Java, Strings can't be checked if one is equal to another using double equals `==`. Only primitive types like `int` can be compared directly with the `==`. In Java, Objects like Strings must be compared using the Object's `.equals()` method.
+
+Take a look at the example below which assigns a color to the variable `fruitColor` based on the name of the `fruit`.
 
 ```java
-// true if x is even (divisible by 2)
-if (x % 2 == 0) {
-	System.out.println("x is even!");
-}
+String fruitColor;
 
-// true if y is divisible by 5
-if (y % 5 == 0) {
-	System.out.println(y + " is a multiple of 5");
+// if the fruit is a banana
+if (fruit.equals("banana")) {
+	// set the fruitColor to yellow
+	fruitColor = "yellow";
 }
 ```
 
-Here's how modulo can be used for alternation.
+## Breaking out of a loop early
+
+Take a look at this example code that searches for the Ace of Spades in a deck of cards.
 
 ```java
-for (int i = 0; i < 10; i++) {
-	if (i % 2 == 0) {
-		text("even", i);
-	} else {
-		text("odd", i);
+String card; // no card picked yet
+
+while (card != "Ace of Spades") {
+	card = pickACard();
+}
+
+System.out.println("Found the Ace of Spades!");
+```
+
+If there are no cards left in the deck, the Ace of Spades can not be found. The while loop would keep looping infinitely! Let's imagine the `pickACard` function would return `null`, a special value that means none if there are no cards left in the deck. The while loop condition would remain true forever, so the loop must be exited early by using the `break` keyword.
+
+```java
+String card;
+
+while (!card.equals("Ace of Spades")) {
+	card = pickACard();
+
+	if (card == null) {
+		break; // exit the while loop
 	}
 }
-```
 
-## for loops with non-standard increments
-
-This code does the same kind of alternation.
-
-```java
-for (int i = 0; i < 10; i+=2) {
-	text("even", i);
-	text("odd", i+1);
+if (card.equals("Ace of Spades")) {
+	System.out.println("Found the Ace of Spades!");
+} else {
+	System.out.println("The Ace of Spades was not in the deck!");
 }
 ```
 
-## Computer History: GRiD Compass
+## Computer History: Apple II
 
-This level's computer is based on the GRiD Compass 1101. The following description is from http://oldcomputers.net/grid1101.html
+This level's computer was inspired by the Apple II. Check out this video about it if you'd like!
 
-![](http://oldcomputers.net/pics/grid1101-right.jpg)
+https://www.youtube.com/watch?v=CxJwy8NsXFs
 
-Designed to be the ultimate portable computer, the clamshell-style GRiD Compass 1101 is the grand-daddy of all present-day laptop computers.
-
-The Compass is very high-tech, with its flat-black, die-cast magnesium-alloy case, and bright, sharp electroluminescent display (ELD). No other system packed so much speed and power in as small a case, and none had such a unique and large, easy-to-read screen, allowing full 80x24 text.
-
-Of course, all of these great features raised the price significantly. At $8150, the GRiD Compass 1101 was the most expensive personal computer on the market.
-
-Originally developed for business executives, GRiDs were also used by the U.S. military 'in the field', and by NASA on the Space Shuttles during the 1980's and 90's. It's even been said that the US President's "nuclear football" at one time included a GRiD computer.
-
-- [Level 04 A](#level-04-a)
-	- [package](#package)
-	- [imports](#imports)
-	- [Classes in Java](#classes-in-java)
-	- [substring String](#substring-string)
-	- [Create a Button](#create-a-button)
-- [Level 04 B](#level-04-b)
-	- [Respond to button clicks](#respond-to-button-clicks)
-	- [Recursion](#recursion)
-- [Level 04 C](#level-04-c)
-	- [Erase](#erase)
-	- [prompts and alerts](#prompts-and-alerts)
-	- [Changing the positions of prompts and alerts](#changing-the-positions-of-prompts-and-alerts)
-- [Level 04 D](#level-04-d)
-	- [Callbacks](#callbacks)
-	- [Creating Arrays of defined length](#creating-arrays-of-defined-length)
-	- [Instant](#instant)
+- [Level 03 A](#level-03-a)
+	- [Coding Philosophy: Naming variables](#coding-philosophy-naming-variables)
+	- [String.split(separator)](#stringsplitseparator)
+	- [Accessing items in an Array](#accessing-items-in-an-array)
+	- [Getting String input from the user](#getting-string-input-from-the-user)
+- [Level 02 B](#level-02-b)
+	- [Getting the length of a String](#getting-the-length-of-a-string)
+	- [Create an array of characters from a String](#create-an-array-of-characters-from-a-string)
+- [Level 03 C](#level-03-c)
+	- [Accessing characters in a String](#accessing-characters-in-a-string)
+	- [Counting with while loops](#counting-with-while-loops)
+- [Level 03 D](#level-03-d)
+	- [for loops](#for-loops)
 - [Level 04 E](#level-04-e)
-	- [modulo operator](#modulo-operator)
-	- [for loops with non-standard increments](#for-loops-with-non-standard-increments)
-	- [Computer History: GRiD Compass](#computer-history-grid-compass)
+	- [String equals](#string-equals)
+	- [Breaking out of a loop early](#breaking-out-of-a-loop-early)
+	- [Computer History: Apple II](#computer-history-apple-ii)

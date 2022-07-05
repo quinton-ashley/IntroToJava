@@ -1,85 +1,73 @@
-# Level 08 A
+# Level 06 A
 
-## Coding Philosophy: Debugging
+Upgrade to level 6! 🥳
 
-If you have problems with your code try printing out the value of your variables using `System.out.println` or the QuintOS `log` function. `log` shows the value of variables in the JavaScript console so you can see how your code is actually working.
+![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen4.jpg)
 
-# Level 08 B
+# Level 06 B
 
-## eraseRect
+## Nested for loops
 
-```java
-eraseRect(row, col, w, h);
-```
-
-Erases text within the specified rectangle.
-
-## textRect
-
-Make boxes using `textRect(row, col, w, h)` around the blank spaces and letters just like in the Wheel of Fortune TV show.
+A `for` loop inside a `for` loop? FORLOOPCEPTION! 😮
 
 ```java
-textRect(5, 5, 3, 3); // make a 3x3 rect at row 5 column 5 (5,5)
-text("w", 6, 6); // make letter 'w' at row 6 column 6 (6,6)
-```
-
-Use `for` loops to make all the boxes for the phrase!
-
-```txt
-┌─┐┌─┐┌─┐┌─┐┌─┐
-│W││h││e││e││ │
-└─┘└─┘└─┘└─┘└─┘
-```
-
-# Level 08 C
-
-## Thread.sleep
-
-Use the `sleep` function of the `Thread` class to delay the rate at which letters are displayed.
-
-```java
-// you need to make the function asynchronous to use await
-void takeFive() {
-	System.out.println("start!");
-	try {
-			// waits for a delay of 5000ms aka 5 seconds
-			Thread.sleep(1000);
-	} catch (InterruptedException e) {
-		System.err.println("delay failed");
+for (int row = 0; row < rows; row++) {
+	for (int col = 0; col < columns; col++) {
+		// nested for loop
 	}
-	System.out.println("5 seconds passed");
 }
-
-takeFive();
 ```
 
-## String toUpperCase and toLowerCase
+The first `for` loop goes row by row, then the `for` loop on the inside goes through all the columns in that row.
+
+# Level 06 C
+
+## Two Dimensional Arrays
+
+A two dimensional array (aka 2D array) is an array of arrays.
 
 ```java
-String str = 'Hello!';
-String up = str.toUpperCase(); // up -> "HELLO!"
-String low = str.toLowerCase(); // low -> "hello!"
+// red and black checkers on a checkerboard
+char[][] board = new char[][] {
+	new char[]{' ', ' ', ' ', 'r', ' ', 'B', ' ', ' '},
+	new char[]{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+	new char[]{' ', ' ', ' ', ' ', ' ', ' ', ' ', 'r'},
+	new char[]{' ', ' ', ' ', ' ', 'r', ' ', ' ', ' '},
+	new char[]{' ', 'B', ' ', ' ', ' ', ' ', ' ', 'b'},
+	new char[]{' ', ' ', 'b', ' ', ' ', ' ', 'b', ' '},
+	new char[]{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+	new char[]{' ', ' ', ' ', ' ', 'b', ' ', 'b', ' '}
+};
 ```
 
-These functions do not change the original value of the string.
+Two dimensional data, such as checker board piece positions, can be stored in two dimensional arrays. In the example `"r"` represents a single red piece, uppercase `"R"` represents a king (two stacked red pieces).
 
-## substring String
+## 2D array access
+
+How could we access the red piece on the top row?
 
 ```java
-str.substring(start, end);
+board[0][3]; // row is 0, column is 3
 ```
 
-This function returns a subsection of the string, starting at the start index and ending and the end index. It does not change the original value of the string. The `end` index is optional.
+`board[0]` gets the first row in board array and the `[3]` after that gets us the piece at column 3 in that row array. How could we access the red piece in the middle of the board?
 
-## replace String
+## Using nested for loops with 2D arrays
 
-```java
-String str = 'The cat jumped over the moon. The cat meowed.';
-String result = str.replace("cat", "dog");
-System.out.println(result);
-// -> "The dog jumped over the moon. The cat meowed."
+How could we use a nested for loop to clear the board of all the pieces by assigning a blank space " " to every element in the `board` array?
+
+```js
+for (let row = 0; row < rows; row++) {
+	for (let col = 0; col < columns; col++) {
+		board[row][col] = ' ';
+	}
+}
 ```
 
-This function takes two input parameters, the first input parameter is replaced in the string by the second. Note that it only does one replacement.
-
-This function does not change the original value of the string.
+- [Level 06 A](#level-06-a)
+- [Level 06 B](#level-06-b)
+	- [Nested for loops](#nested-for-loops)
+- [Level 06 C](#level-06-c)
+	- [Two Dimensional Arrays](#two-dimensional-arrays)
+	- [2D array access](#2d-array-access)
+	- [Using nested for loops with 2D arrays](#using-nested-for-loops-with-2d-arrays)

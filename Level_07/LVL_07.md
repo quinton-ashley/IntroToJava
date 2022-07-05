@@ -1,34 +1,72 @@
 # Level 07 A
 
-## ArrayList
-
-What if you need to make an array but you don't know what it will store or how big it will be beforehand?
-
-Normal arrays have a size limit for adding new items. To add items to an array that is already full, the contents of that array would have to be transferred to a new larger array. `ArrayList` does this behind the scenes so that new items can be added seamlessly!
-
-Here's an example of a wedding guest book. When guests arrive their name is added to the guestBook ArrayList.
+## toUpperCase and toLowerCase String
 
 ```java
-ArrayList<String> guestBook = new ArrayList<String>();
+String str = 'Hello!';
+String up = str.toUpperCase(); // up -> 'HELLO!'
+String low = str.toLowerCase(); // low -> 'hello!'
+```
 
-void guestArrived(String name) {
-	guestBook.add(name);
+These functions do not change the original value of the string.
+
+# Level 07 B
+
+## File Paths in Java
+
+You can read the data from a file in Java by using a Scanner object.
+
+```java
+File file = new File("games_java/Game/file.txt");
+
+Scanner fileScanner;
+try {
+	fileScanner = new Scanner(file);
+} catch (FileNotFoundException e) {
+	e.printStackTrace();
+	return;
 }
+
+String data = "";
+
+while (fileScanner.hasNextLine()) {
+	data += fileScanner.nextLine();
+}
+
+fileScanner.close();
 ```
 
-Get the names of the first and last guests to arrive at the wedding using the `get` function instead of `[]` used for primitive arrays.
+Use `Scanner` with a `File` object to read the file.
+
+# Level 07 C
+
+## Return variables from a function
+
+functions can return a variable (only one). What will the value of `upHigh` be?
 
 ```java
-String firstGuest = guestBook.get(0);
-String lastGuest = guestBook.get(guestBook.size() - 1);
+int gimmeFive() {
+	return 5;
+}
+
+int upHigh = gimmeFive() + gimmeFive();
 ```
 
-Note that ArrayLists can not store primitive data types: int, float, double, and boolean. You will have to use Objects that store these primitive types: Integer, Float, Double, and Boolean.
+Note that the function's return type is `int`.
 
-## ArrayList remove
+## Creating functions with input parameters
 
-You can also easily removes items from an ArrayList using the `remove` method.
+function with input parameters x and y, returns the value of x^2 \* y^2
 
 ```java
-guestBook.remove(name);
+int doMyMathHomework(int x, int y) {
+	return x * x * y * y;
+}
+
+int result0 = doMyMathHomework(1, 3); // returns 9
+int result1 = doMyMathHomework(2, 5); // what does this return?
 ```
+
+## Coding Philosophy: Using functions effectively
+
+Try not to rewrite the same lines of code in different places, put that code in a function instead. If you have a chunk of code and you need to do something only slightly different at another point in your program, sometimes you should make a function with input parameters for the thing(s) that are different. Typically functions should only contain code that is related to the name/description you gave that function, move unrelated code into its own function.

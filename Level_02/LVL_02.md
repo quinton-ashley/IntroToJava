@@ -34,7 +34,7 @@ The p5.js `draw` function should contain code for drawing an image (frame). Behi
 Sprites are characters or items in 2D video games that typically move above the background layer(s).
 
 ```java
-Sprite sprite = createSprite(img);
+Sprite sprite = new Sprite(img);
 sprite.x = 5;
 sprite.y = 12
 ```

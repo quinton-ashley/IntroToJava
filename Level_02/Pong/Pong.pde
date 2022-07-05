@@ -12,7 +12,7 @@ ww....ww
 
 PImage imgPaddle = spriteArt(".wwwwww.\nwwwwwwww\n" + "www..www\nww.ww.ww\n".repeat(21) + "wwwwwwww\n.wwwwww.");
 
-Sprite ball = createSprite(imgBall);
+Sprite ball = new Sprite(imgBall);
 
 void setup() {
   // places a ball in center of the screen
@@ -22,5 +22,5 @@ void setup() {
 
 void draw() {
 
-  drawSprites();
+ 
 }

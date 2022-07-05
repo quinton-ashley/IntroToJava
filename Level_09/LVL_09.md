@@ -1,70 +1,74 @@
-# Level 09 A
+# Level 07 A
 
-## Loading and Playing Sounds
+## ArrayList
 
-Example code for playing a jump sound when the player jumps:
+What if you need to make an array but you don't know what it will store or how big it will be beforehand?
+
+Normal arrays have a size limit for adding new items. To add items to an array that is already full, the contents of that array would have to be transferred to a new larger array. `ArrayList` does this behind the scenes so that new items can be added seamlessly!
+
+Here's an example of a wedding guest book. When guests arrive their name is added to the guestBook ArrayList.
 
 ```java
-SoundFile jumpSound; // class variable
+ArrayList<String> guestBook = new ArrayList<String>();
 
-void preload() {
-	// QuintOS.dir is the game folder
-	jumpSound = loadSound(QuintOS.dir + "/sounds/jumpSound_92.mp3");
-	jumpSound.setVolume(0.3); // 0.0-1.0
-}
-
-void keyPressed() {
-	if (key == ' ') {
-		jumpSound.play();
-	}
+void guestArrived(String name) {
+	guestBook.add(name);
 }
 ```
 
-## overlap
-
-You can disable collisions between sprites by using the overlap function.
+Get the names of the first and last guests to arrive at the wedding using the `get` function instead of `[]` used for primitive arrays.
 
 ```java
-spriteA.overlap(spriteB);
-spriteA.overlap(spriteC);
+String firstGuest = guestBook.get(0);
+String lastGuest = guestBook.get(guestBook.size() - 1);
 ```
 
-spriteB will still collide with spriteC.
+Note that ArrayLists can not store primitive data types: int, float, double, and boolean. You will have to use Objects that store these primitive types: Integer, Float, Double, and Boolean.
 
-## collide/overlap with callback
+## ArrayList remove
 
-You can add a callback function to `collide` and `overlap` that gets run when a sprite collides or overlaps with another sprite.
+You can also easily removes items from an ArrayList using the `remove` method.
 
 ```java
-ball.collide(paddle, () -> {
-	System.out.println("ball bounced!");
-});
+guestBook.remove(name);
 ```
 
-# Level 09 B
+## Creating Classes
 
-## Skip iterations of a for loop
+Classes in Java are like blueprints that can be used to create objects. A class defines all the properties and functions
 
-Use `continue` to skip an iteration of a for loop but continue looping. Unlike `break` which is for exiting the loop early.
+Let's take a look at how we could use an object to store attributes about Gumball, a character from the Cartoon Network show The Amazing World of Gumball.
 
 ```java
-for (int i = 0; i < 8; i++) {
-	if (i == 2) {
-		continue;
+class Student {
+	String[] name;
+	String species;
+	int age;
+	int grade;
+	String studentID;
+
+	Student(String[] name, String species, int age, int grade, String studentID) {
+		this.name = name;
+		this.species = species;
+		this.age = age;
+		this.grade = grade;
+		this.studentID = studentID;
 	}
-	if (i > 5) {
-		break;
-	}
-	System.out.println(i);
 }
+
+Student gumball = new Student(new String[] {"Gumball", "Tristopher", "Watterson"},
+	"cat", 12, 7, "000029083");
 ```
 
-Console Output:
+Properties can be accessed using the dot syntax.
 
-```txt
-0
-1
-3
-4
-5
+```java
+gumball.age; // -> 12
+
+gumball.name[2]; // -> "Watterson"
+
+// edit gumball's grade level
+gumball.grade = 8;
 ```
+
+This kind of programming is called object-oriented programming. Since this mode of thinking is similar to how us humans perceive objects in real life it makes it easier to use them when coding.

@@ -22,27 +22,6 @@ Strings have a lot of useful functions we can use. Oracle is a really great reso
 // -> ["the", "red", "fox"]
 ```
 
-## Accessing items in an Array
-
-The `[]` square brackets are used to create arrays and are also used to access items in an array.
-
-```java
-String[] names = new String[]{"Amy", "Ellie", "Max"};
-int[] nums = new int[]{50, 21, 46, 83};
-
-System.out.println(names[0]); // prints "Amy"
-System.out.println(nums[1]); // prints 21
-```
-
-Items in an array can also be edited using `[]` (aka sub or at).
-
-```java
-names[2] = "Ben";
-// edits the list: "Amy", "Ellie", "Ben"
-nums[1] = 36;
-// edits the list: 50, 36, 42, 83
-```
-
 ## Getting String input from the user
 
 You can get a String from the user via the standard input, `System.in`, by using the `nextLine` method of the Scanner class.
@@ -87,61 +66,7 @@ animal = "the red box"; // this will work!
 
 Strings are immutable, meaning individual characters in the String can not be changed.
 
-## Counting with while loops
-
-The number of loops a while loop does can be counted with a variable.
-
-```java
-String[] names = new String[]{"Jake", "Ali", "Ben", "Cam"};
-
-int i = 0; // initialize i to 0
-
-// loop while i is less than names.length which is 4
-while (i < names.length) {
-	// print the next name in the list
-	System.out.println(i + '. ' + names[i]);
-
-	i = i + 1;
-} // in this loop i goes up from 0 to 1 to 3
-```
-
-The code above prints out a numbered list of names in the Java console.
-
-```txt
-0. Jake
-1. Ali
-2. Ben
-3. Cam
-```
-
-# Level 03 D
-
-## for loops
-
-Scroll up and take another look at the example of the while loop with a counter variable, then check out this for loop! It does the same thing but all the steps related to the index variable are written as one line. The order of their operation is still the same.
-
-```java
-String[] names = new String[]{"Jake", "Ali", "Ben", "Cam"};
-
-// (INITIALIZER; CONDITION; INCREMENATION)
-for (int i = 0; i < names.length; i++) {
-	// print the next name in the list
-	System.out.println(i + '. ' + names[i]);
-}
-```
-
-When the for loop starts `i` is set to 0, then is check the condition. If the condition is true the for loop runs for the first time, this is called an iteration. When the for loop ends, the incrementation section of the for loop is run, in this case `i++` which increases the value of `i` by 1. The condition is checked again, if true the for loop will repeat again, doing another iteration. Until the condition is false the for loop will continue to repeat.
-
-The code above prints out a numbered list of names in the Java console.
-
-```txt
-1. Jake
-2. Ali
-3. Ben
-4. Cam
-```
-
-# Level 04 E
+# Level 04 D
 
 ## String equals
 
@@ -202,17 +127,13 @@ https://www.youtube.com/watch?v=CxJwy8NsXFs
 - [Level 03 A](#level-03-a)
 	- [Coding Philosophy: Naming variables](#coding-philosophy-naming-variables)
 	- [String.split(separator)](#stringsplitseparator)
-	- [Accessing items in an Array](#accessing-items-in-an-array)
 	- [Getting String input from the user](#getting-string-input-from-the-user)
 - [Level 02 B](#level-02-b)
 	- [Getting the length of a String](#getting-the-length-of-a-string)
 	- [Create an array of characters from a String](#create-an-array-of-characters-from-a-string)
 - [Level 03 C](#level-03-c)
 	- [Accessing characters in a String](#accessing-characters-in-a-string)
-	- [Counting with while loops](#counting-with-while-loops)
-- [Level 03 D](#level-03-d)
-	- [for loops](#for-loops)
-- [Level 04 E](#level-04-e)
+- [Level 04 D](#level-04-d)
 	- [String equals](#string-equals)
 	- [Breaking out of a loop early](#breaking-out-of-a-loop-early)
 	- [Computer History: Apple II](#computer-history-apple-ii)

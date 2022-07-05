@@ -1,5 +1,3 @@
-package games_java.TicTacToe;
-
 import static games_java.QuintOS.*;
 
 public class TicTacToe {

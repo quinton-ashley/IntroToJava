@@ -1,74 +1,73 @@
-# Level 07 A
+# Level 09 A
 
-## ArrayList
+Upgrade to level 8! 🥳
 
-What if you need to make an array but you don't know what it will store or how big it will be beforehand?
+![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen4.jpg)
 
-Normal arrays have a size limit for adding new items. To add items to an array that is already full, the contents of that array would have to be transferred to a new larger array. `ArrayList` does this behind the scenes so that new items can be added seamlessly!
+# Level 09 B
 
-Here's an example of a wedding guest book. When guests arrive their name is added to the guestBook ArrayList.
+## Nested for loops
 
-```java
-ArrayList<String> guestBook = new ArrayList<String>();
-
-void guestArrived(String name) {
-	guestBook.add(name);
-}
-```
-
-Get the names of the first and last guests to arrive at the wedding using the `get` function instead of `[]` used for primitive arrays.
+A `for` loop inside a `for` loop? FORLOOPCEPTION! 😮
 
 ```java
-String firstGuest = guestBook.get(0);
-String lastGuest = guestBook.get(guestBook.size() - 1);
-```
-
-Note that ArrayLists can not store primitive data types: int, float, double, and boolean. You will have to use Objects that store these primitive types: Integer, Float, Double, and Boolean.
-
-## ArrayList remove
-
-You can also easily removes items from an ArrayList using the `remove` method.
-
-```java
-guestBook.remove(name);
-```
-
-## Creating Classes
-
-Classes in Java are like blueprints that can be used to create objects. A class defines all the properties and functions
-
-Let's take a look at how we could use an object to store attributes about Gumball, a character from the Cartoon Network show The Amazing World of Gumball.
-
-```java
-class Student {
-	String[] name;
-	String species;
-	int age;
-	int grade;
-	String studentID;
-
-	Student(String[] name, String species, int age, int grade, String studentID) {
-		this.name = name;
-		this.species = species;
-		this.age = age;
-		this.grade = grade;
-		this.studentID = studentID;
+for (int row = 0; row < rows; row++) {
+	for (int col = 0; col < columns; col++) {
+		// nested for loop
 	}
 }
-
-Student gumball = new Student(new String[] {"Gumball", "Tristopher", "Watterson"},
-	"cat", 12, 7, "000029083");
 ```
 
-Properties can be accessed using the dot syntax.
+The first `for` loop goes row by row, then the `for` loop on the inside goes through all the columns in that row.
+
+# Level 09 C
+
+## Two Dimensional Arrays
+
+A two dimensional array (aka 2D array) is an array of arrays.
 
 ```java
-gumball.age; // -> 12
-
-gumball.name[2]; // -> "Watterson"
-
-// edit gumball's grade level
-gumball.grade = 8;
+// red and black checkers on a checkerboard
+char[][] board = new char[][] {
+	new char[]{' ', ' ', ' ', 'r', ' ', 'B', ' ', ' '},
+	new char[]{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+	new char[]{' ', ' ', ' ', ' ', ' ', ' ', ' ', 'r'},
+	new char[]{' ', ' ', ' ', ' ', 'r', ' ', ' ', ' '},
+	new char[]{' ', 'B', ' ', ' ', ' ', ' ', ' ', 'b'},
+	new char[]{' ', ' ', 'b', ' ', ' ', ' ', 'b', ' '},
+	new char[]{' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '},
+	new char[]{' ', ' ', ' ', ' ', 'b', ' ', 'b', ' '}
+};
 ```
 
-This kind of programming is called object-oriented programming. Since this mode of thinking is similar to how us humans perceive objects in real life it makes it easier to use them when coding.
+Two dimensional data, such as checker board piece positions, can be stored in two dimensional arrays. In the example `"r"` represents a single red piece, uppercase `"R"` represents a king (two stacked red pieces).
+
+## 2D array access
+
+How could we access the red piece on the top row?
+
+```java
+board[0][3]; // row is 0, column is 3
+```
+
+`board[0]` gets the first row in board array and the `[3]` after that gets us the piece at column 3 in that row array. How could we access the red piece in the middle of the board?
+
+## Using nested for loops with 2D arrays
+
+How could we use a nested for loop to clear the board of all the pieces by assigning a blank space " " to every element in the `board` array?
+
+```js
+for (let row = 0; row < rows; row++) {
+	for (let col = 0; col < columns; col++) {
+		board[row][col] = ' ';
+	}
+}
+```
+
+- [Level 09 A](#level-09-a)
+- [Level 09 B](#level-09-b)
+	- [Nested for loops](#nested-for-loops)
+- [Level 09 C](#level-09-c)
+	- [Two Dimensional Arrays](#two-dimensional-arrays)
+	- [2D array access](#2d-array-access)
+	- [Using nested for loops with 2D arrays](#using-nested-for-loops-with-2d-arrays)

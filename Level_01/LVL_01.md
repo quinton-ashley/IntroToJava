@@ -32,11 +32,13 @@ Open Visual Studio Code (aka VSCode) and add "IntroToJava" and your "quintos-gam
 
 ## Install Extensions for VSCode
 
-In the Activity Bar on the left side of VSCode click the extension icon, which looks like one box being separated from three other boxes. In the Extension sidebar, search for and install Prettier and Live Server.
+In the Activity Bar on the left side of VSCode click the extension icon, which looks like one box being separated from three other boxes. In the Extension sidebar, search for and install Prettier, Live Server, and Language Support for Java.
 
 Prettier is an extension that will automatically format your code for you when you save it so you won't have to worry about doing proper indentation and formatting yourself!
 
 Live Server auto-refreshes the browser when you make changes to your code.
+
+Language Support for Java is a set of extensions from Red Hat. Use them to also install a reccomended JDK (Java Development Kit).
 
 ## VSCode Settings
 

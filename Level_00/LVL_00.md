@@ -142,23 +142,26 @@ Now you're ready to start making your first game! 🥳 [Click here for the Guess
 
 Did you complete `GuessTheNumber` part A and are ready to learn more? Before we can finish the game we have to learn a bit more stuff!
 
-## Checking Equivalence ✅
-
-Single equals `=` is for assigning values to variables. Double equals `==` is a boolean operator used for checking equivalence. What is a boolean operator? It performs an operation that results in either a true or false (boolean) value.
-
 ## if/else statements
 
 `if` statements use a boolean condition, which goes in parenthesis after the keyword `if`. If the boolean condition is `true`, the code block `{}`, whatever's inside the squiggly brackets, is run.
 
-Check out this coin toss example code. Coin tosses are used in many sports to decide which of two teams goes first. One team picks which side of the coin they think will land facing up, "heads" or "tails". If the result of a coin flip is "heads" then the code in the `if` statement code block will be run. If the result was "tails", then the code in the `else` block is run.
+Check out this coin toss example code. Coin tosses are used in many sports to decide which of two teams goes first. One team picks which side of the coin they think will land facing up, "heads" or "tails". Hypothetically, the `coinFlip` function performs a coin flip and returns true if the result of the coin flip was what the user picked. The code in the `if` statement code block will be run. If the result was "tails", then the code in the `else` block is run.
 
 ```java
-if (coinFlip("heads") == true) {
-	System.out.println("Heads wins the coin toss!");
+System.out.println("Heads or Tails?");
+String pick = sc.nextLine();
+
+if (coinFlip(pick)) {
+	System.out.println("You won the coin toss!");
 } else {
-	System.out.println("Tails wins the coin toss!");
+	System.out.println("You lost the coin toss!");
 }
 ```
+
+## Checking Equivalence ✅
+
+Single equals `=` is for assigning values to variables. Double equals `==` is a boolean operator used for checking equivalence. What is a boolean operator? It performs an operation that results in either a true or false (boolean) value.
 
 ## else if chaining
 
@@ -338,8 +341,8 @@ This level's computer was inspired by the Casio FX-720P, which could run program
   - [Comments](#comments)
   - [End of Level 00 A](#end-of-level-00-a)
 - [Level 00 B](#level-00-b)
-  - [Checking Equivalence ✅](#checking-equivalence-)
   - [if/else statements](#ifelse-statements)
+  - [Checking Equivalence ✅](#checking-equivalence-)
   - [else if chaining](#else-if-chaining)
   - [Boolean operators 🐰](#boolean-operators-)
 - [Level 00 C](#level-00-c)

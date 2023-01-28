@@ -22,7 +22,7 @@ https://codepen.io/qashto/pen/bGrKjGd?editors=0010
 
 ## Instructions for Part A
 
-Since you're just starting to write this program, don't make the number random yet so you can test it out more easily. Create a varible called `num` using `int` and choose the number yourself.
+Since you're just starting to write this program, don't make the number random yet so you can test it out more easily. Create a variable called `num` using `int` and choose the number yourself.
 
 Tell the player to guess a number using `System.out.println` put your message (String) inside the parenthesis of the `println` function. Create the variable `guess` using `int`, assign it to the user's response to `sc.nextInt()`.
 

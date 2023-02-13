@@ -29,7 +29,7 @@ The Processing `setup` function is run by Processing once at the start of the ga
 
 The p5.js `draw` function should contain code for drawing an image (frame). Behind the scenes, p5.js will run it 60 times per second, this is called the frame rate. This allows you to move objects on the screen by animating them, moving them a little bit when each new frame is drawn to the screen.
 
-## p5.play Sprites
+## p5play Sprites
 
 Sprites are characters or items in 2D video games that typically move above the background layer(s).
 
@@ -160,7 +160,7 @@ ball.vel.y = 1;
 
 ## Bounces
 
-Objects in p5.play collide by default but the paddle and ball won't do a perfect bounce off the paddle automatically.
+Objects in p5play collide by default but the paddle and ball won't do a perfect bounce off the paddle automatically.
 
 To have the ball bounce off the paddle and retain its speed, set the ball's bounciness to 1, indicating you want a full bounce.
 
@@ -244,7 +244,7 @@ https://youtu.be/nRlmTiynbd8?t=242
   - [Creating functions 👷](#creating-functions-)
   - [What is Processing?](#what-is-processing)
   - [Processing Basics](#processing-basics)
-  - [p5.play Sprites](#p5play-sprites)
+  - [p5play Sprites](#p5play-sprites)
   - [spriteArt](#spriteart)
   - [Making Strings with Triple Quotes](#making-strings-with-triple-quotes)
   - [p5.js global variables](#p5js-global-variables)

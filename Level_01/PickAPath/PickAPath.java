@@ -9,20 +9,20 @@ public class PickAPath {
 		Scanner sc = new Scanner(System.in);
 		// your code goes here! below this line
 
-		int choice = 0; // initialize choice to 0, user has not made any choice yet
+		int path = 0; // initialize path to 0
 
 		boolean gameOver = false;
 
 		while (gameOver == false) {
 			String msg = ""; // initialize message to empty String
 
-			if (choice == 0) {
+			if (path == 0) {
 				/* Part A0: Start your story! */
 				msg = "This is the start of the story. Type one of the numbers and press enter.\n\n\t" +
 						"1: your player could pick this choice\n\t" +
 						"2: or maybe this path\n\t" +
 						"3: or even this option";
-			} else if (choice == 1) {
+			} else if (path == 1) {
 				/* Part A1: continue the story */
 				msg = "Continue the story, each choice could lead to a different path but you can also reuse choice numbers and have paths converge.\n\t"
 						+
@@ -30,9 +30,9 @@ public class PickAPath {
 						"5: an additional option";
 			}
 
-			// prompt the player to make choices
+			// prompt the player to pick a path
 			System.out.println(msg);
-			choice = sc.nextInt();
+			path = sc.nextInt();
 
 			/* Part B1: check if the player made a valid choice, reject invalid choices */
 

@@ -9,7 +9,7 @@ How do we create our own functions? Use the `void` keyword to create a basic fun
 ```java
 // create the function
 void sayHello() {
-	System.out.println('hello!');
+	System.out.println("hello!");
 }
 
 sayHello(); // run the function
@@ -17,11 +17,11 @@ sayHello(); // run the function
 
 The code inside a function is not run until the function is called/invoked by using its name and the parenthesis.
 
-## What is Processing and p5play?
+## What are Processing and p5play?
 
-To make Pong we're going to use Processing, a 2D graphics library for creative coding!
+To make Pong we're going to use Processing Java, a 2D graphics library for creative coding!
 
-Behind the scenes, QuintOS is actually using p5.js though, the JavaScript version of Processing. p5play is a JavaScript library for making games, via the magic of QuintOS.
+Behind the scenes, QuintOS is actually using p5.js though, the JavaScript version of Processing. p5play is a JavaScript library for making games, that can be used in Java via the magic of QuintOS.
 
 ## Processing Basics
 
@@ -29,7 +29,7 @@ You need to make two functions, `setup` and `draw`, in your Processing programs.
 
 The Processing `setup` function is run by Processing once at the start of the game and should contain code for creating all the sprites and setting their initial positions.
 
-The Processing `draw` function should contain code for drawing an image (frame). Behind the scenes, p5.js will run it 60 times per second, this is called the frame rate. This allows you to move objects on the screen by animating them, moving them a little bit when each new frame is drawn to the screen.
+The Processing `draw` function should contain code for drawing an image (frame). Behind the scenes, Processing will run it 60 times per second, this is called the frame rate. This allows you to move objects on the screen by animating them, moving them a little bit when each new frame is drawn to the screen.
 
 ## p5play Sprites
 
@@ -244,7 +244,7 @@ https://youtu.be/nRlmTiynbd8?t=242
 
 - [Level 02 A](#level-02-a)
   - [Creating functions 👷](#creating-functions-)
-  - [What is Processing and p5play?](#what-is-processing-and-p5play)
+  - [What are Processing and p5play?](#what-are-processing-and-p5play)
   - [Processing Basics](#processing-basics)
   - [p5play Sprites](#p5play-sprites)
   - [spriteArt](#spriteart)

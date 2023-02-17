@@ -12,12 +12,20 @@ ww....ww
 
 PImage imgPaddle = spriteArt(".wwwwww.\nwwwwwwww\n" + "www..www\nww.ww.ww\n".repeat(21) + "wwwwwwww\n.wwwwww.");
 
-Sprite ball = new Sprite(imgBall);
+Sprite ball;
 
 void setup() {
-  // places a ball in center of the screen
-  ball.x = width / 2;
-  ball.y = height / 2;
+  ball = new Sprite();
+  ball.image = imgBall;
+	ball.x = width / 2;
+	ball.y = height / 2;
+	ball.diameter = 8;
+	ball.bounciness = 1; // full bounciness
+	ball.friction = 0; // no friction
+
+  /* Part A: add the paddles */
+
+  // your code here!
 }
 
 void draw() {

@@ -17,9 +17,11 @@ sayHello(); // run the function
 
 The code inside a function is not run until the function is called/invoked by using its name and the parenthesis.
 
-## What is Processing?
+## What is Processing and p5play?
 
 To make Pong we're going to use Processing, a 2D graphics library for creative coding!
+
+Behind the scenes, QuintOS is actually using p5.js though, the JavaScript version of Processing. p5play is a JavaScript library for making games, via the magic of QuintOS.
 
 ## Processing Basics
 
@@ -27,7 +29,7 @@ You need to make two functions, `setup` and `draw`, in your Processing programs.
 
 The Processing `setup` function is run by Processing once at the start of the game and should contain code for creating all the sprites and setting their initial positions.
 
-The p5.js `draw` function should contain code for drawing an image (frame). Behind the scenes, p5.js will run it 60 times per second, this is called the frame rate. This allows you to move objects on the screen by animating them, moving them a little bit when each new frame is drawn to the screen.
+The Processing `draw` function should contain code for drawing an image (frame). Behind the scenes, p5.js will run it 60 times per second, this is called the frame rate. This allows you to move objects on the screen by animating them, moving them a little bit when each new frame is drawn to the screen.
 
 ## p5play Sprites
 
@@ -89,9 +91,9 @@ Can you tell what the image is?
 
 It's a simple yellow and black smiley face image. 😃
 
-## p5.js global variables
+## Processing global variables
 
-Note that p5.js adds a lot of variables to the global scope. Note that `width` and `height` refer to the size of the screen in pixels.
+Note that Processing adds a lot of variables to the global scope. Note that `width` and `height` refer to the size of the screen in pixels.
 
 # Level 02 B
 
@@ -242,12 +244,12 @@ https://youtu.be/nRlmTiynbd8?t=242
 
 - [Level 02 A](#level-02-a)
   - [Creating functions 👷](#creating-functions-)
-  - [What is Processing?](#what-is-processing)
+  - [What is Processing and p5play?](#what-is-processing-and-p5play)
   - [Processing Basics](#processing-basics)
   - [p5play Sprites](#p5play-sprites)
   - [spriteArt](#spriteart)
   - [Making Strings with Triple Quotes](#making-strings-with-triple-quotes)
-  - [p5.js global variables](#p5js-global-variables)
+  - [Processing global variables](#processing-global-variables)
 - [Level 02 B](#level-02-b)
 - [Getting a Sprite's width and height](#getting-a-sprites-width-and-height)
   - [spriteArt scaling](#spriteart-scaling)

@@ -1,3 +1,5 @@
+package games_java.TicTacToe;
+
 import static games_java.QuintOS.*;
 
 public class TicTacToe {
@@ -43,13 +45,13 @@ public class TicTacToe {
     int gridRow = 3;
     int gridCol = 26;
 
-    text(title, 5, 3);
+    txt(title, 5, 3);
     /* Part A: finish the grid of 9x8 spaces */
-    text("─".repeat(26), gridRow + 7, gridCol);
-    // text("─".repeat(26), ?, ?); // draw another horizontal line
+    txt("─".repeat(26), gridRow + 7, gridCol);
+    // txt("─".repeat(26), ?, ?); // draw another horizontal line
 
-    text("│\n".repeat(23), gridRow, gridCol + 8);
-    // text("│\n".repeat(23), ?, ?); // draw another vertical line
+    txt("│\n".repeat(23), gridRow, gridCol + 8);
+    // txt("│\n".repeat(23), ?, ?); // draw another vertical line
 
     /* Part A: Make the buttons in the grid */
     // note the intervals! row += 8 and col += 9

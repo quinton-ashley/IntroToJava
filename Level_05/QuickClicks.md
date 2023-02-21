@@ -47,7 +47,7 @@ Display the result in an alert window.
 
 ## Instructions for Part E
 
-Add a background pattern to the game that should cover the entire space within the frame. Create this pattern yourself using for loops by drawing with `text(txt, row, col)`
+Add a background pattern to the game that should cover the entire space within the frame. Create this pattern yourself using for loops by drawing with `txt(txt, row, col)`
 
 Remember! You can use the `repeat` String function
 

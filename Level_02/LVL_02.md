@@ -211,7 +211,7 @@ Text can be displayed on screen at a given text row and column.
 
 ```java
 //  (text         , row, col)
-text("Hello World!", 10, 12);
+txt("Hello World!", 10, 12);
 ```
 
 ## Level 02 E

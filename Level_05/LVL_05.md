@@ -237,9 +237,9 @@ Here's how modulo can be used for alternation.
 ```java
 for (int i = 0; i < 10; i++) {
 	if (i % 2 == 0) {
-		text("even", i);
+		txt("even", i);
 	} else {
-		text("odd", i);
+		txt("odd", i);
 	}
 }
 ```
@@ -250,8 +250,8 @@ This code does the same kind of alternation.
 
 ```java
 for (int i = 0; i < 10; i+=2) {
-	text("even", i);
-	text("odd", i+1);
+	txt("even", i);
+	txt("odd", i+1);
 }
 ```
 
@@ -270,23 +270,23 @@ Of course, all of these great features raised the price significantly. At $8150,
 Originally developed for business executives, GRiDs were also used by the U.S. military 'in the field', and by NASA on the Space Shuttles during the 1980's and 90's. It's even been said that the US President's "nuclear football" at one time included a GRiD computer.
 
 - [Level 04 A](#level-04-a)
-	- [package](#package)
-	- [imports](#imports)
-	- [Classes in Java](#classes-in-java)
-	- [substring String](#substring-string)
-	- [Create a Button](#create-a-button)
+  - [package](#package)
+  - [imports](#imports)
+  - [Classes in Java](#classes-in-java)
+  - [substring String](#substring-string)
+  - [Create a Button](#create-a-button)
 - [Level 04 B](#level-04-b)
-	- [Respond to button clicks](#respond-to-button-clicks)
-	- [Recursion](#recursion)
+  - [Respond to button clicks](#respond-to-button-clicks)
+  - [Recursion](#recursion)
 - [Level 04 C](#level-04-c)
-	- [Erase](#erase)
-	- [prompts and alerts](#prompts-and-alerts)
-	- [Changing the positions of prompts and alerts](#changing-the-positions-of-prompts-and-alerts)
+  - [Erase](#erase)
+  - [prompts and alerts](#prompts-and-alerts)
+  - [Changing the positions of prompts and alerts](#changing-the-positions-of-prompts-and-alerts)
 - [Level 04 D](#level-04-d)
-	- [Callbacks](#callbacks)
-	- [Creating Arrays of defined length](#creating-arrays-of-defined-length)
-	- [Instant](#instant)
+  - [Callbacks](#callbacks)
+  - [Creating Arrays of defined length](#creating-arrays-of-defined-length)
+  - [Instant](#instant)
 - [Level 04 E](#level-04-e)
-	- [modulo operator](#modulo-operator)
-	- [for loops with non-standard increments](#for-loops-with-non-standard-increments)
-	- [Computer History: GRiD Compass](#computer-history-grid-compass)
+  - [modulo operator](#modulo-operator)
+  - [for loops with non-standard increments](#for-loops-with-non-standard-increments)
+  - [Computer History: GRiD Compass](#computer-history-grid-compass)

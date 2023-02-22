@@ -8,40 +8,60 @@ https://www.youtube.com/watch?v=fiShX2pTz9A
 
 Create two paddle sprites and place them on opposite ends of the screen.
 
-Make the ball move to the right (animated movement). HINT: Do this inside the draw function. Move the ball a little bit every time the draw function is run.
+Make the ball move to the right (animated movement). HINT: Do this inside the draw function. Move the ball a little bit each time the draw function is run.
 
-You will notice that when the ball moves it leaves a trail of ball images behind it. That's because everything drawn to the Processing canvas stays there, it doesn't become a blank slate every time the draw function is used to make a new frame. This is useful for some art programs but not for a Pong game. Use the p5.js background function with "b" (black) as the input argument `background("b")`
+You will notice that when the ball moves it leaves a trail of ball images behind it. That's because everything drawn to the Processing canvas stays there, it doesn't become a blank slate every time the draw function is used to make a new frame. This is useful for some art programs but not for a Pong game. Use the Processing `background` function with "b" (black) as the input argument `background("b")`
 
-Now try moving the ball to the left. Then try moving the ball up and down, then in a diagonal. Get a sense of how changing the ball's x and y values will affect its trajectory.
+Try assigning different angle values to `ball.direction`. Try moving the ball to the left, then try moving the ball up and down, and then in diagonals. Get a sense of how changing the ball's direction affects its trajectory.
 
-Usually Pong is a two player game but to easily test the game you can change the position of both paddles using your mouse. `mouseX` and `mouseY` are global Processing variables that store the position of the mouse at all times. HINT: Change the y position of both paddles to `mouseY`.
+Make two walls, one on the top and one on the bottom of the screen. Set their color to 'white' and their collider type to 'static'. Optionally, you can use the `spriteArt` function to create an image or images for the walls.
 
-Personalize your game of Pong by choosing a sport or something else to theme it on. Give the ball a new design, it's pretty small so you can keep it simple.
+The default images capture the retro Pong look, but if you want, you can change them to match a sports theme or other design!
 
 ## Instructions for Part B
 
-Make a wall image (or two) with the `spriteArt` function. Place two walls at the top and bottom of the screen. You can make the walls one color or patterned or anything if you'd like, besides transparent lol. The second input parameter to the `spriteArt` function is a number value for scale, you can use it to make the wall big without having to type such a long String. HINT: use the `repeat` function too and remember the newline character `\n`.
+Notice how if a ball hits a paddle, it bounces off and the paddle gets knocked away. In Pong, the paddles shouldn't be pushed around by the ball. HINT: Set the collider type of the paddles to 'kinematic'. This will prevent the ball sprite from being able to move the paddles but players will still be able to move them (after you implement key controls in part C).
+
+Implement key controls to enable two players to play your Pong game. When players aren't pressing any keys the paddles shouldn't move. HINT: Use `ball.velocity.y`
+
+Don't let players move the paddles off screen.
+
+Place the ball back in the middle of the screen when it goes off screen. Let the ball travel far from the edge of the screen before placing it back in the center to give players time to react to it being lost! HINT: Use `ball.x` to get the x position of the ball.
+
+When the ball is served from the center of the screen, make it move away from the player that lost the ball, just like in tennis. The y axis (up/down) diagonal direction of the serve should be random. HINT: Adjust `ball.direction`.
 
 ## Instructions for Part C
 
-Make the ball bounce off the walls without using the `bounce` function. To easily test your code for this, have the ball move straight down, when it bounces it should go straight up. HINT: change `ball.velocity.y` when the ball touches a wall.
-
-Make the ball bounce off the paddles. You should try implementing the bounce yourself instead of using the Processing `bounce` function.
-
-Place the ball back in the middle of the screen when it goes off screen.
+Display both player's scores using the QuintOS `txt` function.
 
 ## Instructions for Part D
 
-Implement key controls to enable two players to play your Pong game. Don't let players move the paddles off screen.
+Sometimes the paddles can move inside the ball's collider, forcing the ball to move away from them, which can overly increase the ball's speed by a lot! If you haven't noticed this yet while testing your game try hitting the ball on the top or corner of the paddle while moving the paddle. This may be correct physics but it's not how players expect a Pong game to work.
 
-Display both player's scores. HINT: Use the `text` function
+Fix this bug by overriding the ball's speed after it collides with a paddle by using the `collided` function.
 
-When the ball is served from the center of the screen, make it move away from the player that lost the ball, just like in tennis. Also there should be a 50% chance that the ball moves diagonally up or down. The y velocity of the ball shouldn't be able to be zero or close to zero. Why not? That would make the game really boring if the ball moved straight left and right!
+If you're interested in improving your Pong game, try the challenge section!
 
-Make the ball speed up a little bit each time it hits the walls. Have the ball's speed get reset each time it goes off screen.
+## CHALLENGE SECTION
 
-If you implemented your own bounce function, make the ball bounce a bit randomly by adjusting the y velocity by a random value.
+Try making the ball speed up a little bit each time it hits one of the paddles. Then, reset the ball's speed when it's served from the center.
 
-## Instructions for Part E
+Sometimes when the ball hits the corner of the paddles, it deflects at a "bad" angle, causing the ball to move up and down too much. Fix this bug by adjusting the ball's direction after it collides with a paddle. To make the game more skill based you could even change the ball's direction dependant on where it hits the paddle.
 
-Reference the [Processing documentation](https://processing.org/reference) to learn how to make simple shapes like rectangles, circles, ovals, and triangles. The background of your Pong game should incorporate a few different shapes. You can also make some images with `spriteArt` if you'd like. Be creative!
+Reference the [Processing documentation](https://processing.org/reference/) to learn how to make simple shapes like rectangles, circles, and ellipses. The background of your Pong game should incorporate a few different shapes. You can also make more images with `spriteArt` if you'd like. Be creative!
+
+This example `draw` function draws a black background and then a blue rectangle with a red stroke (outline).
+
+This example `draw` function draws a black background and then a blue rectangle with a red stroke (outline). You can use color pallette codes inside Processing functions like `background`, `fill`, and `stroke` that expect a color.
+
+```java
+void draw() {
+	background("b");
+
+	fill("u");
+	stroke("r");
+
+	//  ( x,  y,  w,  h)
+	rect(10, 20, 15, 55);
+}
+```

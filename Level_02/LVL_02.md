@@ -38,7 +38,7 @@ Sprites are characters or items in 2D video games that typically move above the 
 ```java
 Sprite sprite = new Sprite(img);
 sprite.x = 5;
-sprite.y = 12
+sprite.y = 12;
 ```
 
 Sprite objects in Processing have attributes such as their x and y position. A sprite's x position is its horizontal position on the screen. A sprite's y position is its vertical position on the screen.
@@ -51,6 +51,15 @@ When you create a sprite using an image the width and height of the sprite is au
 System.out.println("size of the paddle: " + paddle.w + "x" + paddle.h);
 ```
 
+## Moving a Sprite
+
+One of the ways that sprites can be moved is by changing their direction and speed properties.
+
+```java
+player.direction = 20;
+player.speed = 1;
+```
+
 ## spriteArt
 
 Processing has it's own `createImage` function, but it's a bit complicated. I created a simple `spriteArt` function for QuintOS that we can use to make sprites for our games very easily!
@@ -58,7 +67,7 @@ Processing has it's own `createImage` function, but it's a bit complicated. I cr
 The first parameter to `spriteArt` is a String representing the color values of pixels.
 
 ```java
-PImage img = spriteArt('wgw');
+PImage img = spriteArt("wgw");
 ```
 
 This example code would create an image with one white pixel, followed by a green pixel, and then another white pixel.
@@ -99,6 +108,16 @@ Can you tell what the image is?
 
 It's a simple yellow and black smiley face image. 😃
 
+## spriteArt scaling
+
+By default each character in the string will be one pixel in the resulting sprite art image. Yet, if you change the scale to 2 then each character in the string will be represented by 4 pixels! This is useful for making larger images.
+
+```java
+PImage face = spriteArt(str, 2);
+```
+
+The second input parameter to the `spriteArt` function is an optional scale value. Input parameters are separated by commas.
+
 ## Processing global variables
 
 Note that Processing adds a lot of variables to the global scope. Note that `width` and `height` refer to the size of the screen in pixels.
@@ -114,17 +133,14 @@ String pattern = "><".repeat(4);
 
 # Level 02 B
 
-## Check if a key is held
+## sprite collider
+
+By default when sprites collide both objects will move. That's because sprites have a dynamic collider by default.
+
+There are two other types of colliders: `static` and `kinematic`. Sprites with static colliders can't be moved at all. Sprites with kinematic colliders can be moved programmatically, but not by other sprites.
 
 ```java
-void draw() {
-	if (kb.pressing("ArrowLeft")) {
-		player.x -= 2; // move the player left by 2 pixels
-	}
-	if (kb.pressing("ArrowRight")) {
-		player.x += 2; // move the player right by 2 pixels
-	}
-}
+paddle.collider = "kinematic";
 ```
 
 ## Vectors
@@ -141,74 +157,50 @@ ball.vel.x = 1;
 ball.vel.y = 1;
 ```
 
-## sprite collider
+## Keyboard input
 
-By default when sprites collide both objects will move. To prevent this, set the paddle to have a kinematic collider.
-
-```java
-paddle.collider = 'kinematic';
-```
-
-# Level 02 C
-
-## spriteArt scaling
-
-By default each character in the string will be one pixel in the resulting sprite art image. Yet, if you change the scale to 2 then each character in the string will be represented by 4 pixels! This is useful for making larger images.
+The `kb` object has a `pressing` function that can be used to check if a key is user is pressing a key.
 
 ```java
-PImage face = spriteArt(str, 2);
+void draw() {
+	if (kb.pressing("ArrowLeft")) {
+		player.vel.x = -2; // move the player left by 2 pixels each frame
+	}
+	if (kb.pressing("ArrowRight")) {
+		player.vel.x = 2; // move the player right by 2 pixels each frame
+	}
+}
 ```
-
-The second input parameter to the `spriteArt` function is an optional scale value. Input parameters are separated by commas.
-
-## += operator
-
-The `+=` operator can be used to add to the existing value of a variable.
-
-```java
-String story = "The cow";
-story += " jumped over the moon.";
-// story -> "The cow jumped over the moon"
-```
-
-You can use `+=` with numbers too!
-
-```java
-int x = 5;
-x += 2;
-System.out.println(x); // x -> 7
-```
-
-`-=`, `*=`, and `/=` operators can also be used with numbers.
 
 # Level 02 C
 
 ## Drawing text to the screen
 
-Text can be displayed on screen at a given text row and column.
+In QuintOS, text can be displayed at a specified row and column on the screen.
 
 ```java
-//  (text         , row, col)
+// (text         , row, col)
 txt("Hello World!", 10, 12);
 ```
 
-## Level 02 E
+Note that the (row, col) dimensions of the screen are different than its (x, y) pixel coordinates.
 
-## Processing Java fill, stroke, and rect
+# Level 02 D
 
-This example `draw` function draws a black background and then a blue rectangle with a red stroke (outline). You can use color pallette codes inside p5.js functions like `background`, `fill`, and `stroke` that expect a color.
+## Custom collision handling
+
+In p5play it's easy to change what happens after two sprites collide using the `collided` function inside the p5.js draw function.
 
 ```java
-void draw() {
-	background('b');
-
-	fill('u');
-	stroke('r');
-
-	//  ( x,  y,  w,  h)
-	rect(10, 20, 15, 55);
+if (laser.collided(shield)) {
+	laser.direction = 20;
+	laser.speed = 1;
 }
 ```
+
+In this example code, the laser gets deflected upward after hitting the shield.
+
+## End of Level 02
 
 ## Computer History: ZX Spectrum
 
@@ -226,21 +218,21 @@ https://youtu.be/nRlmTiynbd8?t=242
   - [Processing Basics](#processing-basics)
   - [p5play Sprites](#p5play-sprites)
   - [Getting a Sprite's width and height](#getting-a-sprites-width-and-height)
+  - [Moving a Sprite](#moving-a-sprite)
   - [spriteArt](#spriteart)
   - [Making Strings with Triple Quotes](#making-strings-with-triple-quotes)
+  - [spriteArt scaling](#spriteart-scaling)
   - [Processing global variables](#processing-global-variables)
   - [String.repeat(amount)](#stringrepeatamount)
 - [Level 02 B](#level-02-b)
-  - [Check if a key is held](#check-if-a-key-is-held)
-  - [Vectors](#vectors)
   - [sprite collider](#sprite-collider)
+  - [Vectors](#vectors)
+  - [Keyboard input](#keyboard-input)
 - [Level 02 C](#level-02-c)
-  - [spriteArt scaling](#spriteart-scaling)
-  - [+= operator](#-operator)
-- [Level 02 C](#level-02-c-1)
   - [Drawing text to the screen](#drawing-text-to-the-screen)
-  - [Level 02 E](#level-02-e)
-  - [Processing Java fill, stroke, and rect](#processing-java-fill-stroke-and-rect)
+- [Level 02 D](#level-02-d)
+  - [Custom collision handling](#custom-collision-handling)
+  - [End of Level 02](#end-of-level-02)
   - [Computer History: ZX Spectrum](#computer-history-zx-spectrum)
 
 ```

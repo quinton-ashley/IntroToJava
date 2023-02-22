@@ -216,6 +216,26 @@ long time = Instant.now().toEpochMilli();
 
 # Level 04 E
 
+## += operator
+
+The `+=` operator can be used to add to the existing value of a variable.
+
+```java
+String story = "The cow";
+story += " jumped over the moon.";
+// story -> "The cow jumped over the moon"
+```
+
+You can use `+=` with numbers too!
+
+```java
+int x = 5;
+x += 2;
+System.out.println(x); // x -> 7
+```
+
+`-=`, `*=`, and `/=` operators can also be used with numbers.
+
 ## modulo operator
 
 The modulo operator `%` gets the gets the remainder of a division.
@@ -287,6 +307,7 @@ Originally developed for business executives, GRiDs were also used by the U.S. m
   - [Creating Arrays of defined length](#creating-arrays-of-defined-length)
   - [Instant](#instant)
 - [Level 04 E](#level-04-e)
+  - [+= operator](#-operator)
   - [modulo operator](#modulo-operator)
   - [for loops with non-standard increments](#for-loops-with-non-standard-increments)
   - [Computer History: GRiD Compass](#computer-history-grid-compass)

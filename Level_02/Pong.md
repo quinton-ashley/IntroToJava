@@ -8,7 +8,7 @@ https://www.youtube.com/watch?v=fiShX2pTz9A
 
 Create two paddle sprites and place them on opposite ends of the screen.
 
-Make the ball move to the right. HINT: Do this inside the draw function.
+Make the ball move to the right (animated movement). HINT: Do this inside the draw function. Move the ball a little bit every time the draw function is run.
 
 You will notice that when the ball moves it leaves a trail of ball images behind it. That's because everything drawn to the Processing canvas stays there, it doesn't become a blank slate every time the draw function is used to make a new frame. This is useful for some art programs but not for a Pong game. Use the p5.js background function with "b" (black) as the input argument `background("b")`
 

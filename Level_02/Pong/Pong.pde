@@ -24,7 +24,6 @@ void setup() {
 	ball.friction = 0; // no friction
 
   /* Part A: add the paddles */
-
   // your code here!
 }
 

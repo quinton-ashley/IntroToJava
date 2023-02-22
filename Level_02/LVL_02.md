@@ -43,6 +43,14 @@ sprite.y = 12
 
 Sprite objects in Processing have attributes such as their x and y position. A sprite's x position is its horizontal position on the screen. A sprite's y position is its vertical position on the screen.
 
+## Getting a Sprite's width and height
+
+When you create a sprite using an image the width and height of the sprite is automatically assigned to the sprite based on the size of the image. These attributes can be accessed using `.width` and `.height` or with `.w` and `.h`
+
+```java
+System.out.println("size of the paddle: " + paddle.w + "x" + paddle.h);
+```
+
 ## spriteArt
 
 Processing has it's own `createImage` function, but it's a bit complicated. I created a simple `spriteArt` function for QuintOS that we can use to make sprites for our games very easily!
@@ -95,15 +103,53 @@ It's a simple yellow and black smiley face image. 😃
 
 Note that Processing adds a lot of variables to the global scope. Note that `width` and `height` refer to the size of the screen in pixels.
 
-# Level 02 B
+## String.repeat(amount)
 
-# Getting a Sprite's width and height
-
-When you create a sprite using an image the width and height of the sprite is automatically assigned to the sprite based on the size of the image. These attributes can be accessed using `.width` and `.height` or with `.w` and `.h`
+To more easily create large Strings you can use a String function called [repeat](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
 
 ```java
-System.out.println("size of the ball: " + ball.w + "x" + ball.h);
+String pattern = "><".repeat(4);
+// pattern -> "><><><><";
 ```
+
+# Level 02 B
+
+## Check if a key is held
+
+```java
+void draw() {
+	if (kb.pressing("ArrowLeft")) {
+		player.x -= 2; // move the player left by 2 pixels
+	}
+	if (kb.pressing("ArrowRight")) {
+		player.x += 2; // move the player right by 2 pixels
+	}
+}
+```
+
+## Vectors
+
+In Physics a vector is a direction in which something is moving and the magnitude of how fast it's moving there at a given interval of time.
+
+In 2D (two dimensional) games, a sprite's vector can be stored as the velocity at which a sprite is moving along the x-axis and the velocity it's moving along the y-axis per frame. The ball's speed is the combination of these velocities.
+
+```java
+ball.velocity.x = 1;
+ball.velocity.y = 1;
+// you can also use "vel" instead of "velocity"
+ball.vel.x = 1;
+ball.vel.y = 1;
+```
+
+## sprite collider
+
+By default when sprites collide both objects will move. To prevent this, set the paddle to have a kinematic collider.
+
+```java
+paddle.collider = 'kinematic';
+```
+
+# Level 02 C
 
 ## spriteArt scaling
 
@@ -114,15 +160,6 @@ PImage face = spriteArt(str, 2);
 ```
 
 The second input parameter to the `spriteArt` function is an optional scale value. Input parameters are separated by commas.
-
-## String.repeat(amount)
-
-To more easily create large Strings you can use a String function called [repeat](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html)
-
-```java
-String pattern = "><".repeat(4);
-// pattern -> "><><><><";
-```
 
 ## += operator
 
@@ -145,65 +182,6 @@ System.out.println(x); // x -> 7
 `-=`, `*=`, and `/=` operators can also be used with numbers.
 
 # Level 02 C
-
-## Vectors
-
-In Physics a vector is a direction in which something is moving and the magnitude of how fast it's moving there at a given interval of time.
-
-In 2D (two dimensional) games, a sprite's vector can be stored as the velocity at which a sprite is moving along the x-axis and the velocity it's moving along the y-axis per frame. The ball's speed is the combination of these velocities.
-
-```java
-ball.velocity.x = 1;
-ball.velocity.y = 1;
-// you can also use "vel" instead of "velocity"
-ball.vel.x = 1;
-ball.vel.y = 1;
-```
-
-## Bounces
-
-Objects in p5play collide by default but the paddle and ball won't do a perfect bounce off the paddle automatically.
-
-To have the ball bounce off the paddle and retain its speed, set the ball's bounciness to 1, indicating you want a full bounce.
-
-```java
-ball.bounciness = 1;
-```
-
-By default when sprites collide both objects will move. To prevent this, set the sprite to be static when another sprite bounces on it.
-
-```java
-paddle.static = true;
-```
-
-# Level 02 D
-
-## Respond to keyboard input
-
-The `keyPressed` is a Processing function that is run whenever a key is pressed.
-
-```java
-void keyPressed() {
-	if (key.equals("w")) {
-		System.out.println("The 'w' key was pressed!");
-	}
-}
-```
-
-Implement `keyPressed` outside the `draw` function.
-
-## Check if a key is held
-
-```java
-void draw() {
-	if (keyIsDown("ArrowLeft")) {
-		player.x -= 2; // move the player left by 2 pixels
-	}
-	if (keyIsDown("ArrowRight")) {
-		player.x += 2; // move the player right by 2 pixels
-	}
-}
-```
 
 ## Drawing text to the screen
 
@@ -247,20 +225,19 @@ https://youtu.be/nRlmTiynbd8?t=242
   - [What are Processing and p5play?](#what-are-processing-and-p5play)
   - [Processing Basics](#processing-basics)
   - [p5play Sprites](#p5play-sprites)
+  - [Getting a Sprite's width and height](#getting-a-sprites-width-and-height)
   - [spriteArt](#spriteart)
   - [Making Strings with Triple Quotes](#making-strings-with-triple-quotes)
   - [Processing global variables](#processing-global-variables)
-- [Level 02 B](#level-02-b)
-- [Getting a Sprite's width and height](#getting-a-sprites-width-and-height)
-  - [spriteArt scaling](#spriteart-scaling)
   - [String.repeat(amount)](#stringrepeatamount)
-  - [+= operator](#-operator)
-- [Level 02 C](#level-02-c)
-  - [Vectors](#vectors)
-  - [Bounces](#bounces)
-- [Level 02 D](#level-02-d)
-  - [Respond to keyboard input](#respond-to-keyboard-input)
+- [Level 02 B](#level-02-b)
   - [Check if a key is held](#check-if-a-key-is-held)
+  - [Vectors](#vectors)
+  - [sprite collider](#sprite-collider)
+- [Level 02 C](#level-02-c)
+  - [spriteArt scaling](#spriteart-scaling)
+  - [+= operator](#-operator)
+- [Level 02 C](#level-02-c-1)
   - [Drawing text to the screen](#drawing-text-to-the-screen)
   - [Level 02 E](#level-02-e)
   - [Processing Java fill, stroke, and rect](#processing-java-fill-stroke-and-rect)

@@ -56,9 +56,9 @@ board[0][3]; // row is 0, column is 3
 
 How could we use a nested for loop to clear the board of all the pieces by assigning a blank space " " to every element in the `board` array?
 
-```js
-for (let row = 0; row < rows; row++) {
-	for (let col = 0; col < columns; col++) {
+```java
+for (int row = 0; row < rows; row++) {
+	for (int col = 0; col < columns; col++) {
 		board[row][col] = ' ';
 	}
 }
@@ -66,8 +66,8 @@ for (let row = 0; row < rows; row++) {
 
 - [Level 09 A](#level-09-a)
 - [Level 09 B](#level-09-b)
-	- [Nested for loops](#nested-for-loops)
+  - [Nested for loops](#nested-for-loops)
 - [Level 09 C](#level-09-c)
-	- [Two Dimensional Arrays](#two-dimensional-arrays)
-	- [2D array access](#2d-array-access)
-	- [Using nested for loops with 2D arrays](#using-nested-for-loops-with-2d-arrays)
+  - [Two Dimensional Arrays](#two-dimensional-arrays)
+  - [2D array access](#2d-array-access)
+  - [Using nested for loops with 2D arrays](#using-nested-for-loops-with-2d-arrays)

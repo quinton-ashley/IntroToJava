@@ -1,11 +1,12 @@
-let frog, lilypads;
+Sprite frog;
+Group lilypads;
 
-function preload() {
+void preload() {
 	frog = new Sprite();
 	lilypads = new Group();
 }
 
-function setup() {
+void setup() {
 	world.gravity.y = 10;
 	noStroke();
 
@@ -17,26 +18,27 @@ function setup() {
 	lilypads.y = 90;
 	lilypads.w = 10;
 	lilypads.h = 2;
-	lilypads.collider = 'static';
+	lilypads.collider = "static";
 
 	makeLilyPads();
 }
 
-function makeLilyPads() {
+void makeLilyPads() {
 	// TODO: use a loop to make more lily pads
-	let lily = new lilypads.Sprite();
+	Func ls = lilypads.Sprite;
+	Sprite lily = new ls();
 	lily.x = 0;
 }
 
-function draw() {
-	background('0');
-	fill('3');
+void draw() {
+	background("0");
+	fill("3");
 	rect(0, 0, width, 90);
 
-	if (kb.presses('up')) {
+	if (kb.presses("up")) {
 		// little jump
 		frog.velocity.y = -1.4;
-	} else if (kb.presses('right')) {
+	} else if (kb.presses("right")) {
 		// BIG jump!
 		frog.velocity.y = -2;
 	}

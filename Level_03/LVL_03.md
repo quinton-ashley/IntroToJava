@@ -39,7 +39,7 @@ while (i < names.length) {
 	System.out.println(i + '. ' + names[i]);
 
 	i = i + 1;
-} // in this loop i goes up from 0 to 1 to 3
+} // in this loop i goes up from 0 to 1 to 2 to 3
 ```
 
 The code above prints out a numbered list of names in the Java console.

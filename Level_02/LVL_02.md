@@ -31,12 +31,18 @@ The Processing `setup` function is run by Processing once at the start of the ga
 
 The Processing `draw` function should contain code for drawing an image (frame). Behind the scenes, Processing will run it 60 times per second, this is called the frame rate. This allows you to move objects on the screen by animating them, moving them a little bit when each new frame is drawn to the screen.
 
+## Canvas
+
+`new Canvas(width, height)` creates a new canvas, the visible area of the game. In QuintOS the canvas is created for you.
+
+Note that `canvas.w` and `canvas.h` can be used to refer to the size of the screen in pixels.
+
 ## p5play Sprites
 
 Sprites are characters or items in 2D video games that typically move above the background layer(s).
 
 ```java
-Sprite sprite = new Sprite(img);
+Sprite sprite = new Sprite();
 sprite.x = 5;
 sprite.y = 12;
 ```
@@ -56,8 +62,8 @@ System.out.println("size of the paddle: " + paddle.w + "x" + paddle.h);
 One of the ways that sprites can be moved is by changing their direction and speed properties.
 
 ```java
-player.direction = 20;
-player.speed = 1;
+ball.direction = 20;
+ball.speed = 1;
 ```
 
 ## spriteArt
@@ -117,10 +123,6 @@ PImage face = spriteArt(str, 2);
 ```
 
 The second input parameter to the `spriteArt` function is an optional scale value. Input parameters are separated by commas.
-
-## Processing global variables
-
-Note that Processing adds a lot of variables to the global scope. Note that `width` and `height` refer to the size of the screen in pixels.
 
 ## String.repeat(amount)
 
@@ -216,13 +218,13 @@ https://youtu.be/nRlmTiynbd8?t=242
   - [Creating functions 👷](#creating-functions-)
   - [What are Processing and p5play?](#what-are-processing-and-p5play)
   - [Processing Basics](#processing-basics)
+  - [Canvas](#canvas)
   - [p5play Sprites](#p5play-sprites)
   - [Getting a Sprite's width and height](#getting-a-sprites-width-and-height)
   - [Moving a Sprite](#moving-a-sprite)
   - [spriteArt](#spriteart)
   - [Making Strings with Triple Quotes](#making-strings-with-triple-quotes)
   - [spriteArt scaling](#spriteart-scaling)
-  - [Processing global variables](#processing-global-variables)
   - [String.repeat(amount)](#stringrepeatamount)
 - [Level 02 B](#level-02-b)
   - [sprite collider](#sprite-collider)

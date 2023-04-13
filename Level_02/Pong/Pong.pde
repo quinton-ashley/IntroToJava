@@ -17,8 +17,8 @@ Sprite ball;
 void setup() {
   ball = new Sprite();
   ball.image = imgBall;
-	ball.x = width / 2;
-	ball.y = height / 2;
+	ball.x = canvas.w / 2;
+	ball.y = canvas.h / 2;
 	ball.diameter = 8;
 	ball.bounciness = 1; // full bounciness
 	ball.friction = 0; // no friction

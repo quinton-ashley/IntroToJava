@@ -10,28 +10,28 @@ Pick a random word from the array of words. HINT: Remember `.length` can be use 
 
 ## Instructions for Part B
 
-Create a `lines` array with the same amount of underscores as the chosen word. For example, if the word is "quiz" the `lines` array should have four dashes: `['_', '_', '_', '_']`. HINT: Use `word.length` and the `repeat` and `toCharArray` functions.
+Create a `lines` array with the same amount of underscores as the chosen word. For example, if the word is "quiz" the `lines` array should have four dashes: `['_', '_', '_', '_']`. Later on you'll use this array to show the player their correct guesses. HINT: Use a for loop.
+
+Make the game loop! Add a variable that will store how many wrong guesses the player has made. If they make more than 6 wrong guesses the game should end. Put the code that shows the hangman and asks the player for a guess inside the loop. HINT: Use a while loop.
+
+Display the `lines` array like this `_ _ _ _` in the prompt on a new line below the hangman text drawing. Don't use `System.out.print` a bunch of times to do this, try creating a new String called `displayLines`. Use a for loop and remember that `+=` can be used with Strings!
 
 ## Instructions for Part C
 
-Display the `lines` array like this `_ _ _ _` in the prompt on a new line below the hangman text drawing. HINT: use a while loop with a counter variable and remember the newline character `\n`
+If the player guesses a letter which occurs in the word, edit the `lines` array so the letter will be displayed in all its correct positions. For example if the word is "avenue" and the player has guessed "e" your prompt should display: `_ _ e _ _ e` HINT: Use a for loop to iterate through each letter in the word.
 
-If the player guesses a letter which occurs in the word, edit the `lines` array so the letter will be displayed in all its correct positions. For example if the word is "avenue" and the player has guessed "e" your prompt should display: `_ _ e _ _ e` HINT: use a while loop with a counter variable to loop through each letter in the word.
-
-Make the game loop! Add a variable for how many wrong guess the player has made. If they get more than 6 wrong the game should end.
-
-If the player guesses a letter which does not occur in the word, the computer should add a body part to the hangman stick figure. HINT: Don't check if they got a letter wrong, just ensure their guess matched none of the letters in the word.
+If the player guesses a letter which does not occur in the word, a wrong guess, the computer should add a body part to the hangman stick figure. HINT: Don't check if they got a letter wrong, just ensure their guess matched none of the letters in the word.
 
 ## Instructions for Part D
 
-Replace the while loops you used for counting, use for loops instead!
+If the player wins, the game should end. The player wins if they guess the whole word or if the lines array does not include any lines. Add the condition to the game loop using boolean OR `||`.
 
-Make the game a bit easier by adding more drawings to the `hangman` array.
+If the player wins tell them they won! If they lost show them the word.
 
-## Instructions for Part E
+These are some hard words to guess within a limit of only 5 mistakes! Make the game a bit easier by adding more drawings to the `hangman` array. Make the scaffold build up before the hangman is drawn.
 
-If the player has won the game by guessing each letter in the word, the `lines` array will not contain any line characters. HINT: Use `break` to exit the game loop early. Your program doesn't need to prompt the player for another guess if they already won.
+Ask the player if they'd like to keep playing, if they say yes start a new game. HINT: Use a while loop and get the user input with `sc.nextLine()`.
 
-The player guessing the word may, at any time, attempt to guess the whole word. If the word is correct, the game is over and the guesser wins.
+## EXTRA CHALLENGE
 
-At the end of the game tell the player if they won or lost and show them what the word was.
+Show the user the letters they guessed wrong. If the user guesses the same wrong letter twice, don't count it! Tell them they already guessed that letter and they should guess a different letter.

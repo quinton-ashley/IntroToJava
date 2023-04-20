@@ -1,4 +1,4 @@
-# Level 03 A
+# Level 04 A
 
 ![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen2.jpg)
 
@@ -33,7 +33,7 @@ System.out.println("What's your name?");
 String name = sc.nextLine();
 ```
 
-# Level 02 B
+# Level 04 B
 
 ## Getting the length of a String
 
@@ -48,7 +48,7 @@ In Java, arrays must be created with a fixed size. This means you must know how 
 String[] names = new String[5];
 ```
 
-# Level 03 C
+# Level 04 C
 
 ## Accessing characters in a String
 
@@ -89,14 +89,14 @@ This level's computer was inspired by the Apple II. Check out this video about i
 
 https://www.youtube.com/watch?v=CxJwy8NsXFs
 
-- [Level 03 A](#level-03-a)
+- [Level 04 A](#level-04-a)
   - [Coding Philosophy: Naming variables](#coding-philosophy-naming-variables)
   - [String.split(separator)](#stringsplitseparator)
   - [Getting String input from the user](#getting-string-input-from-the-user)
-- [Level 02 B](#level-02-b)
+- [Level 04 B](#level-04-b)
   - [Getting the length of a String](#getting-the-length-of-a-string)
   - [Create an array with a fixed size](#create-an-array-with-a-fixed-size)
-- [Level 03 C](#level-03-c)
+- [Level 04 C](#level-04-c)
   - [Accessing characters in a String](#accessing-characters-in-a-string)
 - [Level 04 D](#level-04-d)
   - [String equals](#string-equals)

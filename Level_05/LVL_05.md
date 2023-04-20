@@ -1,4 +1,4 @@
-# Level 04 A
+# Level 05 A
 
 Do the GuessTheNumber challenge section before starting level 04!
 
@@ -96,7 +96,7 @@ button("Yes", 5, 5);
 button("No", 5, 9);
 ```
 
-# Level 04 B
+# Level 05 B
 
 ## Respond to button clicks
 
@@ -142,7 +142,7 @@ void gameLoop() {
 }
 ```
 
-# Level 04 C
+# Level 05 C
 
 ## Erase
 
@@ -180,7 +180,7 @@ A fourth input parameter can be used to restrict the width of the window. Text t
 
 If row, column, and width are not defined, default position values are used, which are different for each of the QuintOS virtual computers.
 
-# Level 04 D
+# Level 05 D
 
 ## Callbacks
 
@@ -214,7 +214,7 @@ long time = Instant.now().toEpochMilli();
 
 `time` is set to the current time in milliseconds since the epoch of January 1, 1970 at midnight. `long` is a Java type used to store numbers which are too big to be stored as `int`.
 
-# Level 04 E
+# Level 05 E
 
 ## += operator
 
@@ -289,24 +289,24 @@ Of course, all of these great features raised the price significantly. At $8150,
 
 Originally developed for business executives, GRiDs were also used by the U.S. military 'in the field', and by NASA on the Space Shuttles during the 1980's and 90's. It's even been said that the US President's "nuclear football" at one time included a GRiD computer.
 
-- [Level 04 A](#level-04-a)
+- [Level 05 A](#level-05-a)
   - [package](#package)
   - [imports](#imports)
   - [Classes in Java](#classes-in-java)
   - [substring String](#substring-string)
   - [Create a Button](#create-a-button)
-- [Level 04 B](#level-04-b)
+- [Level 05 B](#level-05-b)
   - [Respond to button clicks](#respond-to-button-clicks)
   - [Recursion](#recursion)
-- [Level 04 C](#level-04-c)
+- [Level 05 C](#level-05-c)
   - [Erase](#erase)
   - [prompts and alerts](#prompts-and-alerts)
   - [Changing the positions of prompts and alerts](#changing-the-positions-of-prompts-and-alerts)
-- [Level 04 D](#level-04-d)
+- [Level 05 D](#level-05-d)
   - [Callbacks](#callbacks)
   - [Creating Arrays of defined length](#creating-arrays-of-defined-length)
   - [Instant](#instant)
-- [Level 04 E](#level-04-e)
+- [Level 05 E](#level-05-e)
   - [+= operator](#-operator)
   - [modulo operator](#modulo-operator)
   - [for loops with non-standard increments](#for-loops-with-non-standard-increments)

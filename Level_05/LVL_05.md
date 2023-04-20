@@ -125,7 +125,7 @@ void doRecursion() {
 }
 ```
 
-Here's a more practical example of a recursion loop that ends when the player losses all their health points.
+Here's a more practical example of a recursion loop that ends when the player loses all their health points. Although for such a simple case of recursion it'd be more efficient to use a while loop.
 
 ```java
 int health = 100; // initial health
@@ -185,24 +185,6 @@ If row, column, and width are not defined, default position values are used, whi
 ## Callbacks
 
 Callbacks are non-linear, so they are good for handling events (like button clicks) that in some cases we wouldn't want our program to wait for. For example if you gave the user a choice between clicking a "Yes" or "No" button you wouldn't want the program to wait for them to click "Yes" because they might click "No". A separate callback function is needed to handle each response.
-
-## Creating Arrays of defined length
-
-The following example asks the user security questions and records their answers. Since we already know there are three questions there will be three answers. However we don't know what the answers will be, so they can't be defined when we create the array. Instead, the amount of items the array will store can be defined in the `[]` square brackets. Then you can add the values by assigning them to positions in the array.
-
-```java
-String[] questions = new String[] {
-	"What was your first pet's name?",
-	"What's your mother's maiden name?",
-	"In what city or town did your parents meet?"
-};
-String[] answers = new String[3];
-
-for (int i = 0; i < 3; i++) {
-	System.out.println(questions[i]);
-	answers[i] = sc.nextLine();
-}
-```
 
 ## Instant
 
@@ -304,7 +286,6 @@ Originally developed for business executives, GRiDs were also used by the U.S. m
   - [Changing the positions of prompts and alerts](#changing-the-positions-of-prompts-and-alerts)
 - [Level 05 D](#level-05-d)
   - [Callbacks](#callbacks)
-  - [Creating Arrays of defined length](#creating-arrays-of-defined-length)
   - [Instant](#instant)
 - [Level 05 E](#level-05-e)
   - [+= operator](#-operator)

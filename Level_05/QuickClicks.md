@@ -6,7 +6,7 @@ Test your reflexes with the Quick Clicks target practice game! Click a target to
 
 Try placing the target button in the bottom right corner of the screen. Note the values used for the row and column.
 
-Put the target button in a random position on the screen. HINT: `random(start, end)` returns decimal numbers but row and col values need to be whole numbers
+Put the target button in a random position on the screen. HINT: Use `Math.random()` but note that text row and column values need to be integers.
 
 Make four imposter targets using a `for` loop. Imposter targets should look a bit different from the real target. The smaller the differences the harder your Quick Clicks game will be.
 

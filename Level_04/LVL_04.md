@@ -48,6 +48,22 @@ In Java, arrays must be created with a fixed size. This means you must know how 
 String[] names = new String[5];
 ```
 
+The following example asks the user security questions and records their answers. Since we already know there are three questions there will be three answers. However we don't know what the answers will be, so they can't be defined when we create the array. Instead, the amount of items the array will store can be defined in the `[]` square brackets. Then you can add the values by assigning them to positions in the array.
+
+```java
+String[] questions = new String[] {
+	"What was your first pet's name?",
+	"What's your mother's maiden name?",
+	"In what city or town did your parents meet?"
+};
+String[] answers = new String[3];
+
+for (int i = 0; i < 3; i++) {
+	System.out.println(questions[i]);
+	answers[i] = sc.nextLine();
+}
+```
+
 # Level 04 C
 
 ## Accessing characters in a String

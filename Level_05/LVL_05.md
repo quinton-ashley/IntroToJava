@@ -1,8 +1,6 @@
 # Level 05 A
 
-Do the GuessTheNumber challenge section before starting level 04!
-
-![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen3.jpg)
+Do the GuessTheNumber challenge section before starting level 05!
 
 ## package
 
@@ -87,6 +85,8 @@ log(str); // -> "ello"
 `substring` returns a part of the original string which starts at the index provided as the first input parameter.
 
 ## Create a Button
+
+QuintOS provides functions for graphical user interface elements, such as buttons.
 
 Buttons glow when hovered over and are clickable. The `button` function is quite similar to the `text` function.
 

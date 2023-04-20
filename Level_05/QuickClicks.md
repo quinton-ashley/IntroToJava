@@ -8,55 +8,55 @@ Try placing the target button in the bottom right corner of the screen. Note the
 
 Put the target button in a random position on the screen. HINT: `random(start, end)` returns decimal numbers but row and col values need to be whole numbers
 
-Make four imposter targets using a `for` loop. HINT: Imposter targets should look a bit different from the real target. The smaller the differences the harder your Quick Clicks game will be.
+Make four imposter targets using a `for` loop. Imposter targets should look a bit different from the real target. The smaller the differences the harder your Quick Clicks game will be.
 
-## Instructions for Part B
-
-When the player clicks the target button, place another target and another four imposter targets in random positions on the screen. HINT: Use a recursion callback to the button click function to achieve this.
-
-You will notice that using recursion generates a lot of targets quickly!
-
-## Instructions for Part C
-
-When the player clicks the target, erase the screen before creating another target and four more imposter targets.
-
-Before the game starts, place an alert window with instructions on how to play in the middle of the screen. Tell the user to press the "OKAY" button to start the game.
-
-If the player clicks an imposter target tell them "Game Over!" because they clicked an imposter target. Show them the location of the real target but don't allow them to click it. The player should be able to try playing again from the beginning.
-
-## Instructions for Part D
-
-After the player clicks 10 target buttons, calculate the user's average, slowest, and fastest response times. To get the speeds at which the player clicked between buttons you'll first need to create an array that stores the time at which they clicked each target. HINT: Create an array called `times` of type `long` with a size of 10. Add the current time using `Instant.now().toEpochMilli()` to the `times` array each time the player clicks the good target.
-
-Now create an array of speeds that stores the time in milliseconds it took the player to click each button. Each number in this array should represent the difference between the time a button was clicked and the time the next button was clicked. HINT: If the player clicks the button 10 times there will only be 9 speeds (time between each button click). Use a `for` loop to create the array of speeds.
-
-Remember! `for` loops with a counter variable:
+HINT: Use a `for` loop with a counter variable!
 
 ```java
 //   initialize;  condition; increment
 for (int i = 0; i < loopAmount; i++) {
-	// code
+	// code that gets run each loop
 }
 ```
 
-To calculate the average speed, add all the speeds up and divide by the amount of speeds.
+## Instructions for Part B
 
-The fastest speed is the lowest number in the speeds array. The slowest speed is the highest.
+When the player clicks the target button, place another target and another four imposter targets in random positions on the screen. HINT: Use a recursive callback to the `makeTargets` function.
 
-Display the result in an alert window.
+You will notice that using recursion generates a lot of targets quickly! You can use the `erase()` function to remove all text and buttons from the screen.
+
+## Instructions for Part C
+
+Before the game starts, place an alert window with instructions on how to play in the middle of the screen. Tell the user to press the "OKAY" button to start the game.
+
+If the player clicks an imposter target tell them "Game Over!". Show them the location of the real target but don't allow them to click it.
+
+## Instructions for Part D
+
+After the player clicks 10 target buttons, calculate the user's average, slowest, and fastest response times. To get the speeds at which the player clicked between buttons you'll first need to create an array that stores the time at which they clicked each target. HINT: Use the `push` function to add `Date.now()` to an array called `times`
+
+Stop making targets after 10 clicks and run a `calcStats` (calculate statistics) function that will show the user their stats at the end of the game. Inside the `calcStats` function create an array of speeds that stores the time in milliseconds it took the player to click each button. Each number in this array should represent the difference between the time a button was clicked and the time the next button was clicked. HINT: If the player clicks the button 10 times there will only be 9 speeds (time between each button click). Use a `for` loop to create the array of speeds.
 
 ## Instructions for Part E
 
-Add a background pattern to the game that should cover the entire space within the frame. Create this pattern yourself using for loops by drawing with `txt(txt, row, col)`
+Calculate the user's average speed first. HINT: To calculate an average, add up all the numbers in a list and divide by the amount of numbers.
+
+Next calculate the user's slowest and fastest reponse times. The slowest speed is the highest. The fastest speed is the lowest number in the speeds array. Try finding the slowest speed first.
+
+Display all the stats in one alert window. HINT: Remember the new line formatting character "\n"
+
+## Instructions for Part F
+
+Add a background pattern to the game that should cover the entire space within the frame. Create this pattern yourself using for loops by drawing with `txt(text, row, col)`
 
 Remember! You can use the `repeat` String function
 
 ```java
-String pattern = "><".repeat(4);
-// pattern -> "><><><><";
+String pattern = '><'.repeat(4);
+System.out.println(pattern); // -> '><><><><';
 ```
 
-Try making a cool geometric pattern like this! HINT: use the modulo operator to make alternating lines
+Try making your own cool pattern like this one! (don't copy this pattern) HINT: use an alternating line pattern with two or more alternations
 
 ```
 ⎺\⎽⎽/⎺⎺\⎽⎽/⎺
@@ -65,4 +65,4 @@ Try making a cool geometric pattern like this! HINT: use the modulo operator to 
 ⎽/⎺⎺\⎽⎽/⎺⎺\⎽
 ```
 
-BUG FIX! Though unlikely it is possible that an imposter target is placed directly over a real target. How can this be prevented? You can decide what degree of button overlap, if any, is acceptable.
+BUG FIX! Though unlikely, it is possible that an imposter target is placed directly over a real target. Try to prevent this!

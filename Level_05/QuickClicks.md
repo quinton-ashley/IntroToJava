@@ -52,8 +52,8 @@ Add a background pattern to the game that should cover the entire space within t
 Remember! You can use the `repeat` String function
 
 ```java
-String pattern = '><'.repeat(4);
-System.out.println(pattern); // -> '><><><><';
+String pattern = "><".repeat(4);
+System.out.println(pattern); // -> "><><><><";
 ```
 
 Try making your own cool pattern like this one! (don't copy this pattern) HINT: use an alternating line pattern with two or more alternations

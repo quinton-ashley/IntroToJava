@@ -218,6 +218,8 @@ System.out.println(x); // x -> 7
 
 `-=`, `*=`, and `/=` operators can also be used with numbers.
 
+# Level 05 F
+
 ## modulo operator
 
 The modulo operator `%` gets the gets the remainder of a division.
@@ -272,23 +274,24 @@ Of course, all of these great features raised the price significantly. At $8150,
 Originally developed for business executives, GRiDs were also used by the U.S. military 'in the field', and by NASA on the Space Shuttles during the 1980's and 90's. It's even been said that the US President's "nuclear football" at one time included a GRiD computer.
 
 - [Level 05 A](#level-05-a)
-  - [package](#package)
-  - [imports](#imports)
-  - [Classes in Java](#classes-in-java)
-  - [substring String](#substring-string)
-  - [Create a Button](#create-a-button)
+	- [package](#package)
+	- [imports](#imports)
+	- [Classes in Java](#classes-in-java)
+	- [substring String](#substring-string)
+	- [Create a Button](#create-a-button)
 - [Level 05 B](#level-05-b)
-  - [Respond to button clicks](#respond-to-button-clicks)
-  - [Recursion](#recursion)
+	- [Respond to button clicks](#respond-to-button-clicks)
+	- [Recursion](#recursion)
 - [Level 05 C](#level-05-c)
-  - [Erase](#erase)
-  - [prompts and alerts](#prompts-and-alerts)
-  - [Changing the positions of prompts and alerts](#changing-the-positions-of-prompts-and-alerts)
+	- [Erase](#erase)
+	- [prompts and alerts](#prompts-and-alerts)
+	- [Changing the positions of prompts and alerts](#changing-the-positions-of-prompts-and-alerts)
 - [Level 05 D](#level-05-d)
-  - [Callbacks](#callbacks)
-  - [Instant](#instant)
+	- [Callbacks](#callbacks)
+	- [Instant](#instant)
 - [Level 05 E](#level-05-e)
-  - [+= operator](#-operator)
-  - [modulo operator](#modulo-operator)
-  - [for loops with non-standard increments](#for-loops-with-non-standard-increments)
-  - [Computer History: GRiD Compass](#computer-history-grid-compass)
+	- [+= operator](#-operator)
+- [Level 05 F](#level-05-f)
+	- [modulo operator](#modulo-operator)
+	- [for loops with non-standard increments](#for-loops-with-non-standard-increments)
+	- [Computer History: GRiD Compass](#computer-history-grid-compass)

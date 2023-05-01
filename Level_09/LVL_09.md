@@ -1,8 +1,6 @@
 # Level 09 A
 
-Upgrade to level 8! 🥳
-
-![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen4.jpg)
+Upgrade to level 9! 🥳
 
 # Level 09 B
 

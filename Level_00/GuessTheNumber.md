@@ -42,7 +42,7 @@ Make the game loop by using a while loop! Think about what condition must remain
 
 Use `Math` functions to enable your computer pick a random whole number between 1 and 100 for the player to guess. To test your code, try using `System.out.println` to display the number your computer picks. When you are sure it is working, remove that line.
 
-Congrats! You finished your first game in Java!
+Congratulations! You finished your first Java program!
 
 ## CHALLENGE SECTION
 

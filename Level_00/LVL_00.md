@@ -10,13 +10,11 @@ Learning to program will improve your logical reasoning and abstract problem sol
 
 ## What is QuintOS?
 
-The famous 17th century scientist, Issac Newton, once said, "we stand on the shoulders of giants". To understand how software is developed today, it's important to learn a bit about the history of computers.
+Issac Newton, a famous 17th century scientist, once said, "we stand on the shoulders of giants". Newton was humbly acknowledging that great advancements made by people in his day were built upon a giant foundation laid by our ancestors.
 
-If you signed up for this course you might want to know how video games work and how to make your own! If not, making games will hopefully be a fun way for you to learn how to code.
+To become a software developer today it's good to learn a bit about the history of computers and computer games.
 
-QuintOS is a retro game engine I created for this course. During each lesson you'll develop a QuintOS game that runs on virtual computers displayed in your web browser: Google Chrome, Firefox, or Opera. As you level up your coding skills, the virtual computer will get upgraded too. Since you're just starting out, the first game you make will be for... a programmable calculator. 😜
-
-![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen0.jpg)
+QuintOS contains a set of retro computer simulations. During each lesson you'll develop a game or program that runs on a virtual computer displayed in the Google Chrome web browser. As you level up your coding skills, the virtual computer will get upgraded too. Since you're just starting out, the first program you make will be for... a programmable calculator. 😜
 
 This first lesson will require you to learn a lot of information before we can even make a simple game. It may be a bit overwhelming for you but don't worry! You'll get a lot of practice with these concepts so that you will fully understand them. Let's get started! 🥳
 
@@ -172,6 +170,7 @@ Take a look at the example below which assigns the name of the coin to the varia
 ```java
 System.out.println("What's the value of your lucky coin?");
 double value = sc.next();
+
 String coin; // variables can be created without a value assigned to them
 
 if (value == 1.00) {

@@ -14,21 +14,22 @@ Before you can work on the next game, let's get you setup so you can write Java 
 
 ## Setup
 
-Open the [quintos-template](https://github.com/quinton-ashley/quintos-template) project on Github. Press the big green button that says "Use this template". Name your project "quintos-games".
+Open the [quintos-template](https://github.com/quinton-ashley/quintos-template) project on Github. Press the big green button that says "Use this template". Name your project "quintos-projects".
 
-Now open the Git Bash app on Windows or the Terminal app on macOS and copy/paste these commands. Replace `!!!your username!!!` with your GitHub username.
+Now open the Git Bash app on Windows or the Terminal app on macOS and copy/paste these commands one line at a time. Replace `!!!your username!!!` with your GitHub username.
 
 ```sh
 cd ~/Documents
 git clone https://github.com/quinton-ashley/IntroToJava.git
-git clone https://github.com/!!!your username!!!/quintos-games.git
-cd quintos-games
+git clone https://github.com/!!!your username!!!/quintos-projects.git
+cd quintos-projects
 npm i
+npm i java2js
 ```
 
-Don't worry I'm not hacking your computer! The first command `cd`, changes directory (aka folder), which opens your Documents folder inside the terminal (you can choose a different folder if you'd like). The second command downloads my teaching curriculum "IntroToJava". The third command downloads your "quintos-games" project. The fourth command changes directory into your "quintos-games" folder. The last command, `npm i`, installs "QuintOS".
+Don't worry I'm not hacking your computer! The first command `cd`, changes directory (aka folder), which opens your Documents folder inside the terminal (you can choose a different folder if you'd like). The second command downloads my teaching curriculum "IntroToJava". The third command downloads your "quintos-projects" project. The fourth command changes directory into your "quintos-projects" folder. The last command, `npm i`, installs "QuintOS".
 
-Open Visual Studio Code (aka VSCode) and add "IntroToJava" and your "quintos-games" folder to the workspace.
+Open Visual Studio Code (aka VSCode) and add "IntroToJava" and your "quintos-projects" folder to the workspace.
 
 ## Install Extensions for VSCode
 
@@ -74,21 +75,18 @@ Press F1 on your keyboard (hold Fn then press F1 on macOS). Search the menu for 
 
 ## Loading QuintOS Games
 
-Make a new folder in `quintos-games` called `games_java`. Copy the `GuessTheNumber` folder from Level_00 in IntroToJava and paste it in `games_java`.
+Make a new folder in `quintos-projects` called `games_java`. Copy the `GuessTheNumber` folder from Level_00 in IntroToJava and paste it in `games_java`.
 
 Copy your GuessTheNumber code from CodePen and put it in `GuessTheNumber.java`
 
-Edit the `load.js` in your `quintos-games` project folder.
+Edit the `load.js` in your `quintos-projects` project folder.
 
 ```
 QuintOS.username = "your username";
-QuintOS.dir = "games_java";
 QuintOS.gameTitle = "GuessTheNumber";
 ```
 
 Right click on `QuintOS_live.html` file and select `Open with Live Server`. You should see the calculator show up in your browser. 😄
-
-![](https://elasticbeanstalk-us-east-2-651921832906.s3.us-east-2.amazonaws.com/QuintOS/bootScreen1.jpg)
 
 You've finished the install process! Read the next lesson section before starting PickAPath.
 

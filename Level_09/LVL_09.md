@@ -9,14 +9,16 @@ Upgrade to level 9! 🥳
 A `for` loop inside a `for` loop? FORLOOPCEPTION! 😮
 
 ```java
-for (int row = 0; row < rows; row++) {
-	for (int col = 0; col < columns; col++) {
+for (int i = 0; i < 5; i++) {
+	for (int j = 0; j < 5; j++) {
 		// nested for loop
 	}
 }
 ```
 
-The first `for` loop goes row by row, then the `for` loop on the inside goes through all the columns in that row.
+`i` is commonly used to represent the index of the outer loop and `j` is commonly used to represent the index of the inner loop.
+
+Each time the code in the outer loop is run, the inner loop will run completely. In the example above, the inner loop will run 5 times for each time the outer loop runs. The inner loop will run 25 times in total.
 
 # Level 09 C
 
@@ -55,9 +57,9 @@ board[0][3]; // row is 0, column is 3
 How could we use a nested for loop to clear the board of all the pieces by assigning a blank space " " to every element in the `board` array?
 
 ```java
-for (int row = 0; row < rows; row++) {
-	for (int col = 0; col < columns; col++) {
-		board[row][col] = ' ';
+for (int i = 0; i < rows; i++) {
+	for (int j = 0; j < columns; j++) {
+		board[i][j] = ' ';
 	}
 }
 ```

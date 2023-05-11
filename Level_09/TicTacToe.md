@@ -12,7 +12,7 @@ Create 9 buttons for all the empty spaces on the grid. Use `bigSpace` for the te
 
 Now create all the buttons using a nested for loop instead of doing them one by one. Pay attention to the intervals at which the buttons are placed.
 
-Make a `takeTurn` function with row and column input parameters. The click callback function for all the buttons should be an anonymous arrow function. Inside the anonymous function run `takeTurn(row, col)`. For now try drawing a `bigX` on the clicked button using the `text` function.
+Make a `takeTurn` function with row and column input parameters. The click callback function for all the buttons should be an anonymous arrow function. Inside the anonymous function run `takeTurn(i, j);`. For now try drawing a `bigX` on the clicked button using the `text` function.
 
 After player X takes their turn, player O should be able to place their `bigO` mark on the grid.
 

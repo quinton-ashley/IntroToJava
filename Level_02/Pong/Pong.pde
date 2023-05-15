@@ -15,6 +15,9 @@ PImage imgPaddle = spriteArt(".wwwwww.\nwwwwwwww\n" + "www..www\nww.ww.ww\n".rep
 Sprite ball;
 
 void setup() {
+	noStroke(); // disable black outlines around shapes
+	allSprites.pixelPerfect = true;
+	
   ball = new Sprite();
   ball.image = imgBall;
 	ball.x = canvas.w / 2;

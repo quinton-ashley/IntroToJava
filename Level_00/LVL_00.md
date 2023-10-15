@@ -6,8 +6,6 @@ Why is this field of study called "Computer Science" and not "Program Writing" o
 
 These lessons will teach you how to code in Java as part of the AP Computer Science A curriculum. You will have to memorize some vocabulary, grammar, and syntax to learn this new language. However, learning to code isn't what programming is all about, you will also learn how to think like a programmer!
 
-Learning to program will improve your logical reasoning and abstract problem solving skills. Programming has a language arts aspect too. You will not only strive to write efficient code for the computer but also code that can be easily understood by other programmers.
-
 ## What is QuintOS?
 
 Issac Newton, a famous 17th century scientist, once said, "we stand on the shoulders of giants". Newton was humbly acknowledging that great advancements made by people in his day were built upon a giant foundation laid by our ancestors.
@@ -90,18 +88,6 @@ moveForward(2);
 
 This code for a robot remote control makes the robot power on, turn left, move forward ten steps, turn right, and then move forward two steps. Note that functions can do different things depending on their input values!
 
-## Camel Case 🐫
-
-Variables in Java can't have spaces, 🙅‍♂️ so for variables that have multiple words, use camel case! Capitalize the first letter of the words after the first word.
-
-```java
-String apple = "🍎";
-String applePie = "🍎 π";
-String applePieIceCream = "🍎 π 🍨";
-```
-
-Note that using this naming convention isn't required for Java to run, it's just something that most professional Java programmers do to make variable names easier to read. Camel case is a naming convention specific to Java, other programming languages have their own conventions.
-
 ## Globals 🌐
 
 Globals are special variables that are already available for you to use anywhere in your code.
@@ -139,6 +125,18 @@ Now you're ready to start making your first game! 🥳 [Click here for the Guess
 # Level 00 B
 
 Did you complete `GuessTheNumber` part A and are ready to learn more? Before we can finish the game we have to learn a bit more stuff!
+
+## Camel Case 🐫
+
+Variables in Java can't have spaces, 🙅‍♂️ so for variables that have multiple words, use camel case! Capitalize the first letter of the words after the first word.
+
+```java
+String apple = "🍎";
+String applePie = "🍎 π";
+String applePieIceCream = "🍎 π 🍨";
+```
+
+Note that using this naming convention isn't required for Java to run, it's just something that most professional Java programmers do to make variable names easier to read. Camel case is a naming convention specific to Java, other programming languages have their own conventions.
 
 ## if/else statements
 
@@ -296,10 +294,11 @@ int x = 5 * 8; // x -> 40
 
 ## Math functions
 
-At this point you should also know about the global object [Math](https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html), which has many useful functions. You will use `.random()` and `.ceil()` to make this game.
+At this point you should also know about the global Class [Math](https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/Math.html), which has many useful functions. You will use `.random()` and `.ceil()` to make this game.
 
 ```java
 // Math.random() returns a random decimal number between 0 and 1 (not including 1)
+// note that this function does not accept input parameters!
 double x = Math.random(); // x could be .2364 or .928279 or 0.45398, it's random!
 
 double a = Math.round(30.1); // -> 30
@@ -319,7 +318,7 @@ int castedValue = (int) (39.8); // casted -> 39
 
 ## Computer History: Casio FX-720P
 
-This level's computer was inspired by the Casio FX-720P, which could run programs in a programming language called BASIC. Portable programmable calculators were limited by their small button keyboards and displays, but when slotted into a dock that had little printer, they could be used to print out graphs and many lines of text. The calculator could also load programs from tape cassettes.
+This level's computer was inspired by the Casio FX-720P, released in 1986, which could run programs in a programming language called BASIC. Portable programmable calculators were limited by their small button keyboards and displays, but when slotted into a dock that had little printer, they could be used to print out graphs and many lines of text. The calculator could also load programs from tape cassettes.
 
 <https://youtu.be/d3NIe1jTZMc?t=760>
 
@@ -333,13 +332,13 @@ This level's computer was inspired by the Casio FX-720P, which could run program
     - [Character](#character)
     - [String](#string)
     - [functions](#functions)
-  - [Camel Case 🐫](#camel-case-)
   - [Globals 🌐](#globals-)
     - [System](#system)
     - [Scanner](#scanner)
   - [Comments](#comments)
   - [End of Level 00 A](#end-of-level-00-a)
 - [Level 00 B](#level-00-b)
+  - [Camel Case 🐫](#camel-case-)
   - [if/else statements](#ifelse-statements)
   - [Checking Equivalence ✅](#checking-equivalence-)
   - [else if chaining](#else-if-chaining)

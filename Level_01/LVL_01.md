@@ -39,7 +39,7 @@ Prettier is an extension that will automatically format your code for you when y
 
 Live Server auto-refreshes the browser when you make changes to your code.
 
-Language Support for Java is a set of extensions from Red Hat. Use them to also install a reccomended JDK (Java Development Kit).
+Language Support for Java is a set of extensions from Red Hat. Use them to also install a recommended JDK (Java Development Kit).
 
 ## VSCode Settings
 

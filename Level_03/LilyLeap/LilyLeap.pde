@@ -25,9 +25,10 @@ void setup() {
 }
 
 void makeLilyPads() {
+	Func LilypadSprite = lilypads.Sprite;
+	
 	// TODO: use a loop to make more lily pads
-	Func ls = lilypads.Sprite;
-	Sprite lily = new ls();
+	Sprite lily = new LilypadSprite();
 	lily.x = 0;
 }
 

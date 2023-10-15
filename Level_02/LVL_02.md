@@ -165,10 +165,10 @@ The `kb` object has a `pressing` function that can be used to check if a key is 
 
 ```java
 void draw() {
-	if (kb.pressing("ArrowLeft")) {
+	if (kb.pressing("arrowLeft")) {
 		player.vel.x = -2; // move the player left by 2 pixels each frame
 	}
-	if (kb.pressing("ArrowRight")) {
+	if (kb.pressing("arrowRight")) {
 		player.vel.x = 2; // move the player right by 2 pixels each frame
 	}
 }

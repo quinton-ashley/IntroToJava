@@ -24,7 +24,7 @@ If the player guesses a letter which does not occur in the word, a wrong guess, 
 
 ## Instructions for Part D
 
-If the player wins, the game should end. The player wins if they guess the whole word or if the lines array does not include any lines. Add the condition to the game loop using boolean OR `||`.
+If the player wins, the game should end. HINT: Keep track of how many letters the player has gotten correct. Add a condition checking if they've guessed every letter to the game loop using a boolean operator (OR `||` or AND `&&`).
 
 If the player wins tell them they won! If they lost show them the word.
 
